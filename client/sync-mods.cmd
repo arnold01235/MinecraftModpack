@@ -183,8 +183,13 @@ try {
         throw 'The pack URL did not return a packwiz pack.toml. Check the hosting URL.'
     }
     $neoForgeVersion = if ($packContent -match '(?m)^\s*neoforge\s*=\s*"([^"]*)"') { $Matches[1] }
-    $packName = if ($packContent -match '(?m)^\s*name\s*=\s*"([^"]*)"') { $Matches[1] }
-    if ($packName -notmatch '^[\w .()+-]{1,64}$') { $packName = 'Modpack' }
+    # The launcher profile is named after this folder; each folder gets its own profile.
+    $profileName = [IO.Path]::GetFileName($instance.TrimEnd('\'))
+    if ($profileName.Length -gt 64) { $profileName = $profileName.Substring(0, 64) }
+    if ([string]::IsNullOrWhiteSpace($profileName)) { $profileName = 'Modpack' }
+    $pathHash = [BitConverter]::ToString([Security.Cryptography.SHA256]::Create().ComputeHash(
+        [Text.Encoding]::UTF8.GetBytes($instance.TrimEnd('\').ToLowerInvariant()))).Replace('-', '')
+    $profileKey = 'packwiz-' + $pathHash.Substring(0, 16).ToLowerInvariant()
 
     # Official Minecraft Launcher setup. Other launchers (Prism, CurseForge, ...) skip this.
     $minecraftDir = Join-Path $env:APPDATA '.minecraft'
@@ -256,9 +261,9 @@ try {
         Install-NeoForge -Version $neoForgeVersion -MinecraftDir $minecraftDir -Java $javaExeForSync -Cache $cache
         # The launcher may have been reopened while NeoForge installed.
         Wait-LauncherClosed
-        Set-LauncherProfile -ProfilesPath $profilesPath -Key ('packwiz-' + ($packName -replace '[^\w-]', '-')) `
-            -Name $packName -Version "neoforge-$neoForgeVersion" -GameDir $instance
-        Write-Host "Minecraft Launcher profile '$packName' points to this folder."
+        Set-LauncherProfile -ProfilesPath $profilesPath -Key $profileKey `
+            -Name $profileName -Version "neoforge-$neoForgeVersion" -GameDir $instance
+        Write-Host "Minecraft Launcher profile '$profileName' points to this folder."
     }
 
     Write-Host 'Synchronizing mods...'
@@ -268,7 +273,7 @@ try {
     if ($result -ne 0) { throw "packwiz-installer exited with code $result." }
     Write-Host ''
     if ($setupLauncher) {
-        Write-Host "Synchronization complete. Open the Minecraft Launcher, pick '$packName' and press Play."
+        Write-Host "Synchronization complete. Open the Minecraft Launcher, pick '$profileName' and press Play."
     } else {
         Write-Host 'Synchronization complete. You can start Minecraft.'
     }

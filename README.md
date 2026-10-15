@@ -78,8 +78,8 @@ With the official Minecraft Launcher (started at least once):
 
 1. Create an empty folder for the pack, for example `D:\Minecraft\MinecraftModded`, and put the published `sync-mods.cmd` in it.
 2. Close Minecraft and the launcher (including the system tray), then double-click the script.
-3. The script installs the pack's NeoForge version (verified against NeoForge's published SHA-256) if missing, creates or updates a launcher profile named after the pack whose game directory is this folder, and syncs the mods.
-4. Open the launcher, pick the pack's profile and press Play. Run the script again whenever the pack changes; it also moves the profile to a new NeoForge version if the pack changes it.
+3. The script installs the pack's NeoForge version (verified against NeoForge's published SHA-256) if missing, creates or updates a launcher profile named after this folder (each folder gets its own profile) whose game directory is this folder, and syncs the mods.
+4. Open the launcher, pick the profile with the folder's name and press Play. Run the script again whenever the pack changes; it also moves the profile to a new NeoForge version if the pack changes it.
 
 The profile gets a memory setting based on installed RAM (8 GB with 16 GB or more) on creation; later runs keep any memory/Java arguments the player changed. The script backs up `launcher_profiles.json` as `launcher_profiles.json.bak-packwiz` before writing it, and waits if the launcher is open, because the launcher would overwrite the change.
 
