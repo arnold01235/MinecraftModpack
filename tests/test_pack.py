@@ -378,6 +378,7 @@ class ImportTests(unittest.TestCase):
         (self.root / "client/sync-mods.cmd").write_text('set "PACKWIZ_SYNC_URL=https://YOUR-USERNAME.github.io/YOUR-REPO/pack.toml"\n')
         (self.root / "client/visuals").mkdir()
         (self.root / "client/visuals/snow-train.frames.gz").write_bytes(b"frames")
+        (self.root / "client/visuals/snow-train-blocks.frames.gz").write_bytes(b"blocks")
         (self.root / "client/visuals/LICENSE-ascii.rest").write_text("MIT")
         pack_url = stage(self.root, self.root / "dist", "https://example.github.io/pack")
         self.assertEqual(pack_url, "https://example.github.io/pack/pack.toml")
@@ -387,6 +388,7 @@ class ImportTests(unittest.TestCase):
         self.assertTrue((self.root / "dist/mods/example.pw.toml").exists())
         self.assertEqual((self.root / "dist/installer/snow-train.frames.gz").read_bytes(), b"frames")
         self.assertTrue((self.root / "dist/installer/LICENSE-ascii.rest.txt").exists())
+        self.assertEqual((self.root / "dist/installer/snow-train-blocks.frames.gz").read_bytes(), b"blocks")
 
     def test_publish_refuses_incomplete_pack(self):
         with self.assertRaises(importer.ResolutionError):

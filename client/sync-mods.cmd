@@ -92,7 +92,7 @@ function Start-Ui {
         } finally { $file.Dispose() }
         $newline = $text.IndexOf("`n")
         $header = $text.Substring(0, $newline).Split(' ')
-        if ($header[0] -ne 'SNOWTRAIN1' -or [int]$header[1] -ne 120) { return }
+        if ($header[0] -ne 'SNOWTRAIN1' -or [int]$header[1] -gt 120) { return }
         $frames = $text.Substring($newline + 1).Split([char]12)
         [Console]::OutputEncoding = New-Object Text.UTF8Encoding $false
         $script:Ui = @{
@@ -524,10 +524,14 @@ try {
     [IO.File]::WriteAllText($script:RunLog, "$(Get-Date -Format s)  $packUrl$([Environment]::NewLine)")
 
     # The animation is optional: without it (or with a small window) the log is plain text.
-    $frames = Join-Path $cache 'snow-train-v1.frames.gz'
+    # Windows Terminal's fonts have Braille, which draws the scene sharp and unscaled; the
+    # classic console's fonts do not, so it gets the softer half-block version.
+    $style = if ($env:WT_SESSION) { 'snow-train' } else { 'snow-train-blocks' }
+    Get-ChildItem -LiteralPath $cache -Filter 'snow-train-v1*' | Remove-Item -Force
+    $frames = Join-Path $cache "$style-v2.frames.gz"
     if ($env:PACKWIZ_SYNC_PLAIN -ne '1' -and -not (Test-Path -LiteralPath $frames -PathType Leaf)) {
         try {
-            Get-Download -Url ($packUrl -replace '/pack\.toml$', '/installer/snow-train.frames.gz') -Destination $frames
+            Get-Download -Url ($packUrl -replace '/pack\.toml$', "/installer/$style.frames.gz") -Destination $frames
         } catch { }
     }
     Start-Ui -FramesPath $frames -Title ("$packName $packVersion  " + [char]0x00B7 + "  Minecraft $minecraftVersion  " +
