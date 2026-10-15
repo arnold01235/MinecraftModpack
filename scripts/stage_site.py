@@ -37,6 +37,10 @@ def stage(root, output, base_url):
         raise ResolutionError("Site URL contains characters unsafe for the batch updater")
     script = script.replace("https://YOUR-USERNAME.github.io/YOUR-REPO/pack.toml", pack_url)
     (output / "sync-mods.cmd").write_bytes(script.replace("\r\n", "\n").replace("\n", "\r\n").encode("utf-8"))
+    # The updater's optional animation (ascii.rest "snow train", MIT) and its licence.
+    (output / "installer").mkdir()
+    for name, published in [("snow-train.frames.gz", "snow-train.frames.gz"), ("LICENSE-ascii.rest", "LICENSE-ascii.rest.txt")]:
+        shutil.copyfile(root / "client/visuals" / name, output / "installer" / published)
     (output / ".nojekyll").write_text("", encoding="utf-8")
     return pack_url
 
