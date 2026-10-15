@@ -1,0 +1,12 @@
+name = "Immersive structures"
+filename = "[neoforge]imst-2.2.1c.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/CVBAErky/versions/1fkB1mdT/%5Bneoforge%5Dimst-2.2.1c.jar"
+hash-format = "sha512"
+hash = "b1affee3278a7e1c0dbd792e0b325513f2fa9f7253a12c41120b063d170223b861591f7e8af0b11e97525f1fa684a8697d1a2cede5984ba38f23fd382cff53db"
+
+[update.modrinth]
+mod-id = "CVBAErky"
+version = "1fkB1mdT"

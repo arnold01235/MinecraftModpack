@@ -1,0 +1,12 @@
+name = "Cave Dweller ReEvolved"
+filename = "cave_dweller-1.3b.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/82njC4TT/versions/3cKL2M1m/cave_dweller-1.3b.jar"
+hash-format = "sha512"
+hash = "4d59575636c9ed999c1cdce90d9b97784fc90f73c1c3e22b1c61f148cef281b611af199a92f501f1a3849e856af22750912cb580cd12b7b34b907bf658cae70a"
+
+[update.modrinth]
+mod-id = "82njC4TT"
+version = "3cKL2M1m"

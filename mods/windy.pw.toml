@@ -1,0 +1,12 @@
+name = "Windy"
+filename = "windy-1.1.1+1.21-neoforge.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/EwYg6C78/versions/xcBfBf8H/windy-1.1.1%2B1.21-neoforge.jar"
+hash-format = "sha512"
+hash = "01e3aacc6dd41e837943454a3a8d60717d8958832e3053e329de6dd44c65c958111f579918683da4887b0cca9677398b42edf9d2660f0ad566752ddf80977f29"
+
+[update.modrinth]
+mod-id = "EwYg6C78"
+version = "xcBfBf8H"

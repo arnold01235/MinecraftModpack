@@ -1,0 +1,59 @@
+name: Publish packwiz pack
+
+on:
+  workflow_dispatch:
+    inputs:
+      verify_downloads:
+        description: Download every mod and check its checksum before publishing
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Test project tooling
+        run: python -m unittest discover -s tests -v
+      - name: Validate complete pack
+        run: python scripts/validate_pack.py
+      - name: Verify every remote download
+        if: inputs.verify_downloads
+        run: python scripts/validate_pack.py --downloads
+      - name: Configure Pages
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Stage pack and configure client URL
+        env:
+          SITE_BASE_URL: ${{ steps.pages.outputs.base_url }}
+        run: python scripts/stage_site.py --base-url "$SITE_BASE_URL"
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

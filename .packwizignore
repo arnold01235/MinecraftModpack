@@ -1,0 +1,25 @@
+# Pack source/build tools must never be copied into a Minecraft instance.
+.git/
+.github/
+.cache/
+dist/
+sources/
+scripts/
+tests/
+client/
+__pycache__/
+*.pyc
+*.md
+temp-modlist.txt
+pack.toml.in
+.gitignore
+.gitattributes
+.packwizignore
+.packwiz-sync/
+packwiz.json
+packwiz-installer*.jar
+*.cmd
+*.bat
+*.zip
+*.mrpack
+HANDOVER.txt

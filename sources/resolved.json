@@ -1,0 +1,3684 @@
+{
+  "sodium-neoforge-0.6.13+mc1.21.1.jar": {
+    "filename": "sodium-neoforge-0.6.13+mc1.21.1.jar",
+    "name": "Sodium",
+    "side": "client",
+    "provider": "modrinth",
+    "project_id": "AANobbMI",
+    "version_id": "Pb3OXVqC",
+    "url": "https://cdn.modrinth.com/data/AANobbMI/versions/Pb3OXVqC/sodium-neoforge-0.6.13%2Bmc1.21.1.jar",
+    "hash_format": "sha512",
+    "hash": "ce58f34d05d96c0a109a5cea23c741f6bdb2e6be31fc087c5989274cefca5f10ba0c08c62083cf554a51f2c7667bf46e4164383f675c844e77633aef2659996b",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://api.modrinth.com/v2/project/sodium/version"
+  },
+  "[neoforge]imst-2.2.1c.jar": {
+    "filename": "[neoforge]imst-2.2.1c.jar",
+    "name": "Immersive structures",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "CVBAErky",
+    "version_id": "1fkB1mdT",
+    "url": "https://cdn.modrinth.com/data/CVBAErky/versions/1fkB1mdT/%5Bneoforge%5Dimst-2.2.1c.jar",
+    "hash_format": "sha512",
+    "hash": "b1affee3278a7e1c0dbd792e0b325513f2fa9f7253a12c41120b063d170223b861591f7e8af0b11e97525f1fa684a8697d1a2cede5984ba38f23fd382cff53db",
+    "game_versions": [
+      "1.21",
+      "1.21.1",
+      "1.21.2",
+      "1.21.3",
+      "1.21.4",
+      "1.21.5",
+      "1.21.6",
+      "1.21.7",
+      "1.21.8",
+      "1.21.9",
+      "1.21.10",
+      "1.21.11"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/CVBAErky/version/1fkB1mdT"
+  },
+  "accessories-neoforge-1.1.0-beta.53+1.21.1.jar": {
+    "filename": "accessories-neoforge-1.1.0-beta.53+1.21.1.jar",
+    "name": "Accessories",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "jtmvUHXj",
+    "version_id": "Fb55Fgjz",
+    "url": "https://cdn.modrinth.com/data/jtmvUHXj/versions/Fb55Fgjz/accessories-neoforge-1.1.0-beta.53%2B1.21.1.jar",
+    "hash_format": "sha512",
+    "hash": "baafa9a5e48c17c243d45b6260095ffef2ad00e4e970aafc5b1ca9ab5f4a542b18b0fb35d4584318791edbaf00a3c44806f62062513d991383192aca4df27a07",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "ccKDOlHs",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/jtmvUHXj/version/Fb55Fgjz"
+  },
+  "aether-1.21.1-1.5.10-neoforge.jar": {
+    "filename": "aether-1.21.1-1.5.10-neoforge.jar",
+    "name": "The Aether",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "YhmgMVyu",
+    "version_id": "K5X5qMwG",
+    "url": "https://cdn.modrinth.com/data/YhmgMVyu/versions/K5X5qMwG/aether-1.21.1-1.5.10-neoforge.jar",
+    "hash_format": "sha512",
+    "hash": "4b004daed6d09362646e204f068dee28e80523e705e862778036c492775672071ca9cc95f9574a842f34d2e058b46138c6154c6a2f251dcdad7a8803907dad46",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "ccKDOlHs",
+        "file_name": null,
+        "dependency_type": "required"
+      },
+      {
+        "version_id": "Avp7HDTx",
+        "project_id": "jtmvUHXj",
+        "file_name": null,
+        "dependency_type": "embedded"
+      },
+      {
+        "version_id": "30nL1EiU",
+        "project_id": "sq1f0DCq",
+        "file_name": null,
+        "dependency_type": "embedded"
+      }
+    ],
+    "source": "https://modrinth.com/mod/YhmgMVyu/version/K5X5qMwG"
+  },
+  "AmbientSounds_NEOFORGE_v6.3.8_mc1.21.1.jar": {
+    "filename": "AmbientSounds_NEOFORGE_v6.3.8_mc1.21.1.jar",
+    "name": "AmbientSounds",
+    "side": "client",
+    "provider": "modrinth",
+    "project_id": "fM515JnW",
+    "version_id": "RZyxhsqY",
+    "url": "https://cdn.modrinth.com/data/fM515JnW/versions/RZyxhsqY/AmbientSounds_NEOFORGE_v6.3.8_mc1.21.1.jar",
+    "hash_format": "sha512",
+    "hash": "292a7a61836eb6db31ec225ae4a0dc838416638618635ff60c07740bdc327df44ac0be7788c0ed44912935eb4d85b987fb6c594d11e4604f2d24fa21eabc672a",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "OsZiaDHq",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/fM515JnW/version/RZyxhsqY"
+  },
+  "appleskin-neoforge-mc1.21-3.0.9.jar": {
+    "filename": "appleskin-neoforge-mc1.21-3.0.9.jar",
+    "name": "AppleSkin",
+    "side": "client",
+    "provider": "modrinth",
+    "project_id": "EsAfCjCV",
+    "version_id": "uAKA6Laj",
+    "url": "https://cdn.modrinth.com/data/EsAfCjCV/versions/uAKA6Laj/appleskin-neoforge-mc1.21-3.0.9.jar",
+    "hash_format": "sha512",
+    "hash": "f4ea46273e407334b63e262e2555c9a8204f7b5e60f23f272fbaa83ad9e88800e0ee186aca840710df2dbe0a18b37758695fef2ae1a902c10b3706e3de772937",
+    "game_versions": [
+      "1.21",
+      "1.21.1",
+      "1.21.2"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/EsAfCjCV/version/uAKA6Laj"
+  },
+  "Aquaculture-1.21.1-2.7.21.jar": {
+    "filename": "Aquaculture-1.21.1-2.7.21.jar",
+    "name": "Aquaculture 2",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "Vl1uNAuy",
+    "version_id": "5pbz0ETj",
+    "url": "https://cdn.modrinth.com/data/Vl1uNAuy/versions/5pbz0ETj/Aquaculture-1.21.1-2.7.21.jar",
+    "hash_format": "sha512",
+    "hash": "532571f9a9d336d7da4b175f482c2d99c31f440841f9d20dd58137e1df3218180badd54d178559fdc0ac3e08ff94eaf3f1c4d133b9e60c66775971c0a557386d",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/Vl1uNAuy/version/5pbz0ETj"
+  },
+  "architectury-13.0.8-neoforge.jar": {
+    "filename": "architectury-13.0.8-neoforge.jar",
+    "name": "Architectury API",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "lhGA9TYQ",
+    "version_id": "ZxYGwlk0",
+    "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/ZxYGwlk0/architectury-13.0.8-neoforge.jar",
+    "hash_format": "sha512",
+    "hash": "65e3664953385d880320dd6bb818bcb96d361c07c53e2a7f65e64c6a47720ee26b233224ae9cad465ef0b2bbaefdaf30fb0175a983cecd91de058817d6fcf57e",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/lhGA9TYQ/version/ZxYGwlk0"
+  },
+  "ars_nouveau-1.21.1-5.11.5.jar": {
+    "filename": "ars_nouveau-1.21.1-5.11.5.jar",
+    "name": "Ars Nouveau",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "TKB6INcv",
+    "version_id": "8VP4YHYr",
+    "url": "https://cdn.modrinth.com/data/TKB6INcv/versions/8VP4YHYr/ars_nouveau-1.21.1-5.11.5.jar",
+    "hash_format": "sha512",
+    "hash": "7849418f985a665bfccb8e790ab560f9cf81354b2eab03eb6e03e55f270bbc611a66ecc11e09d539f2e5755bc7b680b7fa85b46c49bdee9211fb1eb9f4cfb1bc",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/TKB6INcv/version/8VP4YHYr"
+  },
+  "artifacts-neoforge-13.2.1.jar": {
+    "filename": "artifacts-neoforge-13.2.1.jar",
+    "name": "Artifacts",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "P0Mu4wcQ",
+    "version_id": "rGPw090r",
+    "url": "https://cdn.modrinth.com/data/P0Mu4wcQ/versions/rGPw090r/artifacts-neoforge-13.2.1.jar",
+    "hash_format": "sha512",
+    "hash": "4e5ccc2733e2ede833e6c4ae6b44751eab5ac48857055b61fdcbb6434c7d867c17b438eea9f226f6af652ee397f3fb4d7583f263a5d706d730ff7243ace865dc",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "9s6osm5g",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "vvuO3ImH",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "5aaWibi9",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "jtmvUHXj",
+        "file_name": null,
+        "dependency_type": "optional"
+      }
+    ],
+    "source": "https://modrinth.com/mod/P0Mu4wcQ/version/rGPw090r"
+  },
+  "atmospheric-1.21.1-7.0.1.jar": {
+    "filename": "atmospheric-1.21.1-7.0.1.jar",
+    "name": "Atmospheric",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "U9sJOFmJ",
+    "version_id": "XIvPRE4O",
+    "url": "https://cdn.modrinth.com/data/U9sJOFmJ/versions/XIvPRE4O/atmospheric-1.21.1-7.0.1.jar",
+    "hash_format": "sha512",
+    "hash": "137a56f031a303116dd9245cde3b20047a523fa3215df3e8ab51590249a469a60b1e57536fdb578b6feafc89f4075f85ccd76af52dcf181b6b2df032dec7aafb",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "VsM5EDoI",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/U9sJOFmJ/version/XIvPRE4O"
+  },
+  "Auroras-1.21-1.6.2.jar": {
+    "filename": "Auroras-1.21-1.6.2.jar",
+    "name": "Auroras",
+    "side": "client",
+    "provider": "modrinth",
+    "project_id": "Q7VPWopC",
+    "version_id": "L0KPECkM",
+    "url": "https://cdn.modrinth.com/data/Q7VPWopC/versions/L0KPECkM/Auroras-1.21-1.6.2.jar",
+    "hash_format": "sha512",
+    "hash": "221133d374299f4c224d30798ee9015cef0c6d595ae5f01c17a1d6d8a5644b1c438a582d23ec6095dea434bfee2ef29485a2cb58d80fa8785102608e1687a8b0",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "YhmgMVyu",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "JaCEZUhg",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "JD2NSu5O",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "YL57xq9U",
+        "file_name": null,
+        "dependency_type": "optional"
+      }
+    ],
+    "source": "https://modrinth.com/mod/Q7VPWopC/version/L0KPECkM"
+  },
+  "balm-neoforge-1.21.1-21.0.58.jar": {
+    "filename": "balm-neoforge-1.21.1-21.0.58.jar",
+    "name": "Balm",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "MBAkmtvl",
+    "version_id": "3XiinKbh",
+    "url": "https://cdn.modrinth.com/data/MBAkmtvl/versions/3XiinKbh/balm-neoforge-1.21.1-21.0.58.jar",
+    "hash_format": "sha512",
+    "hash": "96482428a7e67aea9a5ed6304cbc72baafd157e52d73d07f240d9704f9715bf8fb1d2d45bcaad1329b82a6f46287768f63220da702fb2c19a9a27fb9d9b9cc92",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/MBAkmtvl/version/3XiinKbh"
+  },
+  "BetterAdvancements-NeoForge-1.21.1-0.4.3.21.jar": {
+    "filename": "BetterAdvancements-NeoForge-1.21.1-0.4.3.21.jar",
+    "name": "Better Advancements",
+    "side": "client",
+    "provider": "modrinth",
+    "project_id": "Q2OqKxDG",
+    "version_id": "FjTYILOi",
+    "url": "https://cdn.modrinth.com/data/Q2OqKxDG/versions/FjTYILOi/BetterAdvancements-NeoForge-1.21.1-0.4.3.21.jar",
+    "hash_format": "sha512",
+    "hash": "b3deafd146dc3ea6e879fbc92f00de5797319a1aa620fb3b39be64c19271dab2efa07f824cda7139f8c22f2524ea413949357f5469bb6de584d1386de069c6b7",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/Q2OqKxDG/version/FjTYILOi"
+  },
+  "BetterF3-11.0.3-NeoForge-1.21.1.jar": {
+    "filename": "BetterF3-11.0.3-NeoForge-1.21.1.jar",
+    "name": "BetterF3",
+    "side": "client",
+    "provider": "modrinth",
+    "project_id": "8shC1gFX",
+    "version_id": "maXNB1dn",
+    "url": "https://cdn.modrinth.com/data/8shC1gFX/versions/maXNB1dn/BetterF3-11.0.3-NeoForge-1.21.1.jar",
+    "hash_format": "sha512",
+    "hash": "59c36a882669399dce2110db42df05e8fe935a2e1194c4bac49abffc3129b2e19373dfe3c4a3d2f8b22f21b1d66ad8cbd653944ce0a71ae05d3d65528d1b7514",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "9s6osm5g",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/8shC1gFX/version/maXNB1dn"
+  },
+  "blossom-blade-1.3.jar": {
+    "filename": "blossom-blade-1.3.jar",
+    "name": "Blossom Blade",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "UMmSTwE0",
+    "version_id": "k9trRweh",
+    "url": "https://cdn.modrinth.com/data/UMmSTwE0/versions/k9trRweh/blossom-blade-1.3.jar",
+    "hash_format": "sha512",
+    "hash": "07b536e60b93984d937c34497c9fed5a3b6bf6a2b75b8222a4ee667a858c8d2f3026cffffa94212d61d27e2ccd666d77e504e5c487b583f034885a72624ed158",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "fabric",
+      "forge",
+      "neoforge",
+      "quilt"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/UMmSTwE0/version/k9trRweh"
+  },
+  "blueprint-1.21.1-8.1.0.jar": {
+    "filename": "blueprint-1.21.1-8.1.0.jar",
+    "name": "Blueprint",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "VsM5EDoI",
+    "version_id": "5JOCYuQM",
+    "url": "https://cdn.modrinth.com/data/VsM5EDoI/versions/5JOCYuQM/blueprint-1.21.1-8.1.0.jar",
+    "hash_format": "sha512",
+    "hash": "8f4d44efb8ad82a99ccb0d3b0ab0ec2cbca0536ae390dc3cf6f1deeb9d1705bd42feb5f2addfd06ff8ddf87029359cf52b4d4f6164f50e537e84c7f76db611e4",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/VsM5EDoI/version/5JOCYuQM"
+  },
+  "carryon-neoforge-1.21.1-2.2.4.4.jar": {
+    "filename": "carryon-neoforge-1.21.1-2.2.4.4.jar",
+    "name": "Carry On",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "joEfVgkn",
+    "version_id": "cgZi7nC7",
+    "url": "https://cdn.modrinth.com/data/joEfVgkn/versions/cgZi7nC7/carryon-neoforge-1.21.1-2.2.4.4.jar",
+    "hash_format": "sha512",
+    "hash": "8b78ddc55ce6e28d4457dadb5aca4cd32e16d2db3c395276993e67c6acc108ced55e3e3d9a01aa5bf1da0d4fccab6183ba62acc1421054c0b2ecae9bd03cabf6",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/joEfVgkn/version/cgZi7nC7"
+  },
+  "cc-tweaked-1.21.1-forge-1.119.0.jar": {
+    "filename": "cc-tweaked-1.21.1-forge-1.119.0.jar",
+    "name": "CC: Tweaked",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "gu7yAYhd",
+    "version_id": "puxJkazX",
+    "url": "https://cdn.modrinth.com/data/gu7yAYhd/versions/puxJkazX/cc-tweaked-1.21.1-forge-1.119.0.jar",
+    "hash_format": "sha512",
+    "hash": "87c086049ecbb5c1cfbb8e2180abc6902d2c70f2b07d4a37652f931d4c334e7304b1df1206a98b109c40e5dea719a22a335f8c0b09b330646bd05c971a8edb62",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/gu7yAYhd/version/puxJkazX"
+  },
+  "chat_heads-0.15.1-neoforge-1.21.jar": {
+    "filename": "chat_heads-0.15.1-neoforge-1.21.jar",
+    "name": "Chat Heads",
+    "side": "client",
+    "provider": "modrinth",
+    "project_id": "Wb5oqrBJ",
+    "version_id": "8oDa7chj",
+    "url": "https://cdn.modrinth.com/data/Wb5oqrBJ/versions/8oDa7chj/chat_heads-0.15.1-neoforge-1.21.jar",
+    "hash_format": "sha512",
+    "hash": "779c264a4ad54f9fe462c313ba40968ae7fc206d282d5895c433136d510bfa29a86a3ba32e83bbe819c07fc06e75cf8cb2e4606120d8038b6b24378fd556f11d",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "9s6osm5g",
+        "file_name": null,
+        "dependency_type": "optional"
+      }
+    ],
+    "source": "https://modrinth.com/mod/Wb5oqrBJ/version/8oDa7chj"
+  },
+  "chatanimation-neoforge-1.21.1-1.1.3.jar": {
+    "filename": "chatanimation-neoforge-1.21.1-1.1.3.jar",
+    "name": "Chat Animation [Smooth Chat]",
+    "side": "client",
+    "provider": "modrinth",
+    "project_id": "DnNYdJsx",
+    "version_id": "fo7IaI89",
+    "url": "https://cdn.modrinth.com/data/DnNYdJsx/versions/fo7IaI89/chatanimation-neoforge-1.21.1-1.1.3.jar",
+    "hash_format": "sha512",
+    "hash": "e7f8b57e72b0a82dd549638303ad5e94aad7dd712769352deff4d215ed747654190717e496a3be49a3958c99e1712a9c66713404f7f5eeac62debcc737ee51d6",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/DnNYdJsx/version/fo7IaI89"
+  },
+  "Chunky-NeoForge-1.4.23.jar": {
+    "filename": "Chunky-NeoForge-1.4.23.jar",
+    "name": "Chunky",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "fALzjamp",
+    "version_id": "LuFhm4eU",
+    "url": "https://cdn.modrinth.com/data/fALzjamp/versions/LuFhm4eU/Chunky-NeoForge-1.4.23.jar",
+    "hash_format": "sha512",
+    "hash": "2db769dd723f243a21e1881e7c9f825e9c193da6f2bed454b70cb6fa9e51c57f63fdcf017c0657bbd26f7bba30815413e27c74d3c7be0783390a96ee9baa4bf7",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/fALzjamp/version/LuFhm4eU"
+  },
+  "citadel-2.7.0-1.21.1.jar": {
+    "filename": "citadel-2.7.0-1.21.1.jar",
+    "name": "Citadel",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "jJfV67b1",
+    "version_id": "uzrkhBpn",
+    "url": "https://cdn.modrinth.com/data/jJfV67b1/versions/uzrkhBpn/citadel-2.7.0-1.21.1.jar",
+    "hash_format": "sha512",
+    "hash": "d77d8d25279d877ef94f1e48e770547ba2fbee2f01ed151aa932c6e36ed5dd7f846db096f7b1f9c13f49a3e2fd5de434d20a0924a3232e06d20c7ca5f46e47f6",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/jJfV67b1/version/uzrkhBpn"
+  },
+  "cloth-config-15.0.140-neoforge.jar": {
+    "filename": "cloth-config-15.0.140-neoforge.jar",
+    "name": "Cloth Config API",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "9s6osm5g",
+    "version_id": "izKINKFg",
+    "url": "https://cdn.modrinth.com/data/9s6osm5g/versions/izKINKFg/cloth-config-15.0.140-neoforge.jar",
+    "hash_format": "sha512",
+    "hash": "aaf9b010955b8cd294e5a92f069985b18729fd5e2cf22d351f1dff9680f15488688803ec41e77e941cbde130ceb535014ca4c868047d80ab69c2d508e216654d",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/9s6osm5g/version/izKINKFg"
+  },
+  "Clumps-neoforge-1.21.1-19.0.0.1.jar": {
+    "filename": "Clumps-neoforge-1.21.1-19.0.0.1.jar",
+    "name": "Clumps",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "Wnxd13zP",
+    "version_id": "jo7lDoK4",
+    "url": "https://cdn.modrinth.com/data/Wnxd13zP/versions/jo7lDoK4/Clumps-neoforge-1.21.1-19.0.0.1.jar",
+    "hash_format": "sha512",
+    "hash": "314d8d8e640d73041f27e0f3f2cad7aad8b4c77dbd7fb31700ef7760362261f77085eed5289555c725d99c3f47a114e7290cd608f39c9f0f12ef74958463bdcc",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/Wnxd13zP/version/jo7lDoK4"
+  },
+  "comforts-neoforge-9.0.5+1.21.1.jar": {
+    "filename": "comforts-neoforge-9.0.5+1.21.1.jar",
+    "name": "Comforts",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "SaCpeal4",
+    "version_id": "3kpPjcTc",
+    "url": "https://cdn.modrinth.com/data/SaCpeal4/versions/3kpPjcTc/comforts-neoforge-9.0.5%2B1.21.1.jar",
+    "hash_format": "sha512",
+    "hash": "e9de2952545e9e773a6e78fc501e8cd231ea19750c30404355b71df9928eb5bd0921a4429aeca9d0fa10e67717f77fcf7a2aae117ac953b8f7de246b0ad685e4",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/SaCpeal4/version/3kpPjcTc"
+  },
+  "connectedglass-1.1.14-neoforge-mc1.21.jar": {
+    "filename": "connectedglass-1.1.14-neoforge-mc1.21.jar",
+    "name": "Connected Glass",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "DghO0R02",
+    "version_id": "vF1S4Mfu",
+    "url": "https://cdn.modrinth.com/data/DghO0R02/versions/vF1S4Mfu/connectedglass-1.1.14-neoforge-mc1.21.jar",
+    "hash_format": "sha512",
+    "hash": "c0db64151d850d568386b4c287e75fa882a4590802a0a9bc0eec7d47240e56dbc3215b4edede97204d7817afc097cba5e438a66eb58b956213b2289e342823a5",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "p19vrgc2",
+        "file_name": null,
+        "dependency_type": "required"
+      },
+      {
+        "version_id": null,
+        "project_id": "B0g2vT6l",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "rOUBggPv",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/DghO0R02/version/vF1S4Mfu"
+  },
+  "connector-2.0.0-beta.14+1.21.1-full.jar": {
+    "filename": "connector-2.0.0-beta.14+1.21.1-full.jar",
+    "name": "Sinytra Connector",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "u58R1TMW",
+    "version_id": "1i8teo7m",
+    "url": "https://cdn.modrinth.com/data/u58R1TMW/versions/1i8teo7m/connector-2.0.0-beta.14%2B1.21.1-full.jar",
+    "hash_format": "sha512",
+    "hash": "6ed3168c2c7dad2606ada1fdf63ee412bb8bb5620718a702f6ac51310e671f2f93ab46fc96400e258f4433e51b96f9dd21441e1a8963d8b356c75b578e156dcc",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "FYpiwiBR",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "Aqlf1Shp",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/u58R1TMW/version/1i8teo7m"
+  },
+  "continuity-3.0.0+1.21.neoforge.jar": {
+    "filename": "continuity-3.0.0+1.21.neoforge.jar",
+    "name": "Continuity",
+    "side": "client",
+    "provider": "modrinth",
+    "project_id": "1IjD5062",
+    "version_id": "eXGUs5sy",
+    "url": "https://cdn.modrinth.com/data/1IjD5062/versions/eXGUs5sy/continuity-3.0.0%2B1.21.neoforge.jar",
+    "hash_format": "sha512",
+    "hash": "320b6def6073ce0ffc0ce2bd7cdb66324467ea3e7cec05508f32d78f65c60ff3e155394b94c60f62e059404ec0ca3fc6112987a5764a8f85241d3026a2ee4935",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "u58R1TMW",
+        "file_name": null,
+        "dependency_type": "required"
+      },
+      {
+        "version_id": null,
+        "project_id": "Aqlf1Shp",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/1IjD5062/version/eXGUs5sy"
+  },
+  "Controlling-neoforge-1.21.1-19.0.5.jar": {
+    "filename": "Controlling-neoforge-1.21.1-19.0.5.jar",
+    "name": "Controlling",
+    "side": "client",
+    "provider": "modrinth",
+    "project_id": "xv94TkTM",
+    "version_id": "FaNppCJJ",
+    "url": "https://cdn.modrinth.com/data/xv94TkTM/versions/FaNppCJJ/Controlling-neoforge-1.21.1-19.0.5.jar",
+    "hash_format": "sha512",
+    "hash": "bd01b2a38a869ea38e5f2a8fcd601e67ea9b132b9883c6ae752bc35dff6e94f6d47b965e31c1ee5c2f6a1221653549680da779fcb5319d199aec261d221d179e",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "fuuu3xnx",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/xv94TkTM/version/FaNppCJJ"
+  },
+  "copycats-3.0.4+mc.1.21.1-neoforge.jar": {
+    "filename": "copycats-3.0.4+mc.1.21.1-neoforge.jar",
+    "name": "Create: Copycats+",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "UT2M39wf",
+    "version_id": "kecZ0sl7",
+    "url": "https://cdn.modrinth.com/data/UT2M39wf/versions/kecZ0sl7/copycats-3.0.4%2Bmc.1.21.1-neoforge.jar",
+    "hash_format": "sha512",
+    "hash": "ecc98e659be66a71af0aee66a9f4c7c8838f4f0101402644929079ce7280a572a000e7e417905e1869a51d6e49ebbd601008f54585e07ee4ed01f2c4bc752bfe",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "u6dRKJwZ",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "LNytGWDc",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/UT2M39wf/version/kecZ0sl7"
+  },
+  "coroutil-neoforge-1.21.0-1.3.8.jar": {
+    "filename": "coroutil-neoforge-1.21.0-1.3.8.jar",
+    "name": "CoroUtil",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "rLLJ1OZM",
+    "version_id": "H2YXCYUY",
+    "url": "https://cdn.modrinth.com/data/rLLJ1OZM/versions/H2YXCYUY/coroutil-neoforge-1.21.0-1.3.8.jar",
+    "hash_format": "sha512",
+    "hash": "daae9e37acddedccad05e3f8e565f8b4c237f25b2462e043428f88b32fc27e4bc3a00955ed7426a7d7f93f068b4e96b37e2e42d121d40fdf94a31b6c2b7440e0",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/rLLJ1OZM/version/H2YXCYUY"
+  },
+  "create-1.21.1-6.0.10.jar": {
+    "filename": "create-1.21.1-6.0.10.jar",
+    "name": "Create",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "LNytGWDc",
+    "version_id": "UjX6dr61",
+    "url": "https://cdn.modrinth.com/data/LNytGWDc/versions/UjX6dr61/create-1.21.1-6.0.10.jar",
+    "hash_format": "sha512",
+    "hash": "11cc8fc049d2f67f6548c7abfada6b82a3adb5c7ca410a742de04bbca76e03862c518721b88d806f6e6d768a4d68531fdb903a85859b25d1484d550cc7bafd4b",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/LNytGWDc/version/UjX6dr61"
+  },
+  "create-aeronautics-bundled-1.21.1-1.2.1.jar": {
+    "filename": "create-aeronautics-bundled-1.21.1-1.2.1.jar",
+    "name": "Create Aeronautics",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "oWaK0Q19",
+    "version_id": "YhZLrAFC",
+    "url": "https://cdn.modrinth.com/data/oWaK0Q19/versions/YhZLrAFC/create-aeronautics-bundled-1.21.1-1.2.1.jar",
+    "hash_format": "sha512",
+    "hash": "c7899f8a693cf1b4c17a31faf64e631383f6df331b82b517ed6abe01b0464a9f10b226f0336fa8611c5af514375716c4d009d55c7f92640445c68239b63ebc03",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "LNytGWDc",
+        "file_name": null,
+        "dependency_type": "required"
+      },
+      {
+        "version_id": null,
+        "project_id": "T9PomCSv",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/oWaK0Q19/version/YhZLrAFC"
+  },
+  "create-enchantment-industry-2.3.1.jar": {
+    "filename": "create-enchantment-industry-2.3.1.jar",
+    "name": "Create: Enchantment Industry",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "JWGBpFUP",
+    "version_id": "zjSKnkVT",
+    "url": "https://cdn.modrinth.com/data/JWGBpFUP/versions/zjSKnkVT/create-enchantment-industry-2.3.1.jar",
+    "hash_format": "sha512",
+    "hash": "0e83fef0ae333a2bad9cff09cb661d72c0ab48a5b8a97a06c946d54da1eb967b7bd532e780845ff62d19f3bb094daed07f63daec7c1caaa1aeb5050ec4bfcd7c",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "dzb1a5WV",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/JWGBpFUP/version/zjSKnkVT"
+  },
+  "createaddition-1.5.11.jar": {
+    "filename": "createaddition-1.5.11.jar",
+    "name": "Create Crafts & Additions",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "kU1G12Nn",
+    "version_id": "3ptU8Nq9",
+    "url": "https://cdn.modrinth.com/data/kU1G12Nn/versions/3ptU8Nq9/createaddition-1.5.11.jar",
+    "hash_format": "sha512",
+    "hash": "3a5066223ea6b583cc0bbe9f2bb0adbe7d7ff90625291f483a0f4bb1df3d6c5da1dfd3cfcfec4e9d90eebc4732328c64127e835f96dfe29016642728e21c1b97",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": "UjX6dr61",
+        "project_id": "LNytGWDc",
+        "file_name": null,
+        "dependency_type": "required"
+      },
+      {
+        "version_id": null,
+        "project_id": "u6dRKJwZ",
+        "file_name": null,
+        "dependency_type": "optional"
+      }
+    ],
+    "source": "https://modrinth.com/mod/kU1G12Nn/version/3ptU8Nq9"
+  },
+  "createbigcannons-5.11.3+mc.1.21.1.jar": {
+    "filename": "createbigcannons-5.11.3+mc.1.21.1.jar",
+    "name": "Create Big Cannons",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "GWp4jCJj",
+    "version_id": "bsGaXKEd",
+    "url": "https://cdn.modrinth.com/data/GWp4jCJj/versions/bsGaXKEd/createbigcannons-5.11.3%2Bmc.1.21.1.jar",
+    "hash_format": "sha512",
+    "hash": "f75a8bbdc9fc67c09eac6d78e8ad92583a342d54ab70e91923c52cd9b42987765e9a84e43e9c3e175593982aed80fe960a96561d9cd1ed62c4c966818346b466",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "B3pb093D",
+        "file_name": null,
+        "dependency_type": "required"
+      },
+      {
+        "version_id": null,
+        "project_id": "LNytGWDc",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/GWp4jCJj/version/bsGaXKEd"
+  },
+  "createcclogistics-1.21.1-0.3.6.jar": {
+    "filename": "createcclogistics-1.21.1-0.3.6.jar",
+    "name": "Create: CC Total Logistics",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "FuyTRq2g",
+    "version_id": "24hfd7Lg",
+    "url": "https://cdn.modrinth.com/data/FuyTRq2g/versions/24hfd7Lg/createcclogistics-1.21.1-0.3.6.jar",
+    "hash_format": "sha512",
+    "hash": "d3217ac82366f80de3413fefc1430bcb45e350761430011528a547e6ff875ef5f733f5fbe0477e179d3f47b859bc38379550bcb75a11b9f807d77357440ec8f0",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "gu7yAYhd",
+        "file_name": null,
+        "dependency_type": "required"
+      },
+      {
+        "version_id": null,
+        "project_id": "LNytGWDc",
+        "file_name": null,
+        "dependency_type": "required"
+      },
+      {
+        "version_id": null,
+        "project_id": "ordsPcFz",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/FuyTRq2g/version/24hfd7Lg"
+  },
+  "CreateDragonsPlus-1.10.1.jar": {
+    "filename": "CreateDragonsPlus-1.10.1.jar",
+    "name": "Create: Dragons Plus",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "dzb1a5WV",
+    "version_id": "r0TIh2nX",
+    "url": "https://cdn.modrinth.com/data/dzb1a5WV/versions/r0TIh2nX/CreateDragonsPlus-1.10.1.jar",
+    "hash_format": "sha512",
+    "hash": "cb8ff236250d346f7c76d534a5cd12f75b081d05b542c54cac49cc430a4539061f05562f10b8ba8503423fb6044666418a355aeae31a4e34615d0da41fa14967",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "LNytGWDc",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/dzb1a5WV/version/r0TIh2nX"
+  },
+  "createliquidfuel-2.1.1-1.21.1.jar": {
+    "filename": "createliquidfuel-2.1.1-1.21.1.jar",
+    "name": "Create: Liquid Fuel",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "sH9tXU9f",
+    "version_id": "7oNrI3y9",
+    "url": "https://cdn.modrinth.com/data/sH9tXU9f/versions/7oNrI3y9/createliquidfuel-2.1.1-1.21.1.jar",
+    "hash_format": "sha512",
+    "hash": "01a8995f09105e1c4cfe001a4674c208c3ed0e82a7612ea3891b2482a9fcbe1ccec185125cf40fd5802d153bbed5f1d7a057aefe40ba750476f3000936d3c71e",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "LNytGWDc",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/sH9tXU9f/version/7oNrI3y9"
+  },
+  "createnuclear-1.3.2-beta.3-neoforge.jar": {
+    "filename": "createnuclear-1.3.2-beta.3-neoforge.jar",
+    "name": "Create Nuclear",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "z611fdf7",
+    "version_id": "waO2BSHO",
+    "url": "https://cdn.modrinth.com/data/z611fdf7/versions/waO2BSHO/createnuclear-1.3.2-beta.3-neoforge.jar",
+    "hash_format": "sha512",
+    "hash": "39d9691d8f00f375a438193139c30fe60032cf04cd99d83fa428fefef5c8ed79d49d8f09b5f0e57fb4b2c4058fc4c2bad942a0913dd885f701a5e9f0d9d2f36f",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "fRiHVvU7",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "u6dRKJwZ",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "LNytGWDc",
+        "file_name": null,
+        "dependency_type": "required"
+      },
+      {
+        "version_id": null,
+        "project_id": "nfn13YXA",
+        "file_name": null,
+        "dependency_type": "optional"
+      }
+    ],
+    "source": "https://modrinth.com/mod/z611fdf7/version/waO2BSHO"
+  },
+  "createoreexcavation-1.21-1.6.8.jar": {
+    "filename": "createoreexcavation-1.21-1.6.8.jar",
+    "name": "Create Ore Excavation",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "ResbpANg",
+    "version_id": "tivxiPTo",
+    "url": "https://cdn.modrinth.com/data/ResbpANg/versions/tivxiPTo/createoreexcavation-1.21-1.6.8.jar",
+    "hash_format": "sha512",
+    "hash": "844ae32ff0d22f4d3c83db3bae2f6edc0f74cd1a530f900bf18829838d5a354b1e439e52688416130d9fd9a52c3310458bbdbc7458f4c1c1d8ffb088ae802d32",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "LNytGWDc",
+        "file_name": null,
+        "dependency_type": "required"
+      },
+      {
+        "version_id": null,
+        "project_id": "gu7yAYhd",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "u6dRKJwZ",
+        "file_name": null,
+        "dependency_type": "optional"
+      }
+    ],
+    "source": "https://modrinth.com/mod/ResbpANg/version/tivxiPTo"
+  },
+  "CreativeCore_NEOFORGE_v2.13.38_mc1.21.1.jar": {
+    "filename": "CreativeCore_NEOFORGE_v2.13.38_mc1.21.1.jar",
+    "name": "CreativeCore",
+    "side": "client",
+    "provider": "modrinth",
+    "project_id": "OsZiaDHq",
+    "version_id": "ObUu8hxJ",
+    "url": "https://cdn.modrinth.com/data/OsZiaDHq/versions/ObUu8hxJ/CreativeCore_NEOFORGE_v2.13.38_mc1.21.1.jar",
+    "hash_format": "sha512",
+    "hash": "33ecac767a2ff2bcec96a0a1d2126f2344a82b59b7b4981695e5e2347c465f5c2004e9386a33c84ec0143d36dde50efc0afe7aa262b9a6b927910cdea064c428",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/OsZiaDHq/version/ObUu8hxJ"
+  },
+  "curios-neoforge-9.5.1+1.21.1.jar": {
+    "filename": "curios-neoforge-9.5.1+1.21.1.jar",
+    "name": "Curios API",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "vvuO3ImH",
+    "version_id": "yohfFbgD",
+    "url": "https://cdn.modrinth.com/data/vvuO3ImH/versions/yohfFbgD/curios-neoforge-9.5.1%2B1.21.1.jar",
+    "hash_format": "sha512",
+    "hash": "5981a267686b744e7e3c227f78cbcd5267c14ac6979a28e814695f4589273998563147207fef4a5cdb7cdbdc39797cd95d9e4abadb55869f18e02a38d0654ae5",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/vvuO3ImH/version/yohfFbgD"
+  },
+  "DistantHorizons-3.0.3-b-1.21.1-fabric-neoforge.jar": {
+    "filename": "DistantHorizons-3.0.3-b-1.21.1-fabric-neoforge.jar",
+    "name": "Distant Horizons",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "uCdwusMi",
+    "version_id": "oYXIfeus",
+    "url": "https://cdn.modrinth.com/data/uCdwusMi/versions/oYXIfeus/DistantHorizons-3.0.3-b-1.21.1-fabric-neoforge.jar",
+    "hash_format": "sha512",
+    "hash": "8b39994ee6c5d71b8afacc80c2d13dd92fad10281374392c0049d1b6aebc823d7e137125268dee7383d3ff753eacf708fbe87d773cf0087d7b6057a05cf18ad3",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "fabric",
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/uCdwusMi/version/oYXIfeus"
+  },
+  "dungeons-and-taverns-v4.4.4.jar": {
+    "filename": "dungeons-and-taverns-v4.4.4.jar",
+    "name": "Dungeons and Taverns",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "tpehi7ww",
+    "version_id": "BYUUUeZA",
+    "url": "https://cdn.modrinth.com/data/tpehi7ww/versions/BYUUUeZA/dungeons-and-taverns-v4.4.4.jar",
+    "hash_format": "sha512",
+    "hash": "83069dc336bcc212059f753923373d9522aa5953bf4b4fe2a8cfa666b4e28d2d017daa66c4b35e315c3be8d1ad60c2872879dd47cc1f47665ebbfd102da76976",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/tpehi7ww/version/BYUUUeZA"
+  },
+  "EasyAnvils-v21.1.0-1.21.1-NeoForge.jar": {
+    "filename": "EasyAnvils-v21.1.0-1.21.1-NeoForge.jar",
+    "name": "Easy Anvils",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "OZBR5JT5",
+    "version_id": "fSQSKhdF",
+    "url": "https://cdn.modrinth.com/data/OZBR5JT5/versions/fSQSKhdF/EasyAnvils-v21.1.0-1.21.1-NeoForge.jar",
+    "hash_format": "sha512",
+    "hash": "366eed1f4831e4044566833e07e5f6201ef1d178d0b30938b8a8a34bcac08c904c95ca0afe87bd55ea06b87cce85ee70c95d0cddd0ae053b1302d288252fe98f",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "5WeWGLoJ",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "QAGBst4M",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/OZBR5JT5/version/fSQSKhdF"
+  },
+  "elevatorid-neoforge-1.21.1-1.11.4.jar": {
+    "filename": "elevatorid-neoforge-1.21.1-1.11.4.jar",
+    "name": "ElevatorMod",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "hi2dSXTu",
+    "version_id": "NKEMiRIu",
+    "url": "https://cdn.modrinth.com/data/hi2dSXTu/versions/NKEMiRIu/elevatorid-neoforge-1.21.1-1.11.4.jar",
+    "hash_format": "sha512",
+    "hash": "2b13e5daf0e54d7d004a1fbdcfbd75909f32c83527df727f708106b7d5770b790d35facb2308b2fd63540f40c895ff4c7cc30916bb5e6c4934f06484fbaed16e",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/hi2dSXTu/version/NKEMiRIu"
+  },
+  "endermanoverhaul-neoforge-1.21.1-2.0.3.jar": {
+    "filename": "endermanoverhaul-neoforge-1.21.1-2.0.3.jar",
+    "name": "Enderman Overhaul",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "Lq6ojcWv",
+    "version_id": "TH9YXp9r",
+    "url": "https://cdn.modrinth.com/data/Lq6ojcWv/versions/TH9YXp9r/endermanoverhaul-neoforge-1.21.1-2.0.3.jar",
+    "hash_format": "sha512",
+    "hash": "d2032b35ed5dcf028a35a1d3da16a48b71d182fab1203bbf0f9f9123b99bb725730c60cdd8a9f48431c91f7ac9e04fa958aed842ee94114ade3a9418392ee6ab",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "M1953qlQ",
+        "file_name": null,
+        "dependency_type": "required"
+      },
+      {
+        "version_id": null,
+        "project_id": "8BmcQJ2H",
+        "file_name": null,
+        "dependency_type": "required"
+      },
+      {
+        "version_id": null,
+        "project_id": "G1hIVOrD",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/Lq6ojcWv/version/TH9YXp9r"
+  },
+  "Essential_1-3-10-8_neoforge_1-21-1.jar": {
+    "filename": "Essential_1-3-10-8_neoforge_1-21-1.jar",
+    "name": "Essential Mod",
+    "side": "client",
+    "provider": "modrinth",
+    "project_id": "k2ZPuTBm",
+    "version_id": "L1fxDroJ",
+    "url": "https://cdn.modrinth.com/data/k2ZPuTBm/versions/L1fxDroJ/Essential_1-3-10-8_neoforge_1-21-1.jar",
+    "hash_format": "sha512",
+    "hash": "a1ada47c3361e89b19ddbc7ef8def13fd0f3f946ece87299c8146f5b6cf930808c24b3387d9b1e483f4f0c2b0ae161b467fc01005c985fad3bcd5578c70df33a",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/k2ZPuTBm/version/L1fxDroJ"
+  },
+  "FarmersDelight-1.21.1-1.3.2.jar": {
+    "filename": "FarmersDelight-1.21.1-1.3.2.jar",
+    "name": "Farmer's Delight",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "R2OftAxM",
+    "version_id": "GbNuOZ4S",
+    "url": "https://cdn.modrinth.com/data/R2OftAxM/versions/GbNuOZ4S/FarmersDelight-1.21.1-1.3.2.jar",
+    "hash_format": "sha512",
+    "hash": "da5a4236427df8010d75992201c8723ac84a8fa71efa55670551d333cac94a90ae8e8c536da63ae07a67f4d00dc2774ae4151030f41d26886e508f4a037c8694",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/R2OftAxM/version/GbNuOZ4S"
+  },
+  "fast-ip-ping-v1.0.11-mc1.21.1-neoforge.jar": {
+    "filename": "fast-ip-ping-v1.0.11-mc1.21.1-neoforge.jar",
+    "name": "Fast IP Ping",
+    "side": "client",
+    "provider": "modrinth",
+    "project_id": "9mtu0sUO",
+    "version_id": "gRe07TZL",
+    "url": "https://cdn.modrinth.com/data/9mtu0sUO/versions/gRe07TZL/fast-ip-ping-v1.0.11-mc1.21.1-neoforge.jar",
+    "hash_format": "sha512",
+    "hash": "aaaf3c1494e240aa61d5191521cf324aab82a3d08c0a5dfa1db516bb26a6b165639b98fc8e9946bd65ad5048ecb6b96601d9febbd1d536f8e1ed5b72c741461f",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/9mtu0sUO/version/gRe07TZL"
+  },
+  "ferritecore-7.0.3-neoforge.jar": {
+    "filename": "ferritecore-7.0.3-neoforge.jar",
+    "name": "FerriteCore",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "uXXizFIs",
+    "version_id": "x7kQWVju",
+    "url": "https://cdn.modrinth.com/data/uXXizFIs/versions/x7kQWVju/ferritecore-7.0.3-neoforge.jar",
+    "hash_format": "sha512",
+    "hash": "19af89a2075bb10a63884fa853ebf84b02c79dc3242430ecdad056fd764fdcde367a7303276b329df01b0736e2ef264c5d80c7dc92c6aebd244f556a230bb417",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/uXXizFIs/version/x7kQWVju"
+  },
+  "forgified-fabric-api-0.116.7+2.2.4+1.21.1.jar": {
+    "filename": "forgified-fabric-api-0.116.7+2.2.4+1.21.1.jar",
+    "name": "Forgified Fabric API",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "Aqlf1Shp",
+    "version_id": "7nHK7hMg",
+    "url": "https://cdn.modrinth.com/data/Aqlf1Shp/versions/7nHK7hMg/forgified-fabric-api-0.116.7%2B2.2.4%2B1.21.1.jar",
+    "hash_format": "sha512",
+    "hash": "858acb32a79e7ed1f37472bd7c50e3d2f47c7d7f6e734a8cece3800eb30d565a09580c261778ea73a0ae25e10e9eb9b16866012fe61d24f671b0ffe3ae2377dd",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/Aqlf1Shp/version/7nHK7hMg"
+  },
+  "friendsandfoes-neoforge-4.0.25+mc1.21.1.jar": {
+    "filename": "friendsandfoes-neoforge-4.0.25+mc1.21.1.jar",
+    "name": "Friends&Foes (Forge/NeoForge)",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "BOCJKD49",
+    "version_id": "jaXsPU8A",
+    "url": "https://cdn.modrinth.com/data/BOCJKD49/versions/jaXsPU8A/friendsandfoes-neoforge-4.0.25%2Bmc1.21.1.jar",
+    "hash_format": "sha512",
+    "hash": "2cfbac1f0e4e01e3e5b94272e7ee866b4135558da26f4c2a6d0f7b76330abb44be7fa529efa1a2be1d1b86c608529b81ba05ddbb4b31d8e5b7f567eb3831ec5d",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "G1hIVOrD",
+        "file_name": null,
+        "dependency_type": "required"
+      },
+      {
+        "version_id": null,
+        "project_id": "1eAoo2KR",
+        "file_name": null,
+        "dependency_type": "optional"
+      }
+    ],
+    "source": "https://modrinth.com/mod/BOCJKD49/version/jaXsPU8A"
+  },
+  "fusion-1.2.12-neoforge-mc1.21.1.jar": {
+    "filename": "fusion-1.2.12-neoforge-mc1.21.1.jar",
+    "name": "Fusion (Connected Textures)",
+    "side": "client",
+    "provider": "modrinth",
+    "project_id": "p19vrgc2",
+    "version_id": "h2GrA0Ku",
+    "url": "https://cdn.modrinth.com/data/p19vrgc2/versions/h2GrA0Ku/fusion-1.2.12-neoforge-mc1.21.1.jar",
+    "hash_format": "sha512",
+    "hash": "50604fa4125e846b659479a8bb8bcef5db47460a8185902b8655d8b12c6cc67eb3cc4c08fee45e82a6b215976bea2a480e32ce420f062cea88abe17cb362365c",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/p19vrgc2/version/h2GrA0Ku"
+  },
+  "fzzy_config-0.7.6+1.21+neoforge.jar": {
+    "filename": "fzzy_config-0.7.6+1.21+neoforge.jar",
+    "name": "Fzzy Config",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "hYykXjDp",
+    "version_id": "MAPG6cXE",
+    "url": "https://cdn.modrinth.com/data/hYykXjDp/versions/MAPG6cXE/fzzy_config-0.7.6%2B1.21%2Bneoforge.jar",
+    "hash_format": "sha512",
+    "hash": "6071890aba7f2273c9fd508914acc7850de9d986423760f9ce416875ffa04eea2ad71a7a6f4d5f90f0625a672f6f54606778d11151b155f3fd98c223c61a4a6d",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "ordsPcFz",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/hYykXjDp/version/MAPG6cXE"
+  },
+  "geckolib-neoforge-1.21.1-4.8.4.jar": {
+    "filename": "geckolib-neoforge-1.21.1-4.8.4.jar",
+    "name": "Geckolib",
+    "side": "client",
+    "provider": "modrinth",
+    "project_id": "8BmcQJ2H",
+    "version_id": "gFmrC8Ru",
+    "url": "https://cdn.modrinth.com/data/8BmcQJ2H/versions/gFmrC8Ru/geckolib-neoforge-1.21.1-4.8.4.jar",
+    "hash_format": "sha512",
+    "hash": "340d96149a04c57c09485f5b1c69e7f8ec3b68223c618e38b7d84c58f4280dcba3d0e9480b8fc79735d9ef5fd7da5fc8f3081d575bf4bbcd2c44b6dcf21d98c0",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/8BmcQJ2H/version/gFmrC8Ru"
+  },
+  "golemoverhaul-neoforge-1.21.1-1.1.0.jar": {
+    "filename": "golemoverhaul-neoforge-1.21.1-1.1.0.jar",
+    "name": "Golem Overhaul",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "qEYs2G9A",
+    "version_id": "lRRw1dZc",
+    "url": "https://cdn.modrinth.com/data/qEYs2G9A/versions/lRRw1dZc/golemoverhaul-neoforge-1.21.1-1.1.0.jar",
+    "hash_format": "sha512",
+    "hash": "dae0c7b9ed35bd9c3356dd78505efd080054e5a2fe74117bdbb150ffb94eacd4ecbb02cda80f4c29070db375c09d73fb38bbaf3a8b102bbea6727f6d6a2d851f",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "u6dRKJwZ",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "nfn13YXA",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "M1953qlQ",
+        "file_name": null,
+        "dependency_type": "required"
+      },
+      {
+        "version_id": null,
+        "project_id": "G1hIVOrD",
+        "file_name": null,
+        "dependency_type": "required"
+      },
+      {
+        "version_id": null,
+        "project_id": "8BmcQJ2H",
+        "file_name": null,
+        "dependency_type": "required"
+      },
+      {
+        "version_id": null,
+        "project_id": "lhGA9TYQ",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/qEYs2G9A/version/lRRw1dZc"
+  },
+  "gravestone-neoforge-1.21.1-1.0.37.jar": {
+    "filename": "gravestone-neoforge-1.21.1-1.0.37.jar",
+    "name": "GraveStone Mod",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "RYtXKJPr",
+    "version_id": "Y29z3Y9Y",
+    "url": "https://cdn.modrinth.com/data/RYtXKJPr/versions/Y29z3Y9Y/gravestone-neoforge-1.21.1-1.0.37.jar",
+    "hash_format": "sha512",
+    "hash": "07e1a08d8e1a8c3f7d0a59a3c5a7b03e32862fadbb018067795704683aa8298823cb6d66e739577b7591bef2dfa2bcbe49eafe14cb73920feebb79cd7a539141",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "nvQzSEkH",
+        "file_name": null,
+        "dependency_type": "optional"
+      }
+    ],
+    "source": "https://modrinth.com/mod/RYtXKJPr/version/Y29z3Y9Y"
+  },
+  "immersive_armors-1.7.6+1.21.1-neoforge.jar": {
+    "filename": "immersive_armors-1.7.6+1.21.1-neoforge.jar",
+    "name": "Immersive Armors",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "eE2Db4YU",
+    "version_id": "B2YtQYCh",
+    "url": "https://cdn.modrinth.com/data/eE2Db4YU/versions/B2YtQYCh/immersive_armors-1.7.6%2B1.21.1-neoforge.jar",
+    "hash_format": "sha512",
+    "hash": "875852a2d6710c1b4da43026b345154b41751e4c1f987c7a19614c5f195a4d68ebbd93811da9868db83bf245aca2d15a35432b66730c17531f5e7006882a5d95",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/eE2Db4YU/version/B2YtQYCh"
+  },
+  "interiors-1.21.1-neoforge-0.6.1.jar": {
+    "filename": "interiors-1.21.1-neoforge-0.6.1.jar",
+    "name": "Create: Interiors",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "r4Knci2k",
+    "version_id": "gBrfZy6S",
+    "url": "https://cdn.modrinth.com/data/r4Knci2k/versions/gBrfZy6S/interiors-1.21.1-neoforge-0.6.1.jar",
+    "hash_format": "sha512",
+    "hash": "68b0d915e41fb0ce9d12a8c580d688a604770ded2b21e963058aa6d80cbc5661c481416d051a541395b5c79f461edcb658046e53cfcfb405179a450662ed01b5",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/r4Knci2k/version/gBrfZy6S"
+  },
+  "iris-neoforge-1.8.12+mc1.21.1.jar": {
+    "filename": "iris-neoforge-1.8.12+mc1.21.1.jar",
+    "name": "Iris Shaders",
+    "side": "client",
+    "provider": "modrinth",
+    "project_id": "YL57xq9U",
+    "version_id": "t3ruzodq",
+    "url": "https://cdn.modrinth.com/data/YL57xq9U/versions/t3ruzodq/iris-neoforge-1.8.12%2Bmc1.21.1.jar",
+    "hash_format": "sha512",
+    "hash": "57b8026a3c3c433cf6123d63dc6ce7e11f6d480a72926370db1fc7f2b06059bc16a753ecd7e7af659c19e90b592103196b0e89585ce4f0744a4ca433f59bcf1a",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": "Pb3OXVqC",
+        "project_id": "AANobbMI",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/YL57xq9U/version/t3ruzodq"
+  },
+  "Jade-1.21.1-NeoForge-15.10.5.jar": {
+    "filename": "Jade-1.21.1-NeoForge-15.10.5.jar",
+    "name": "Jade 🔍",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "nvQzSEkH",
+    "version_id": "yd8FKCmx",
+    "url": "https://cdn.modrinth.com/data/nvQzSEkH/versions/yd8FKCmx/Jade-1.21.1-NeoForge-15.10.5.jar",
+    "hash_format": "sha512",
+    "hash": "678b998677a3d73f98f82dac4093893bfc8a3c2335ec627b4147811c381a040475decdb8db31cc3cbe600abb5a7a6dedcd356eed0ba471af0becdcf49bf5b137",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "u6dRKJwZ",
+        "file_name": null,
+        "dependency_type": "optional"
+      }
+    ],
+    "source": "https://modrinth.com/mod/nvQzSEkH/version/yd8FKCmx"
+  },
+  "jamlib-neoforge-1.3.6+1.21.1.jar": {
+    "filename": "jamlib-neoforge-1.3.6+1.21.1.jar",
+    "name": "JamLib",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "IYY9Siz8",
+    "version_id": "n6UM6TcS",
+    "url": "https://cdn.modrinth.com/data/IYY9Siz8/versions/n6UM6TcS/jamlib-neoforge-1.3.6%2B1.21.1.jar",
+    "hash_format": "sha512",
+    "hash": "c544322a31b5f3fe045cf80eb39e6bd59f91f209a0e510731daa0a6403a273f582769bb26277ef767b4c1ca6438316959d31a6a08e5aa4b1b5a9184a370e5135",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "lhGA9TYQ",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/IYY9Siz8/version/n6UM6TcS"
+  },
+  "jei-1.21.1-neoforge-19.27.0.340.jar": {
+    "filename": "jei-1.21.1-neoforge-19.27.0.340.jar",
+    "name": "Just Enough Items (JEI)",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "u6dRKJwZ",
+    "version_id": "YAcQ6elZ",
+    "url": "https://cdn.modrinth.com/data/u6dRKJwZ/versions/YAcQ6elZ/jei-1.21.1-neoforge-19.27.0.340.jar",
+    "hash_format": "sha512",
+    "hash": "8bad8eb3c8e974f867e23e4d74598f603c5fbf03eb5356a386dd37cb9fa23e08ad1f58be6b7be50d2fbf9d3fbfaeac8584c70ced736df4b8f82c7c75be242998",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/u6dRKJwZ/version/YAcQ6elZ"
+  },
+  "jurassicreborn-1.3.44.jar": {
+    "filename": "jurassicreborn-1.3.44.jar",
+    "name": "Jurassic Reborn",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "3cnkUCbj",
+    "version_id": "H5N3HIGx",
+    "url": "https://cdn.modrinth.com/data/3cnkUCbj/versions/H5N3HIGx/jurassicreborn-1.3.44.jar",
+    "hash_format": "sha512",
+    "hash": "baf5b56a0ff3c6effc1a80afdae15d45d5514bd0b5969b1a0a005d34edcad78c81cbd27b4ae97dee828341883e07dae4af1bf12a74506b28c70dd8b08b878505",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "jJfV67b1",
+        "file_name": null,
+        "dependency_type": "required"
+      },
+      {
+        "version_id": null,
+        "project_id": "8BmcQJ2H",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/3cnkUCbj/version/H5N3HIGx"
+  },
+  "justzoom_neoforge_2.1.0_MC_1.21.1.jar": {
+    "filename": "justzoom_neoforge_2.1.0_MC_1.21.1.jar",
+    "name": "Just Zoom",
+    "side": "client",
+    "provider": "modrinth",
+    "project_id": "iAiqcykM",
+    "version_id": "mnCUZfmm",
+    "url": "https://cdn.modrinth.com/data/iAiqcykM/versions/mnCUZfmm/justzoom_neoforge_2.1.0_MC_1.21.1.jar",
+    "hash_format": "sha512",
+    "hash": "6b4df108238ff54a4cee55517908fef96e2382458c9f13eac2443dab1148fa5538f33505a66f3ea24f646c9be7300e6c6185a077d709c85405cbe61c24e58f38",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "J81TRJWm",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/iAiqcykM/version/mnCUZfmm"
+  },
+  "konkrete_neoforge_1.9.9_MC_1.21.jar": {
+    "filename": "konkrete_neoforge_1.9.9_MC_1.21.jar",
+    "name": "Konkrete",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "J81TRJWm",
+    "version_id": "stJDU839",
+    "url": "https://cdn.modrinth.com/data/J81TRJWm/versions/stJDU839/konkrete_neoforge_1.9.9_MC_1.21.jar",
+    "hash_format": "sha512",
+    "hash": "378bd12e3c32329abbae5cd514e1d1cc2a3cc3a45979fedb1d4e4c0a6732bdcf4b7d1bf7f7a112074bf288957edf86152c9c090a27d1d5de84a9a7825d3d6511",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/J81TRJWm/version/stJDU839"
+  },
+  "kotlinforforge-5.11.0-all.jar": {
+    "filename": "kotlinforforge-5.11.0-all.jar",
+    "name": "Kotlin for Forge",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "ordsPcFz",
+    "version_id": "NrSebcsG",
+    "url": "https://cdn.modrinth.com/data/ordsPcFz/versions/NrSebcsG/kotlinforforge-5.11.0-all.jar",
+    "hash_format": "sha512",
+    "hash": "b32faa6d616511aff4f8b32197877c53b9f8bee103884ec37c632b5d017bb59a498ec971b68d8d94787043b0c5be666a330b61d285033c341bff83ac28a90992",
+    "game_versions": [
+      "1.20.6",
+      "1.21",
+      "1.21.1",
+      "1.21.2",
+      "1.21.3",
+      "1.21.4",
+      "1.21.5"
+    ],
+    "loaders": [
+      "forge",
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/ordsPcFz/version/NrSebcsG"
+  },
+  "lambdynamiclights-4.8.8+1.21.1.jar": {
+    "filename": "lambdynamiclights-4.8.8+1.21.1.jar",
+    "name": "LambDynamicLights - Dynamic Lights",
+    "side": "client",
+    "provider": "modrinth",
+    "project_id": "yBW8D80W",
+    "version_id": "IQcvNDtF",
+    "url": "https://cdn.modrinth.com/data/yBW8D80W/versions/IQcvNDtF/lambdynamiclights-4.8.8%2B1.21.1.jar",
+    "hash_format": "sha512",
+    "hash": "34c279e7f4edf3ff68ad8d33a8cac49a75402630b95a9bfda20880880c2a425fc64c61f63d5406a0243be5b6d5df24eb745c2c5799871fc4a6e5cac4ae2f9426",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "fabric",
+      "neoforge",
+      "quilt"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "PxQSWIcD",
+        "file_name": null,
+        "dependency_type": "incompatible"
+      },
+      {
+        "version_id": null,
+        "project_id": "reCfnRvJ",
+        "file_name": null,
+        "dependency_type": "incompatible"
+      },
+      {
+        "version_id": null,
+        "project_id": "P7dR8mSH",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/yBW8D80W/version/IQcvNDtF"
+  },
+  "lithostitched-1.7.7-neoforge-21.1.jar": {
+    "filename": "lithostitched-1.7.7-neoforge-21.1.jar",
+    "name": "Lithostitched",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "XaDC71GB",
+    "version_id": "Nf30FMLg",
+    "url": "https://cdn.modrinth.com/data/XaDC71GB/versions/Nf30FMLg/lithostitched-1.7.7-neoforge-21.1.jar",
+    "hash_format": "sha512",
+    "hash": "35508c0ee72418f78311fbf11a0a341d96cbd468c29f098c7cee81550de902ddb6ca5af65a97a806fb85b2949a78108bc0d5b09e6411220d8f1d960b8885445e",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/XaDC71GB/version/Nf30FMLg"
+  },
+  "lootr-neoforge-1.21.1-1.11.37.120.jar": {
+    "filename": "lootr-neoforge-1.21.1-1.11.37.120.jar",
+    "name": "Lootr",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "EltpO5cN",
+    "version_id": "C2tLycH2",
+    "url": "https://cdn.modrinth.com/data/EltpO5cN/versions/C2tLycH2/lootr-neoforge-1.21.1-1.11.37.120.jar",
+    "hash_format": "sha512",
+    "hash": "c4f85de3cc97f34266e67ff09eb38b69f97918e2f5528b82fd195df0b067d0f4ed53b6adf6ae30fcf74f323042f731beb1e12a9506346d7f15412430e4eb1597",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/EltpO5cN/version/C2tLycH2"
+  },
+  "mcw-doors-1.1.5-mc1.21.1neoforge.jar": {
+    "filename": "mcw-doors-1.1.5-mc1.21.1neoforge.jar",
+    "name": "Macaw's Doors",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "kNxa8z3e",
+    "version_id": "u7BRX44F",
+    "url": "https://cdn.modrinth.com/data/kNxa8z3e/versions/u7BRX44F/mcw-doors-1.1.5-mc1.21.1neoforge.jar",
+    "hash_format": "sha512",
+    "hash": "43ddf00be46af91c009a95392a094f05017155214c46c7980042cbcf871864dc792416497019e688eb558897c87848bd70c282ec4a6d7b268e1ba30389ba987a",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/kNxa8z3e/version/u7BRX44F"
+  },
+  "mcw-furniture-3.4.1-mc1.21.1neoforge.jar": {
+    "filename": "mcw-furniture-3.4.1-mc1.21.1neoforge.jar",
+    "name": "Macaw's Furniture",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "dtWC90iB",
+    "version_id": "Z5V3Ps7S",
+    "url": "https://cdn.modrinth.com/data/dtWC90iB/versions/Z5V3Ps7S/mcw-furniture-3.4.1-mc1.21.1neoforge.jar",
+    "hash_format": "sha512",
+    "hash": "93103f868a6a7b4fa613dbe908bcf83c4aaabf4719057d484d1636c98e6e3defa00d550a8988ff91d4d0a090463c25b898336e675da52c19bd3bd0ce37e053e4",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/dtWC90iB/version/Z5V3Ps7S"
+  },
+  "mcw-holidays-1.1.2-mc1.21.1neoforge.jar": {
+    "filename": "mcw-holidays-1.1.2-mc1.21.1neoforge.jar",
+    "name": "Macaw's Holidays",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "rH20L2Lp",
+    "version_id": "2mO9Xhpt",
+    "url": "https://cdn.modrinth.com/data/rH20L2Lp/versions/2mO9Xhpt/mcw-holidays-1.1.2-mc1.21.1neoforge.jar",
+    "hash_format": "sha512",
+    "hash": "439c93fe0a8ca363898b3d3d85e0413d7988927ae0a2716e2c4deed9a4097607087abc09a7dc60ac726d7cab9491d444e296ee57e5f0708ddb8951df2ac911a2",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/rH20L2Lp/version/2mO9Xhpt"
+  },
+  "mcw-lights-1.1.5-mc1.21.1neoforge.jar": {
+    "filename": "mcw-lights-1.1.5-mc1.21.1neoforge.jar",
+    "name": "Macaw's Lights and Lamps",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "w4an97C2",
+    "version_id": "5U2kQZIL",
+    "url": "https://cdn.modrinth.com/data/w4an97C2/versions/5U2kQZIL/mcw-lights-1.1.5-mc1.21.1neoforge.jar",
+    "hash_format": "sha512",
+    "hash": "a6e1c4419b70a3f9225ad03daafca22c8a7da432ec4939b8029455927e3b44683a20e89a3299da78f124d0438e188dad3735d2018a931ad4d553ec9d3b83a9ca",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/w4an97C2/version/5U2kQZIL"
+  },
+  "mcw-mcwfences-1.2.1-mc1.21.1neoforge.jar": {
+    "filename": "mcw-mcwfences-1.2.1-mc1.21.1neoforge.jar",
+    "name": "Macaw's Fences and Walls",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "GmwLse2I",
+    "version_id": "jVdb0r4W",
+    "url": "https://cdn.modrinth.com/data/GmwLse2I/versions/jVdb0r4W/mcw-mcwfences-1.2.1-mc1.21.1neoforge.jar",
+    "hash_format": "sha512",
+    "hash": "9bf496a8db8c6074ab32374042ae15e87fe87d897e21de29d459556fa8d7d0e73f2718f28a0236181cfb3c1bc66c776b4d079f0a7084696ad490275ab1b9eb6e",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/GmwLse2I/version/jVdb0r4W"
+  },
+  "mcw-mcwpaths-1.1.1-mc1.21.1neoforge.jar": {
+    "filename": "mcw-mcwpaths-1.1.1-mc1.21.1neoforge.jar",
+    "name": "Macaw's Paths and Pavings",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "VRLhWB91",
+    "version_id": "tlymsxUG",
+    "url": "https://cdn.modrinth.com/data/VRLhWB91/versions/tlymsxUG/mcw-mcwpaths-1.1.1-mc1.21.1neoforge.jar",
+    "hash_format": "sha512",
+    "hash": "8a7bc0100e57369fdcfbb65164fdf97cd7f6a931882d0f63aae15fd3db8975a78cc8734f34f640a5790dddaca5883d8e97117e7966dab50de479b1a8f3662678",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/VRLhWB91/version/tlymsxUG"
+  },
+  "Mekanism-1.21.1-10.7.19.85.jar": {
+    "filename": "Mekanism-1.21.1-10.7.19.85.jar",
+    "name": "Mekanism",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "Ce6I4WUE",
+    "version_id": "5KzzycBT",
+    "url": "https://cdn.modrinth.com/data/Ce6I4WUE/versions/5KzzycBT/Mekanism-1.21.1-10.7.19.85.jar",
+    "hash_format": "sha512",
+    "hash": "66745825330a98f3e4a5ea3a44aff8b00870f715c144edc38dd2f61b4240589600b58ae89efac3b54dbb5aa430b1059dac1a28fd71cac5cc9002bbeb5ba3f22b",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "R2OftAxM",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "nvQzSEkH",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "EiEOyeoL",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "fRiHVvU7",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "XxWD5pD3",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "NTi7d3Xc",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "qXkLFB0L",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "u6dRKJwZ",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "Xg35A4rS",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "6AQIaxuO",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "gu7yAYhd",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "bcOsQHnC",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "Eyw0UxEx",
+        "file_name": null,
+        "dependency_type": "optional"
+      }
+    ],
+    "source": "https://modrinth.com/mod/Ce6I4WUE/version/5KzzycBT"
+  },
+  "MoogsEndStructures-1.21-2.0.2.jar": {
+    "filename": "MoogsEndStructures-1.21-2.0.2.jar",
+    "name": "MES - Moog's End Structures",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "r4PuRGfV",
+    "version_id": "oN0WTi2D",
+    "url": "https://cdn.modrinth.com/data/r4PuRGfV/versions/oN0WTi2D/MoogsEndStructures-1.21-2.0.2.jar",
+    "hash_format": "sha512",
+    "hash": "96635d7ee00c11d63b532920604dce3736291b6e7961d1dcaafd08383ffbb639060ea85589519c745fef156bdf38f81b6a78bc2c033b1fb39fe4d8520fbdaf6a",
+    "game_versions": [
+      "1.21",
+      "1.21.1",
+      "1.21.2",
+      "1.21.3",
+      "1.21.4",
+      "1.21.5",
+      "1.21.6",
+      "1.21.7",
+      "1.21.8",
+      "1.21.9",
+      "1.21.10",
+      "1.21.11",
+      "26.1",
+      "26.1.1",
+      "26.1.2"
+    ],
+    "loaders": [
+      "fabric",
+      "forge",
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "1oUDhxuy",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/r4PuRGfV/version/oN0WTi2D"
+  },
+  "MoogsVoyagerStructures-1.21-5.0.10.jar": {
+    "filename": "MoogsVoyagerStructures-1.21-5.0.10.jar",
+    "name": "MVS - Moog's Voyager Structures",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "OQAgZMH1",
+    "version_id": "yWllMkRb",
+    "url": "https://cdn.modrinth.com/data/OQAgZMH1/versions/yWllMkRb/MoogsVoyagerStructures-1.21-5.0.10.jar",
+    "hash_format": "sha512",
+    "hash": "3d3553d7fb4c2475e01c967dcce73f2c233346d83e10442283b2a0e15b45b64420bd0bf802df5a924ede45c5a90c66e0523ab07b2eebb40f016417012421b067",
+    "game_versions": [
+      "1.21",
+      "1.21.1",
+      "1.21.2",
+      "1.21.3",
+      "1.21.4",
+      "1.21.5",
+      "1.21.6",
+      "1.21.7",
+      "1.21.8",
+      "1.21.9",
+      "1.21.10",
+      "1.21.11",
+      "26.1",
+      "26.1.1",
+      "26.1.2"
+    ],
+    "loaders": [
+      "fabric",
+      "forge",
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "1oUDhxuy",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/OQAgZMH1/version/yWllMkRb"
+  },
+  "moonlight-neoforge-1.21.1-3.0.9.jar": {
+    "filename": "moonlight-neoforge-1.21.1-3.0.9.jar",
+    "name": "Moonlight Lib",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "twkfQtEc",
+    "version_id": "sqbhVahR",
+    "url": "https://cdn.modrinth.com/data/twkfQtEc/versions/sqbhVahR/moonlight-neoforge-1.21.1-3.0.9.jar",
+    "hash_format": "sha512",
+    "hash": "5a7364b494cb0348b6401b23cd7a6dec9db1d6f91641072a8c6824308e24cb4bc8e12465e8b816800fdbcedcc8a0e3f837852c48f8d455c7b6f5f6e72330800d",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/twkfQtEc/version/sqbhVahR"
+  },
+  "mowziesmobs-1.21.1-1.8.2.jar": {
+    "filename": "mowziesmobs-1.21.1-1.8.2.jar",
+    "name": "Mowzie's Mobs",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "BFbX9xcm",
+    "version_id": "xgAXTl17",
+    "url": "https://cdn.modrinth.com/data/BFbX9xcm/versions/xgAXTl17/mowziesmobs-1.21.1-1.8.2.jar",
+    "hash_format": "sha512",
+    "hash": "ab10d2f759df613d5094bac26c5a8bbe144786699018f7e4ae027fc4a86632aa7f96206f2c8be9970338eadef42539614a19b41d0d70b6216c3ed1c4c4421f0a",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "8BmcQJ2H",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/BFbX9xcm/version/xgAXTl17"
+  },
+  "mru-1.0.19+LTS+1.21.1+neoforge.jar": {
+    "filename": "mru-1.0.19+LTS+1.21.1+neoforge.jar",
+    "name": "MRU",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "SNVQ2c0g",
+    "version_id": "qYqVf5jP",
+    "url": "https://cdn.modrinth.com/data/SNVQ2c0g/versions/qYqVf5jP/mru-1.0.19%2BLTS%2B1.21.1%2Bneoforge.jar",
+    "hash_format": "sha512",
+    "hash": "c0b39727c6d4e312cc6a6e6e5137149ecf907f3c9a518313e4188a05c8301b80c088fb62f7096831e9aa1026fc95a09d79b99fc43456f8da2a1ee36e9a86154d",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/SNVQ2c0g/version/qYqVf5jP"
+  },
+  "NaturesCompass-1.21.1-3.4.0-neoforge.jar": {
+    "filename": "NaturesCompass-1.21.1-3.4.0-neoforge.jar",
+    "name": "Nature's Compass",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "fPetb5Kh",
+    "version_id": "nFniEtJV",
+    "url": "https://cdn.modrinth.com/data/fPetb5Kh/versions/nFniEtJV/NaturesCompass-1.21.1-3.4.0-neoforge.jar",
+    "hash_format": "sha512",
+    "hash": "5314b536bcb9a594a9cf2bbd46c82468d17e1559bd6c00da9d91e96c0814f50416799a011705f0d184bd731dac3f03dec009c76fea3d02b3556a6013f9649014",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/fPetb5Kh/version/nFniEtJV"
+  },
+  "notenoughanimations-neoforge-1.12.3-mc1.21.1.jar": {
+    "filename": "notenoughanimations-neoforge-1.12.3-mc1.21.1.jar",
+    "name": "Not Enough Animations",
+    "side": "client",
+    "provider": "modrinth",
+    "project_id": "MPCX6s5C",
+    "version_id": "ZNs9eukY",
+    "url": "https://cdn.modrinth.com/data/MPCX6s5C/versions/ZNs9eukY/notenoughanimations-neoforge-1.12.3-mc1.21.1.jar",
+    "hash_format": "sha512",
+    "hash": "b57f21a4b24917b15dbcb90d95c077fe5fe9167aadc4cc86eb2de6cb2cea605378b8221788975df5498a001278c990ace1e9f75e51c423035ca9f20652b957cd",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/MPCX6s5C/version/ZNs9eukY"
+  },
+  "owo-lib-neoforge-0.12.15.5-beta.1+1.21.jar": {
+    "filename": "owo-lib-neoforge-0.12.15.5-beta.1+1.21.jar",
+    "name": "oωo (owo-lib)",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "ccKDOlHs",
+    "version_id": "NMCHU6DZ",
+    "url": "https://cdn.modrinth.com/data/ccKDOlHs/versions/NMCHU6DZ/owo-lib-neoforge-0.12.15.5-beta.1%2B1.21.jar",
+    "hash_format": "sha512",
+    "hash": "4de5c5d52139244b8c5260d641087664d992624b822599a32e03c08eb133be854a2f413667dbca1e55772445b04a70210c17b3bc13e3c88e425e7d928104b9fa",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "Aqlf1Shp",
+        "file_name": null,
+        "dependency_type": "embedded"
+      }
+    ],
+    "source": "https://modrinth.com/mod/ccKDOlHs/version/NMCHU6DZ"
+  },
+  "Paraglider-neoforge-21.1.5.jar": {
+    "filename": "Paraglider-neoforge-21.1.5.jar",
+    "name": "Paragliders",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "esqWA0aQ",
+    "version_id": "tkTruHIA",
+    "url": "https://cdn.modrinth.com/data/esqWA0aQ/versions/tkTruHIA/Paraglider-neoforge-21.1.5.jar",
+    "hash_format": "sha512",
+    "hash": "b2d986b5eb21b12ad59b0b4ac3f4ac00457562031064eada7870c023f22ba06b57712d67a0a11e4914ad4ebba51860ee37060b8b20baee1efa16738f97802434",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/esqWA0aQ/version/tkTruHIA"
+  },
+  "particlerain-4.0.0-beta.10+1.21.1-neoforge.jar": {
+    "filename": "particlerain-4.0.0-beta.10+1.21.1-neoforge.jar",
+    "name": "Particle Rain",
+    "side": "client",
+    "provider": "modrinth",
+    "project_id": "nrikgvxm",
+    "version_id": "CJeVXIae",
+    "url": "https://cdn.modrinth.com/data/nrikgvxm/versions/CJeVXIae/particlerain-4.0.0-beta.10%2B1.21.1-neoforge.jar",
+    "hash_format": "sha512",
+    "hash": "9bff41758d0a63621512a3ce4d9c8f2e5a16937ac1ccac766f24d2baaded2a0475a0478a61062ebc861414443826480235a6f5c7cfe14f4ee26bd057188ff5b0",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/nrikgvxm/version/CJeVXIae"
+  },
+  "punchy-2.5.5b-neoforge-1.21.1.jar": {
+    "filename": "punchy-2.5.5b-neoforge-1.21.1.jar",
+    "name": "Punchy!",
+    "side": "client",
+    "provider": "modrinth",
+    "project_id": "8aoMKplv",
+    "version_id": "xhYuu96b",
+    "url": "https://cdn.modrinth.com/data/8aoMKplv/versions/xhYuu96b/punchy-2.5.5b-neoforge-1.21.1.jar",
+    "hash_format": "sha512",
+    "hash": "1a1ef30da0dbbc5252ca1b231e67421d8d207b1202ef0e9090565892970f2d30117fad8e442978c5e27023f2eee5975129d1ff0ae09ff8ec44dd972ab0621023",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/8aoMKplv/version/xhYuu96b"
+  },
+  "PuzzlesLib-v21.1.39-1.21.1-NeoForge.jar": {
+    "filename": "PuzzlesLib-v21.1.39-1.21.1-NeoForge.jar",
+    "name": "Puzzles Lib",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "QAGBst4M",
+    "version_id": "EgWWSAhJ",
+    "url": "https://cdn.modrinth.com/data/QAGBst4M/versions/EgWWSAhJ/PuzzlesLib-v21.1.39-1.21.1-NeoForge.jar",
+    "hash_format": "sha512",
+    "hash": "84bac5cddae511234eea4387d34a96cc961a0e7d23b8c1ab17523b9762bee96a6aa132f57a417e5bc679565439784c268b92ee8d353e4b26f86d3ef5e1c5453b",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/QAGBst4M/version/EgWWSAhJ"
+  },
+  "refinedstorage-neoforge-2.0.8.jar": {
+    "filename": "refinedstorage-neoforge-2.0.8.jar",
+    "name": "Refined Storage",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "KDvYkUg3",
+    "version_id": "kxRNbIBe",
+    "url": "https://cdn.modrinth.com/data/KDvYkUg3/versions/kxRNbIBe/refinedstorage-neoforge-2.0.8.jar",
+    "hash_format": "sha512",
+    "hash": "835640a9b17f3e9d1d86b6af87f69979489b6df950cf2616d528aef67ea39e7682a84c4bcc8fb774ff67fc557008927073e6d02472ce65465219b5884c425ee3",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/KDvYkUg3/version/kxRNbIBe"
+  },
+  "resourcefulconfig-neoforge-1.21-3.0.11.jar": {
+    "filename": "resourcefulconfig-neoforge-1.21-3.0.11.jar",
+    "name": "Resourceful Config",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "M1953qlQ",
+    "version_id": "lSbyRD6v",
+    "url": "https://cdn.modrinth.com/data/M1953qlQ/versions/lSbyRD6v/resourcefulconfig-neoforge-1.21-3.0.11.jar",
+    "hash_format": "sha512",
+    "hash": "8e4ccc37732b3f5190e7e98df34dbc1339fe614494fcabf1aeaeab9ad8e5993522964b51be31882000c08c48a6d0096b5458364415bb81f2b2b775a7daf2eb87",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/M1953qlQ/version/lSbyRD6v"
+  },
+  "resourcefullib-neoforge-1.21-3.0.12.jar": {
+    "filename": "resourcefullib-neoforge-1.21-3.0.12.jar",
+    "name": "Resourceful Lib",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "G1hIVOrD",
+    "version_id": "x99nCLTm",
+    "url": "https://cdn.modrinth.com/data/G1hIVOrD/versions/x99nCLTm/resourcefullib-neoforge-1.21-3.0.12.jar",
+    "hash_format": "sha512",
+    "hash": "a9d20e345faa9bcb297bd95ac9524205834804d1bb13518397dd4f7f62b352b08c3339ee7f7870d3669078ceeb33d5c31ea527aecce4b31d62ec1ff7d8b562c8",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/G1hIVOrD/version/x99nCLTm"
+  },
+  "Ribbits-1.21.1-NeoForge-4.1.6.jar": {
+    "filename": "Ribbits-1.21.1-NeoForge-4.1.6.jar",
+    "name": "Ribbits",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "8YcE8y4T",
+    "version_id": "XrUKaWrw",
+    "url": "https://cdn.modrinth.com/data/8YcE8y4T/versions/XrUKaWrw/Ribbits-1.21.1-NeoForge-4.1.6.jar",
+    "hash_format": "sha512",
+    "hash": "5e78b0d63757d5904b96e0c4565d56832ca42b1cbba939b98101f848f618cfcda94d5aeadeacb0faff85bdd05fb071f2df551a42c3e7d0e3a2564adbec227931",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "8BmcQJ2H",
+        "file_name": null,
+        "dependency_type": "required"
+      },
+      {
+        "version_id": null,
+        "project_id": "Ua7DFN59",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/8YcE8y4T/version/XrUKaWrw"
+  },
+  "rightclickharvest-neoforge-4.6.1+1.21.1.jar": {
+    "filename": "rightclickharvest-neoforge-4.6.1+1.21.1.jar",
+    "name": "RightClickHarvest",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "Cnejf5xM",
+    "version_id": "djt0zS53",
+    "url": "https://cdn.modrinth.com/data/Cnejf5xM/versions/djt0zS53/rightclickharvest-neoforge-4.6.1%2B1.21.1.jar",
+    "hash_format": "sha512",
+    "hash": "909cc4aba3ed535bb65c4cf285725907f100c0ebbcb619b1c861338b7993a020f0aef953bebeeb74920304c5a80e9cd07654aa5f885a5995824da7cf6784bf42",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "IYY9Siz8",
+        "file_name": null,
+        "dependency_type": "required"
+      },
+      {
+        "version_id": null,
+        "project_id": "lhGA9TYQ",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/Cnejf5xM/version/djt0zS53"
+  },
+  "ritchiesprojectilelib-2.1.2+mc.1.21.1-neoforge.jar": {
+    "filename": "ritchiesprojectilelib-2.1.2+mc.1.21.1-neoforge.jar",
+    "name": "Ritchie's Projectile Library",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "B3pb093D",
+    "version_id": "hZ6B2Z0x",
+    "url": "https://cdn.modrinth.com/data/B3pb093D/versions/hZ6B2Z0x/ritchiesprojectilelib-2.1.2%2Bmc.1.21.1-neoforge.jar",
+    "hash_format": "sha512",
+    "hash": "6d64c84505a5a8fbb96d106603065465c5a2314ec09636900c5c1a31014c12fa68f1a41e758313cbf0d6f95d9a1f53bd67339020f7d8db0e184c23f66aee0330",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/B3pb093D/version/hZ6B2Z0x"
+  },
+  "sable-neoforge-1.21.1-1.2.2.jar": {
+    "filename": "sable-neoforge-1.21.1-1.2.2.jar",
+    "name": "Sable",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "T9PomCSv",
+    "version_id": "3FMsUjO4",
+    "url": "https://cdn.modrinth.com/data/T9PomCSv/versions/3FMsUjO4/sable-neoforge-1.21.1-1.2.2.jar",
+    "hash_format": "sha512",
+    "hash": "eb7c46649f5aa359f688fecacfa348b205dff0cfc2d27694632c2e1e1f8f4dbab2c31bdc95b2577201529b2597afe49328c7ad8c348d25eaca109f1a02667534",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "qy8EtCnG",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "LNytGWDc",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "3KUWeVhG",
+        "file_name": null,
+        "dependency_type": "embedded"
+      }
+    ],
+    "source": "https://modrinth.com/mod/T9PomCSv/version/3FMsUjO4"
+  },
+  "Searchables-neoforge-1.21.1-1.0.2.jar": {
+    "filename": "Searchables-neoforge-1.21.1-1.0.2.jar",
+    "name": "Searchables",
+    "side": "client",
+    "provider": "modrinth",
+    "project_id": "fuuu3xnx",
+    "version_id": "iEE85X0w",
+    "url": "https://cdn.modrinth.com/data/fuuu3xnx/versions/iEE85X0w/Searchables-neoforge-1.21.1-1.0.2.jar",
+    "hash_format": "sha512",
+    "hash": "d0824bac1900142ac9a53e68f7ec3b4c0d33d9366bbd3f1d0d93eed860e5eb6b5e6f5a215a69bfffa70bcb48573ff49b5a12bbaa96096ceac6636000d506027a",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/fuuu3xnx/version/iEE85X0w"
+  },
+  "SimpleDiscordRichPresence-neoforge-88.0.1-build.54+mc1.21.1.jar": {
+    "filename": "SimpleDiscordRichPresence-neoforge-88.0.1-build.54+mc1.21.1.jar",
+    "name": "Simple Rich Discord Presence",
+    "side": "client",
+    "provider": "modrinth",
+    "project_id": "SCAopByd",
+    "version_id": "ggKPQKwC",
+    "url": "https://cdn.modrinth.com/data/SCAopByd/versions/ggKPQKwC/SimpleDiscordRichPresence-neoforge-88.0.1-build.54%2Bmc1.21.1.jar",
+    "hash_format": "sha512",
+    "hash": "ea7c4757fc74085b06ce0293f02fd6d6ff47616244987feec3a5fc2fadd491c13d47e55e344ac4602db00aafb3071370ddfadd08333925be1cff2b6a26111dd8",
+    "game_versions": [
+      "1.21.1",
+      "1.21.2",
+      "1.21.3",
+      "1.21.4",
+      "1.21.5",
+      "1.21.6",
+      "1.21.7",
+      "1.21.8"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "lhGA9TYQ",
+        "file_name": null,
+        "dependency_type": "required"
+      },
+      {
+        "version_id": null,
+        "project_id": "9s6osm5g",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/SCAopByd/version/ggKPQKwC"
+  },
+  "skinlayers3d-neoforge-1.11.1-mc1.21.1.jar": {
+    "filename": "skinlayers3d-neoforge-1.11.1-mc1.21.1.jar",
+    "name": "3D Skin Layers",
+    "side": "client",
+    "provider": "modrinth",
+    "project_id": "zV5r3pPn",
+    "version_id": "lWa5oHuK",
+    "url": "https://cdn.modrinth.com/data/zV5r3pPn/versions/lWa5oHuK/skinlayers3d-neoforge-1.11.1-mc1.21.1.jar",
+    "hash_format": "sha512",
+    "hash": "cdd870541a7c1dcea5252bbb29858cba1b4a0f379357fa49ea4eb416fe1a068c654864f8ff5b4aca5079fc65f6f4f272e70b0e3cd50981dcc332a7d2cd80cee4",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/zV5r3pPn/version/lWa5oHuK"
+  },
+  "smarterfarmers-1.21-2.2.4-neoforge.jar": {
+    "filename": "smarterfarmers-1.21-2.2.4-neoforge.jar",
+    "name": "Smarter Farmers (farmers replant)",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "Bh6ZOMvp",
+    "version_id": "odppGdXf",
+    "url": "https://cdn.modrinth.com/data/Bh6ZOMvp/versions/odppGdXf/smarterfarmers-1.21-2.2.4-neoforge.jar",
+    "hash_format": "sha512",
+    "hash": "a79babd2e4fd42823dbbfc6afedd30e57462d693fe255b7e4306023d0567f183196c9b142356b43803ad8e503a386642aa91b9b29835f739c233bce768018d62",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "twkfQtEc",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/Bh6ZOMvp/version/odppGdXf"
+  },
+  "sophisticatedbackpacks-1.21.1-3.25.45.1742.jar": {
+    "filename": "sophisticatedbackpacks-1.21.1-3.25.45.1742.jar",
+    "name": "Sophisticated Backpacks",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "TyCTlI4b",
+    "version_id": "gCxpNA3A",
+    "url": "https://cdn.modrinth.com/data/TyCTlI4b/versions/gCxpNA3A/sophisticatedbackpacks-1.21.1-3.25.45.1742.jar",
+    "hash_format": "sha512",
+    "hash": "a4e536c2c9cf53ab538bc22469518320382e02368714069b545e69eb21da4c04abaebfc578843b09761de2602a77db1427278789dc99c33e5e28cd1388ac58e3",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "u6dRKJwZ",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "nmoqTijg",
+        "file_name": null,
+        "dependency_type": "required"
+      },
+      {
+        "version_id": null,
+        "project_id": "vRYk0bv7",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "vvuO3ImH",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "WRaRZdTd",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "DMu0oBKf",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "BAscRYKm",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "b1fMg6sH",
+        "file_name": null,
+        "dependency_type": "optional"
+      }
+    ],
+    "source": "https://modrinth.com/mod/TyCTlI4b/version/gCxpNA3A"
+  },
+  "sophisticatedcore-1.21.1-1.4.39.1852.jar": {
+    "filename": "sophisticatedcore-1.21.1-1.4.39.1852.jar",
+    "name": "Sophisticated Core",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "nmoqTijg",
+    "version_id": "616eWTaq",
+    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/616eWTaq/sophisticatedcore-1.21.1-1.4.39.1852.jar",
+    "hash_format": "sha512",
+    "hash": "98be3c258f453558af770b094027e03fa2503aa32bbef963e7c7d9136b8aea58c53b7c8377e27598d8c74efd90683b86866d77410b1ffd3f8ffafa82c3b80d7f",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/nmoqTijg/version/616eWTaq"
+  },
+  "sound-physics-remastered-neoforge-1.21.1-1.5.1.jar": {
+    "filename": "sound-physics-remastered-neoforge-1.21.1-1.5.1.jar",
+    "name": "Sound Physics Remastered",
+    "side": "client",
+    "provider": "modrinth",
+    "project_id": "qyVF9oeo",
+    "version_id": "Dd2tmpsk",
+    "url": "https://cdn.modrinth.com/data/qyVF9oeo/versions/Dd2tmpsk/sound-physics-remastered-neoforge-1.21.1-1.5.1.jar",
+    "hash_format": "sha512",
+    "hash": "ff7e9f0b968eeb2ba0e833328a122813cad0434cfe2d5c3d527c1c0d564504f13a737fc05f22d3fea562a2f86568d31b95212bf5347dd10da36cd49ad56143a6",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "9s6osm5g",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "9eGKb6K1",
+        "file_name": null,
+        "dependency_type": "optional"
+      }
+    ],
+    "source": "https://modrinth.com/mod/qyVF9oeo/version/Dd2tmpsk"
+  },
+  "SubtleEffects-neoforge-1.21.1-1.14.3.jar": {
+    "filename": "SubtleEffects-neoforge-1.21.1-1.14.3.jar",
+    "name": "Subtle Effects",
+    "side": "client",
+    "provider": "modrinth",
+    "project_id": "4q8UOK1d",
+    "version_id": "s3Fo4cDk",
+    "url": "https://cdn.modrinth.com/data/4q8UOK1d/versions/s3Fo4cDk/SubtleEffects-neoforge-1.21.1-1.14.3.jar",
+    "hash_format": "sha512",
+    "hash": "efaf415d9dad768ac9b3893973349db65d7848b42d99952e82dbd1b0e66163ba09cfc2233953a8887b54da5ef52e366d7fa18f1b467e05780639be10a0e1e0ef",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "hYykXjDp",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/4q8UOK1d/version/s3Fo4cDk"
+  },
+  "supermartijn642corelib-1.1.21-neoforge-mc1.21.jar": {
+    "filename": "supermartijn642corelib-1.1.21-neoforge-mc1.21.jar",
+    "name": "SuperMartijn642's Core Lib",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "rOUBggPv",
+    "version_id": "hcYSe7v7",
+    "url": "https://cdn.modrinth.com/data/rOUBggPv/versions/hcYSe7v7/supermartijn642corelib-1.1.21-neoforge-mc1.21.jar",
+    "hash_format": "sha512",
+    "hash": "91e67be718dc288c95e22ba78e54deb75c4f110afddddfbef58480019008d39aaeeb7104fcddfd45a49c5e6ee703b20c1d22c5ad32f63059deef080c7bae4f62",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/rOUBggPv/version/hcYSe7v7"
+  },
+  "tectonic-3.0.22-neoforge-21.1.jar": {
+    "filename": "tectonic-3.0.22-neoforge-21.1.jar",
+    "name": "Tectonic",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "lWDHr9jE",
+    "version_id": "iCGkqnnx",
+    "url": "https://cdn.modrinth.com/data/lWDHr9jE/versions/iCGkqnnx/tectonic-3.0.22-neoforge-21.1.jar",
+    "hash_format": "sha512",
+    "hash": "a02d3f2bfd8aa099512005df23b45ec723694c397b4224a69ffd47b41cd06bb3d56a0f10bbfd81e8159e0fc55f61d0729656f91231410a74ed55e6fc16fd18ec",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "XaDC71GB",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/lWDHr9jE/version/iCGkqnnx"
+  },
+  "Terralith_1.21.x_v2.5.8.jar": {
+    "filename": "Terralith_1.21.x_v2.5.8.jar",
+    "name": "Terralith",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "8oi3bsk5",
+    "version_id": "MuJMtPGQ",
+    "url": "https://cdn.modrinth.com/data/8oi3bsk5/versions/MuJMtPGQ/Terralith_1.21.x_v2.5.8.jar",
+    "hash_format": "sha512",
+    "hash": "f862ed5435ce4c11a97d2ea5c40eee9f817c908f3223b5fd3e3fff0562a55111d7429dc73a2f1ca0b1af7b1ff6fa0470ed6efebb5de13336c40bb70fb357dd60",
+    "game_versions": [
+      "1.21",
+      "1.21.1",
+      "1.21.2",
+      "1.21.3",
+      "1.21.4"
+    ],
+    "loaders": [
+      "fabric",
+      "forge",
+      "neoforge",
+      "quilt"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/8oi3bsk5/version/MuJMtPGQ"
+  },
+  "tfmg-1.2.0.jar": {
+    "filename": "tfmg-1.2.0.jar",
+    "name": "Create: The Factory Must Grow",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "USgVjXsk",
+    "version_id": "uDi14nbt",
+    "url": "https://cdn.modrinth.com/data/USgVjXsk/versions/uDi14nbt/tfmg-1.2.0.jar",
+    "hash_format": "sha512",
+    "hash": "03f2ad28c78ef565ef203c5650280acb0b846d6105dc5c84b2e31187f501be5c59733ef3adb623fbaa32c3233d113d608905259128661ffab06b26b270b1b38c",
+    "game_versions": [
+      "1.21",
+      "1.21.1",
+      "1.21.2",
+      "1.21.3",
+      "1.21.4",
+      "1.21.5",
+      "1.21.6",
+      "1.21.7",
+      "1.21.8",
+      "1.21.9",
+      "1.21.10",
+      "1.21.11"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "LNytGWDc",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/USgVjXsk/version/uDi14nbt"
+  },
+  "travelersbackpack-neoforge-1.21.1-10.1.35.jar": {
+    "filename": "travelersbackpack-neoforge-1.21.1-10.1.35.jar",
+    "name": "Traveler's Backpack",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "rlloIFEV",
+    "version_id": "sXNN7hDc",
+    "url": "https://cdn.modrinth.com/data/rlloIFEV/versions/sXNN7hDc/travelersbackpack-neoforge-1.21.1-10.1.35.jar",
+    "hash_format": "sha512",
+    "hash": "9c8d9cb92d98925f781585bd5598f75b9c8c2e7b28934a78c6ec0d1ad366fe535805f8fb719ea929a2934895dc8305459375123803c0dbaf30227b0db3213cee",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "u6dRKJwZ",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "vRYk0bv7",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "fRiHVvU7",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "DMu0oBKf",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "vvuO3ImH",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "tagwiZkJ",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "nfn13YXA",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "jtmvUHXj",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "SaCpeal4",
+        "file_name": null,
+        "dependency_type": "optional"
+      }
+    ],
+    "source": "https://modrinth.com/mod/rlloIFEV/version/sXNN7hDc"
+  },
+  "VisualWorkbench-v21.1.1-1.21.1-NeoForge.jar": {
+    "filename": "VisualWorkbench-v21.1.1-1.21.1-NeoForge.jar",
+    "name": "Visual Workbench",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "kfqD1JRw",
+    "version_id": "Jy5V5FNj",
+    "url": "https://cdn.modrinth.com/data/kfqD1JRw/versions/Jy5V5FNj/VisualWorkbench-v21.1.1-1.21.1-NeoForge.jar",
+    "hash_format": "sha512",
+    "hash": "8e8837d2ddf7d60d192597d0c53d0fe3cd10858bf1cd015b154bc87a05603c0b849acc966592671d927bdb421c83f3c95f80ce5ba63717825508ef1579437aac",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "5WeWGLoJ",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "QAGBst4M",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/kfqD1JRw/version/Jy5V5FNj"
+  },
+  "voicechat-neoforge-1.21.1-2.6.17.jar": {
+    "filename": "voicechat-neoforge-1.21.1-2.6.17.jar",
+    "name": "Simple Voice Chat",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "9eGKb6K1",
+    "version_id": "6rT2RWh6",
+    "url": "https://cdn.modrinth.com/data/9eGKb6K1/versions/6rT2RWh6/voicechat-neoforge-1.21.1-2.6.17.jar",
+    "hash_format": "sha512",
+    "hash": "9646faa446300ee4d34936fdb71614d1e23bc2b3ca8da39a7dc46dc420caa01139db7f9db830154e27ea6662a1a50a68665e09407ba73da45841c3678f1659db",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "9eGKb6K1",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "9s6osm5g",
+        "file_name": null,
+        "dependency_type": "optional"
+      }
+    ],
+    "source": "https://modrinth.com/mod/9eGKb6K1/version/6rT2RWh6"
+  },
+  "waystones-neoforge-1.21.1-21.1.33.jar": {
+    "filename": "waystones-neoforge-1.21.1-21.1.33.jar",
+    "name": "Waystones",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "LOpKHB2A",
+    "version_id": "PXntW965",
+    "url": "https://cdn.modrinth.com/data/LOpKHB2A/versions/PXntW965/waystones-neoforge-1.21.1-21.1.33.jar",
+    "hash_format": "sha512",
+    "hash": "7a7034749b41745f738e7b5270a46cfe7cc533277653fdee9fbcb0710ea32b6387b836c4ee5a91c8a3ebffab157024b6c9f15a8ecfbc6359aba36e0a06c67e87",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "MBAkmtvl",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/LOpKHB2A/version/PXntW965"
+  },
+  "windy-1.1.1+1.21-neoforge.jar": {
+    "filename": "windy-1.1.1+1.21-neoforge.jar",
+    "name": "Windy",
+    "side": "client",
+    "provider": "modrinth",
+    "project_id": "EwYg6C78",
+    "version_id": "xcBfBf8H",
+    "url": "https://cdn.modrinth.com/data/EwYg6C78/versions/xcBfBf8H/windy-1.1.1%2B1.21-neoforge.jar",
+    "hash_format": "sha512",
+    "hash": "01e3aacc6dd41e837943454a3a8d60717d8958832e3053e329de6dd44c65c958111f579918683da4887b0cca9677398b42edf9d2660f0ad566752ddf80977f29",
+    "game_versions": [
+      "1.21",
+      "1.21.1",
+      "1.21.2",
+      "1.21.3",
+      "1.21.4",
+      "1.21.5",
+      "1.21.6",
+      "1.21.7",
+      "1.21.8"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "1eAoo2KR",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/EwYg6C78/version/xcBfBf8H"
+  },
+  "xaerominimap-neoforge-1.21.1-25.3.13.jar": {
+    "filename": "xaerominimap-neoforge-1.21.1-25.3.13.jar",
+    "name": "Xaero's Minimap",
+    "side": "client",
+    "provider": "modrinth",
+    "project_id": "1bokaNcj",
+    "version_id": "CklXEjmp",
+    "url": "https://cdn.modrinth.com/data/1bokaNcj/versions/CklXEjmp/xaerominimap-neoforge-1.21.1-25.3.13.jar",
+    "hash_format": "sha512",
+    "hash": "e6d12bcc860d81af59b8cb6d7e2306eb6c119b57f6bd0e7f9536e7800b82385b935b9b23b59e7935dd157724e2b02f32aa0e519dea033d45f7eae78362732c4b",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "gF3BGWvG",
+        "file_name": null,
+        "dependency_type": "optional"
+      }
+    ],
+    "source": "https://modrinth.com/mod/1bokaNcj/version/CklXEjmp"
+  },
+  "xaeros_waystones_compatibility-NeoForge-1.21.1-2.1.0.jar": {
+    "filename": "xaeros_waystones_compatibility-NeoForge-1.21.1-2.1.0.jar",
+    "name": "Xaero's Minimap & World Map - Waystones Compatibility",
+    "side": "client",
+    "provider": "modrinth",
+    "project_id": "7mLhyqIY",
+    "version_id": "k8wIAiWT",
+    "url": "https://cdn.modrinth.com/data/7mLhyqIY/versions/k8wIAiWT/xaeros_waystones_compatibility-NeoForge-1.21.1-2.1.0.jar",
+    "hash_format": "sha512",
+    "hash": "440da659b1c406ff410841248a28adba60b73f3d91f513ba335b9e5d44b3e48ab63d5ecc86484ff1e3d1a4f7830ad7566fc1efec2a03eba3c958b414b61feea0",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/7mLhyqIY/version/k8wIAiWT"
+  },
+  "xaeroworldmap-neoforge-1.21.1-1.40.16.jar": {
+    "filename": "xaeroworldmap-neoforge-1.21.1-1.40.16.jar",
+    "name": "Xaero's World Map",
+    "side": "client",
+    "provider": "modrinth",
+    "project_id": "NcUtCpym",
+    "version_id": "XwL25au3",
+    "url": "https://cdn.modrinth.com/data/NcUtCpym/versions/XwL25au3/xaeroworldmap-neoforge-1.21.1-1.40.16.jar",
+    "hash_format": "sha512",
+    "hash": "30fee010d813ce1cffe67a7b386d0ff6a8f9bd49026a38d0ba948a44a4670c50d434d30cc0797453b51a9c73587a050669a8ab58d97c659397b4696bc2592f2d",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "gF3BGWvG",
+        "file_name": null,
+        "dependency_type": "optional"
+      }
+    ],
+    "source": "https://modrinth.com/mod/NcUtCpym/version/XwL25au3"
+  },
+  "yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.jar": {
+    "filename": "yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.jar",
+    "name": "YetAnotherConfigLib (YACL)",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "1eAoo2KR",
+    "version_id": "7TVdVtxF",
+    "url": "https://cdn.modrinth.com/data/1eAoo2KR/versions/7TVdVtxF/yet_another_config_lib_v3-3.8.2%2B1.21.1-neoforge.jar",
+    "hash_format": "sha512",
+    "hash": "583de19b927ce8050c2b7d5e60b75accc69e325e5aac85c27994c82a9dec2e4e078343fa1d4c3a10d4bd7e0e524e0b3b246a18cf03db01e363a1e6f865adcf48",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/1eAoo2KR/version/7TVdVtxF"
+  },
+  "YungsApi-1.21.1-NeoForge-5.1.6.jar": {
+    "filename": "YungsApi-1.21.1-NeoForge-5.1.6.jar",
+    "name": "YUNG's API",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "Ua7DFN59",
+    "version_id": "ZB22DE9q",
+    "url": "https://cdn.modrinth.com/data/Ua7DFN59/versions/ZB22DE9q/YungsApi-1.21.1-NeoForge-5.1.6.jar",
+    "hash_format": "sha512",
+    "hash": "5f36d5166a67a156df52699071f20219bc2320b3c4fbcd9dac38631f66136f034e3219ac89ff4bfb6e26e4c68513a94c833797f2e5ed5bf58cfa1531eeed162d",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/Ua7DFN59/version/ZB22DE9q"
+  },
+  "YungsBetterDesertTemples-1.21.1-NeoForge-4.1.5.jar": {
+    "filename": "YungsBetterDesertTemples-1.21.1-NeoForge-4.1.5.jar",
+    "name": "YUNG's Better Desert Temples",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "XNlO7sBv",
+    "version_id": "GQ9iNWkI",
+    "url": "https://cdn.modrinth.com/data/XNlO7sBv/versions/GQ9iNWkI/YungsBetterDesertTemples-1.21.1-NeoForge-4.1.5.jar",
+    "hash_format": "sha512",
+    "hash": "6454c955f75f66104810e967a59ae032ddf1ccc5a854346af6bfba6e44cd456e755cd8feb1e0968be4e9132ea6c5d1cb2126fe5e85d3eb18c8d3ea3c81ffdf9a",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "Ua7DFN59",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/XNlO7sBv/version/GQ9iNWkI"
+  },
+  "YungsBetterDungeons-1.21.1-NeoForge-5.1.4.jar": {
+    "filename": "YungsBetterDungeons-1.21.1-NeoForge-5.1.4.jar",
+    "name": "YUNG's Better Dungeons",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "o1C1Dkj5",
+    "version_id": "D6aZn0Em",
+    "url": "https://cdn.modrinth.com/data/o1C1Dkj5/versions/D6aZn0Em/YungsBetterDungeons-1.21.1-NeoForge-5.1.4.jar",
+    "hash_format": "sha512",
+    "hash": "40513bacd13fa9860abcab507b1fc09dc51649af4b615ce466e0ec361557f02d35e6e44bea1cc17cb4120805f862aad01394eb185f46611e7be63dfd97f272df",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "Ua7DFN59",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/o1C1Dkj5/version/D6aZn0Em"
+  },
+  "YungsBetterEndIsland-1.21.1-NeoForge-3.1.2.jar": {
+    "filename": "YungsBetterEndIsland-1.21.1-NeoForge-3.1.2.jar",
+    "name": "YUNG's Better End Island",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "2BwBOmBQ",
+    "version_id": "I52NZ1qK",
+    "url": "https://cdn.modrinth.com/data/2BwBOmBQ/versions/I52NZ1qK/YungsBetterEndIsland-1.21.1-NeoForge-3.1.2.jar",
+    "hash_format": "sha512",
+    "hash": "02923a1a97eb81ec13d69bdc6b7e8b36dfb9e6f1a98adfcf103707ec3afde35831ccd4b210e9b3a9c7662541c38ea593a3d94c12171b4072ea7feafa75c95f96",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "Ua7DFN59",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/2BwBOmBQ/version/I52NZ1qK"
+  },
+  "YungsBetterJungleTemples-1.21.1-NeoForge-3.1.2.jar": {
+    "filename": "YungsBetterJungleTemples-1.21.1-NeoForge-3.1.2.jar",
+    "name": "YUNG's Better Jungle Temples",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "z9Ve58Ih",
+    "version_id": "P00i2hJn",
+    "url": "https://cdn.modrinth.com/data/z9Ve58Ih/versions/P00i2hJn/YungsBetterJungleTemples-1.21.1-NeoForge-3.1.2.jar",
+    "hash_format": "sha512",
+    "hash": "eca4233e874a55886c63d2111b8685d479771d3627bad2922582e65b78c51ba74733dc4624aabf91f2a2178a940a72d9209ae33eef74e34f84f07d62256709d9",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "Ua7DFN59",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/z9Ve58Ih/version/P00i2hJn"
+  },
+  "YungsBetterMineshafts-1.21.1-NeoForge-5.1.1.jar": {
+    "filename": "YungsBetterMineshafts-1.21.1-NeoForge-5.1.1.jar",
+    "name": "YUNG's Better Mineshafts",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "HjmxVlSr",
+    "version_id": "Go3nbneL",
+    "url": "https://cdn.modrinth.com/data/HjmxVlSr/versions/Go3nbneL/YungsBetterMineshafts-1.21.1-NeoForge-5.1.1.jar",
+    "hash_format": "sha512",
+    "hash": "8b01b386f53feeaa55f0c62697578b82e00501e45e428b2a68df6bda34efb6a4b3b4e3582abf13fe767ebcb61aef9368186f53c03999958bef38f31c41a7f8b2",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "Ua7DFN59",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/HjmxVlSr/version/Go3nbneL"
+  },
+  "YungsBetterNetherFortresses-1.21.1-NeoForge-3.1.5.jar": {
+    "filename": "YungsBetterNetherFortresses-1.21.1-NeoForge-3.1.5.jar",
+    "name": "YUNG's Better Nether Fortresses",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "Z2mXHnxP",
+    "version_id": "iopJiJQp",
+    "url": "https://cdn.modrinth.com/data/Z2mXHnxP/versions/iopJiJQp/YungsBetterNetherFortresses-1.21.1-NeoForge-3.1.5.jar",
+    "hash_format": "sha512",
+    "hash": "18b461298d3df1215fa3b4d2c0cb2ef1c7ed76701d8a0bb140277b21923e31abd939f0fd9b400c5bd676d739f1cda31c43b4dc753f9187251542223f3424d336",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "Ua7DFN59",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/Z2mXHnxP/version/iopJiJQp"
+  },
+  "YungsBetterOceanMonuments-1.21.1-NeoForge-4.1.2.jar": {
+    "filename": "YungsBetterOceanMonuments-1.21.1-NeoForge-4.1.2.jar",
+    "name": "YUNG's Better Ocean Monuments",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "3dT9sgt4",
+    "version_id": "yFjEcj2g",
+    "url": "https://cdn.modrinth.com/data/3dT9sgt4/versions/yFjEcj2g/YungsBetterOceanMonuments-1.21.1-NeoForge-4.1.2.jar",
+    "hash_format": "sha512",
+    "hash": "77c864da36f1d2173e6460dc335996893a804954b8a5c274173fc95dfdbf437e80d9dce32f6060306a662fc35322566eecf5dfe24e2d3fab79bf7e0ff9fa4db6",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "Ua7DFN59",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/3dT9sgt4/version/yFjEcj2g"
+  },
+  "YungsBetterStrongholds-1.21.1-NeoForge-5.1.3.jar": {
+    "filename": "YungsBetterStrongholds-1.21.1-NeoForge-5.1.3.jar",
+    "name": "YUNG's Better Strongholds",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "kidLKymU",
+    "version_id": "8U0dIfSM",
+    "url": "https://cdn.modrinth.com/data/kidLKymU/versions/8U0dIfSM/YungsBetterStrongholds-1.21.1-NeoForge-5.1.3.jar",
+    "hash_format": "sha512",
+    "hash": "385d67e07f2c67af5ea387d92d92949d8f671e8f99204457b6396dbe987ac3b14c2bff765df5fcbaa68016604f82a1fc6ec5a69c012ca22ad088d1a7c9bc135d",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "Ua7DFN59",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/kidLKymU/version/8U0dIfSM"
+  },
+  "YungsBetterWitchHuts-1.21.1-NeoForge-4.1.1.jar": {
+    "filename": "YungsBetterWitchHuts-1.21.1-NeoForge-4.1.1.jar",
+    "name": "YUNG's Better Witch Huts",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "t5FRdP87",
+    "version_id": "AvedwcIe",
+    "url": "https://cdn.modrinth.com/data/t5FRdP87/versions/AvedwcIe/YungsBetterWitchHuts-1.21.1-NeoForge-4.1.1.jar",
+    "hash_format": "sha512",
+    "hash": "9baa8a1f36a2a36efc3df58ab9347fd9f326b551ad78e3f600ed9d68862c619752ac0770804807efb15a46fcb4d9f6e2baf6a11f622d3ebb6c865662f6c7bcfd",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "Ua7DFN59",
+        "file_name": null,
+        "dependency_type": "required"
+      }
+    ],
+    "source": "https://modrinth.com/mod/t5FRdP87/version/AvedwcIe"
+  },
+  "camera-neoforge-1.21.1-1.0.21.jar": {
+    "filename": "camera-neoforge-1.21.1-1.0.21.jar",
+    "name": "Camera Mod",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "oiuNWinn",
+    "version_id": "Etw6aqhL",
+    "url": "https://cdn.modrinth.com/data/oiuNWinn/versions/Etw6aqhL/camera-neoforge-1.21.1-1.0.21.jar",
+    "hash_format": "sha512",
+    "hash": "61da467f7d43af4a9057bc2e9fbea749fd9b94a6c1a8ecb52ff31d36d3ae815031fa1881c3b9df22a20073bc15d04dfac45e683513eefbb70aab0c855dee3d8c",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [
+      {
+        "version_id": null,
+        "project_id": "u6dRKJwZ",
+        "file_name": null,
+        "dependency_type": "optional"
+      },
+      {
+        "version_id": null,
+        "project_id": "nvQzSEkH",
+        "file_name": null,
+        "dependency_type": "optional"
+      }
+    ],
+    "source": "https://modrinth.com/mod/oiuNWinn/version/Etw6aqhL"
+  },
+  "cave_dweller-1.3b.jar": {
+    "filename": "cave_dweller-1.3b.jar",
+    "name": "Cave Dweller ReEvolved",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "82njC4TT",
+    "version_id": "3cKL2M1m",
+    "url": "https://cdn.modrinth.com/data/82njC4TT/versions/3cKL2M1m/cave_dweller-1.3b.jar",
+    "hash_format": "sha512",
+    "hash": "4d59575636c9ed999c1cdce90d9b97784fc90f73c1c3e22b1c61f148cef281b611af199a92f501f1a3849e856af22750912cb580cd12b7b34b907bf658cae70a",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/82njC4TT/version/3cKL2M1m"
+  },
+  "moogs_structures-neoforge-1.21.1-2.0.2.jar": {
+    "filename": "moogs_structures-neoforge-1.21.1-2.0.2.jar",
+    "name": "Moog's Structure Lib (moogs_structures)",
+    "side": "both",
+    "provider": "modrinth",
+    "project_id": "1oUDhxuy",
+    "version_id": "9eOgZ04o",
+    "url": "https://cdn.modrinth.com/data/1oUDhxuy/versions/9eOgZ04o/moogs_structures-neoforge-1.21.1-2.0.2.jar",
+    "hash_format": "sha512",
+    "hash": "dbf20127270e7a96d731f8294cab37665c7f707ba5faf9f5205099d1ba267386dcd1755e04c9c67214f5557ffc34eb4884359886db2ae2369ca794ad8b2ecb12",
+    "game_versions": [
+      "1.21",
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "dependencies": [],
+    "source": "https://modrinth.com/mod/1oUDhxuy/version/9eOgZ04o"
+  },
+  "createpropulsion-1.1.2.jar": {
+    "filename": "createpropulsion-1.1.2.jar",
+    "name": "Create Propulsion: Simulated",
+    "side": "both",
+    "provider": "curseforge",
+    "project_id": 1522736,
+    "version_id": 8039499,
+    "url": "https://cursemaven.com/curse/maven/create-propulsion-simulated-1522736/8039499/create-propulsion-simulated-1522736-8039499.jar",
+    "hash_format": "sha512",
+    "hash": "7811dfa200185f1996cce68af1d8466c829ab36500c83a4e3351645ed9d9c28394c62b0b6afeebd2027a76fb3f5ea4e2055d511ff950db84097dde153090b421",
+    "game_versions": [
+      "1.21.1"
+    ],
+    "loaders": [
+      "neoforge"
+    ],
+    "source": "https://www.curseforge.com/minecraft/mc-mods/create-propulsion-simulated/files/8039499",
+    "verification": {
+      "method": "downloaded-jar",
+      "sha1": "f9d66d20ca742dcd191f38abbf9d304f3ef6587e",
+      "mod_id": "createpropulsion",
+      "version": "1.1.2",
+      "size": 1150452
+    },
+    "jar_dependencies": [
+      {
+        "modId": "neoforge",
+        "type": "required",
+        "versionRange": "[21.1.219,)",
+        "ordering": "NONE",
+        "side": "BOTH"
+      },
+      {
+        "modId": "minecraft",
+        "type": "required",
+        "versionRange": "[1.21.1]",
+        "ordering": "NONE",
+        "side": "BOTH"
+      },
+      {
+        "modId": "create",
+        "type": "required",
+        "versionRange": "[6.0.6,)",
+        "ordering": "AFTER",
+        "side": "BOTH"
+      },
+      {
+        "modId": "createdieselgenerators",
+        "type": "optional",
+        "versionRange": "[1.2,)",
+        "ordering": "AFTER",
+        "side": "BOTH"
+      },
+      {
+        "modId": "createbigcannons",
+        "type": "optional",
+        "versionRange": "*",
+        "ordering": "NONE",
+        "side": "BOTH"
+      },
+      {
+        "modId": "tfmg",
+        "type": "optional",
+        "versionRange": "*",
+        "ordering": "AFTER",
+        "side": "BOTH"
+      },
+      {
+        "modId": "immersiveengineering",
+        "type": "optional",
+        "versionRange": "*",
+        "ordering": "AFTER",
+        "side": "BOTH"
+      },
+      {
+        "modId": "mekanism",
+        "type": "optional",
+        "versionRange": "*",
+        "ordering": "AFTER",
+        "side": "BOTH"
+      },
+      {
+        "modId": "mekanismgenerators",
+        "type": "optional",
+        "versionRange": "*",
+        "ordering": "AFTER",
+        "side": "BOTH"
+      },
+      {
+        "modId": "northstar",
+        "type": "optional",
+        "versionRange": "*",
+        "ordering": "AFTER",
+        "side": "BOTH"
+      },
+      {
+        "modId": "stellaris",
+        "type": "optional",
+        "versionRange": "*",
+        "ordering": "AFTER",
+        "side": "BOTH"
+      },
+      {
+        "modId": "computercraft",
+        "type": "optional",
+        "versionRange": "*",
+        "ordering": "AFTER",
+        "side": "BOTH"
+      },
+      {
+        "modId": "jei",
+        "type": "optional",
+        "versionRange": "*",
+        "ordering": "AFTER",
+        "side": "BOTH"
+      },
+      {
+        "modId": "sable",
+        "type": "required",
+        "versionRange": "*",
+        "ordering": "AFTER",
+        "side": "BOTH"
+      },
+      {
+        "modId": "sablecompanion",
+        "type": "required",
+        "versionRange": "*",
+        "ordering": "AFTER",
+        "side": "BOTH"
+      }
+    ]
+  }
+}

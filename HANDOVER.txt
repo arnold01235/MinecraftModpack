@@ -1,0 +1,199 @@
+MINECRAFTMODDED - PROJECT HANDOVER
+Updated: 2026-10-15 (Europe/Oslo)
+Workspace: D:\git\MinecraftModded
+
+OBJECTIVE AND USER PREFERENCES
+Build a packwiz project from temp-modlist.txt, distributed through a public
+HTTPS pack.toml and synchronized by the supplied Windows client updater.
+Minecraft target: 1.21.1, NeoForge, Java 21.
+Preserve the supplied mod versions for the initial import. The user wants a
+later pass to update mods and find the newest compatible NeoForge version.
+The initial pack pins NeoForge 21.1.259; game compatibility and the hosting
+destination remain unconfirmed.
+
+CURRENT STATE
+- All 134 enabled mod filenames have resolved, saved release records.
+- sources/unresolved.json is empty.
+- 133 records use Modrinth; Create Propulsion uses CurseForge project/file IDs
+  with a verified Curse Maven download URL.
+- pack.toml, index.toml and 134 mods/*.pw.toml files now exist.
+- Minecraft 1.21.1 and NeoForge 21.1.259 are pinned in pack.toml.
+- Local exact-inventory and checksum-chain validation passed for the real pack.
+  pack.toml.in remains a reference template.
+- No Git repository (.git), GitHub remote, or published site exists here.
+- No mod upgrades have been performed.
+- No config, defaultconfigs, shaders, or resource packs were supplied.
+- Client script still has the YOUR-USERNAME/YOUR-REPO hosting placeholder.
+
+LATEST USER RUN / SUCCESSFUL RECOVERY
+Command:
+  python scripts/import_pack.py --neoforge latest
+Result: exit code 0; all 134 mods resolved; selected NeoForge 21.1.259;
+created pack.toml, index.toml, and all mod metadata.
+
+The earlier Python expired-certificate error was recovered by the Windows
+HTTPS retry. Two old warning lines appeared after the successful output
+because they were written to stderr, confusing the user. The logging has
+now been changed to print this success message on stdout only AFTER the
+native request succeeds:
+  NeoForge metadata verified successfully using Windows HTTPS.
+The user does NOT need to rerun the importer; the pack already exists.
+The underlying difference between Python and Windows certificate-chain
+handling has not been fully diagnosed, but the live fallback worked.
+
+TLS RETRY IMPLEMENTATION
+For certificate-verification failures on the official NeoForge host, the
+importer retries through Windows System32/curl.exe, requiring Schannel.
+Certificate and revocation checks remain enabled. Transfers and redirects
+are restricted to HTTPS, and curl configuration files are disabled.
+No trust stores were changed. Network denials and other API hosts do not
+use this retry. Failed Windows validation or malformed JSON is not cached.
+34 tests passed after the logging clarification. The real generated pack
+also passed scripts/validate_pack.py --inventory after the user's import.
+
+The --neoforge latest option uses:
+  https://maven.neoforged.net/api/maven/versions/releases/net/neoforged/neoforge
+It bypasses the local cache for that version list, filters stable 21.1.x
+versions, and selects the highest numeric patch. It then checks the selected
+release's neoforge-VERSION-moddev-config.json before creating pack files.
+Latest stable is only a candidate for testing, not proof of compatibility.
+
+KNOWN LOADER REQUIREMENT
+Create Propulsion 1.1.2 was downloaded and its internal NeoForge metadata
+verified. It requires NeoForge [21.1.219,), Minecraft [1.21.1], Create
+[6.0.6,), Sable, and sablecompanion. The catalog records a minimum of
+21.1.219, and the importer rejects lower loader versions.
+This is a known lower bound, not a complete scan of all 134 JAR constraints.
+Check whether required components are bundled before adding new mods.
+No latest-compatible loader version has been established.
+
+NEXT STEPS
+1. Verify all remote mod downloads in the user's terminal:
+     cd D:\git\MinecraftModded
+     python scripts/validate_pack.py --inventory --downloads
+   This downloads each JAR and verifies its checksum without installing it.
+   The full remote download check has not yet been completed.
+   Do not rerun pack creation: the importer refuses existing pack files.
+
+2. Test a clean Minecraft 1.21.1 instance with Java 21 and NeoForge 21.1.259.
+   Confirm startup and world loading; investigate dependency or mod conflicts.
+   Preserve the original mod versions until the intentional upgrade pass.
+
+3. Obtain the intended GitHub repository / public HTTPS hosting destination.
+   Push the completed project, configure GitHub Pages to use GitHub Actions,
+   and manually run 'Publish packwiz pack'. Nothing has been published yet.
+   For another host, stage with:
+     python scripts/stage_site.py --base-url https://YOUR-HOST/path
+   Use the actual site root and an empty dist/ directory. Staging copies only
+   indexed pack files and configures the distributed sync-mods.cmd URL.
+
+4. Test the published updater in a clean instance before sharing it.
+   Later upgrade mods, review loader compatibility, test, and republish.
+
+IMPORTANT FILES
+- pack.toml: generated pack, Minecraft 1.21.1 / NeoForge 21.1.259.
+- index.toml and mods/*.pw.toml: generated index and 134 mod definitions.
+- temp-modlist.txt: original filename inventory; preserve as an audit snapshot.
+- sources/mods.json: 134 source mappings, sides, loader hints, minimum loader.
+- sources/resolved.json: all verified release records; preserve these.
+- sources/unresolved.json: current unresolved list (empty).
+- sources/overrides.json: optional explicit verified source records.
+- .cache/api/: cached API responses; useful locally, ignored for publication.
+- scripts/import_pack.py: Python 3.11+ standard-library initial importer.
+- scripts/validate_pack.py: metadata, path, completeness, client-side and
+  checksum-chain validation; --downloads also verifies remote binaries.
+- scripts/stage_site.py: builds dist/ for static HTTPS hosting.
+- client/sync-mods.cmd: completed hybrid batch/PowerShell client updater.
+- .github/workflows/pages.yml: manual validation, staging, Pages deployment.
+- tests/test_pack.py: 34 unit tests at the last successful run.
+- README.md: setup, hosting, maintenance, and client instructions.
+- .packwizignore: excludes tools/source documents from packwiz refresh.
+- .gitattributes: preserves TOML line endings for stable checksums.
+- HANDOVER.txt: this handover; excluded from the pack.
+
+INITIAL IMPORT DESIGN
+The importer matches exact filenames and Minecraft/loader metadata; it never
+silently substitutes a newer mod release. It saves successful records as it
+goes. Exact Modrinth version IDs, version-number lookups, and hash lookups
+are supported. CurseForge API access needs CURSEFORGE_API_KEY when used;
+never put a key into the repository. All current records are already resolved.
+The importer is for initial creation only: it refuses an existing pack.toml
+or a nonempty mods directory. Once built, use packwiz for maintenance.
+
+SOURCE-MAPPING FIXES ALREADY COMPLETED
+- Camera Mod: project oiuNWinn, version Etw6aqhL.
+- Cave Dweller ReEvolved: project 82njC4TT, version 3cKL2M1m.
+- Moog's Structure Lib: project 1oUDhxuy, version 9eOgZ04o.
+- Create Propulsion: Simulated: exact 1.1.2 is unavailable through the tested
+  Modrinth version/hash endpoints (404). It is CurseForge project 1522736,
+  file 8039499:
+  https://www.curseforge.com/minecraft/mc-mods/create-propulsion-simulated/files/8039499
+  The Curse Maven coordinate provided by that page is:
+  curse.maven:create-propulsion-simulated-1522736:8039499
+  The user successfully ran the fallback, which downloaded the JAR, checked
+  the SHA-1 hint, inspected its mod ID/version and NeoForge metadata, and
+  calculated SHA-512 from actual bytes. Its successful saved record includes
+  verification details and internal dependency declarations. Do not redo
+  source matching or guess another download URL.
+
+VALIDATION ALREADY PERFORMED
+- python -m unittest discover -s tests: 34 tests passed.
+- Generated a complete pack from all 134 real saved records in a temporary
+  directory, then validated exact inventory and the entire hash chain.
+  NeoForge 21.1.219 was used only as a test input for file generation.
+  The temporary directory was removed; this did not create the source pack
+  or establish game compatibility.
+- Client script syntax and startup guards were checked earlier.
+- Create Propulsion's actual fallback download passed verification in the
+  user's terminal; the other records contain provider release metadata/hashes.
+- Full binary download validation for all mods, full updater synchronization,
+  and actual Minecraft startup/world loading have NOT been completed.
+
+CLIENT UPDATER BEHAVIOR
+Place sync-mods.cmd in the game's instance folder beside mods/. Close the
+running game first. It requires Windows x64, downloads portable Java 21 for
+its own use, and runs the packwiz installer with client-side selection and an
+explicit instance directory. It uses a lock and a local .packwiz-sync cache,
+and refuses to run from the pack source repository.
+Keep packwiz.json: the installer uses it to track managed files.
+The script does not install Minecraft or NeoForge, change the launcher's Java
+setting, or wipe old manually installed mods. Different old filenames may
+remain, which is why the first sync should use a clean instance.
+The publishing workflow supplies the correct URL in the distributed script;
+the source copy retains its placeholder until a host is configured.
+
+COMPATIBILITY ITEMS FOR THE LATER PASS
+- The pack includes Sinytra Connector and Forgified Fabric API.
+- LambDynamicLights is a Fabric build intended to run through Connector.
+  Its provider lists Fabric API as a dependency; the inventory uses Forgified
+  Fabric API instead. This requires runtime verification, not blindly adding
+  the disabled ordinary Fabric API.
+- A provider dependency scan found no listed incompatible projects among
+  resolved Modrinth records, but provider declarations are not a complete
+  compatibility or transitive-dependency check.
+- Both Sophisticated Backpacks and Traveler's Backpack are intentional
+  inventory entries, as are Accessories and Curios; preserve them.
+- The disabled entries remain excluded:
+    fabric-api-0.116.11+1.21.1.jar.disabled
+    L_Ender's Cataclysm 1.21.1-3.27.jar.disabled
+
+ONGOING MAINTENANCE AFTER INITIAL CREATION
+Use packwiz refresh after changing files, and commit pack.toml, index.toml,
+and changed metadata together. For intentional updates use packwiz update
+--all, review resulting dependencies/loader requirements, and test the game.
+Omit --inventory validation after intentionally changing original filenames.
+Keep metadata source slugs/paths stable: completeness validation expects the
+original catalog's project paths. Adding or removing projects may require
+updating that validation/catalog deliberately.
+
+ENVIRONMENT NOTES FOR THE NEXT AGENT
+The workspace is Windows/PowerShell and writable at D:\git\MinecraftModded.
+Python 3.11+ is required; python.exe worked (Python 3.13 in this environment).
+Earlier exec_command calls failed during environment setup. The available
+mcp__node_repl__js tool worked for local fs operations and child_process calls.
+Agent-side network calls previously failed with WinError 10013 / EACCES.
+User shell commands successfully resolved the mods, but the latest user run
+encountered a separate expired-certificate error on NeoForge's host. The
+later Windows HTTPS retry succeeded and generated the real pack.
+Do not equate those two failures or report a successful network check from
+unit tests. No external credentials or hosting details have been supplied.

@@ -1,0 +1,14 @@
+# Reference template only. scripts/import_pack.py writes the real pack.toml
+# after all 134 enabled mods resolve and a loader version has been selected.
+name = "MinecraftModded"
+version = "0.1.0"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "@GENERATED_INDEX_SHA256@"
+
+[versions]
+minecraft = "1.21.1"
+neoforge = "@SELECTED_NEOFORGE_VERSION@"

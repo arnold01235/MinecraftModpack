@@ -1,0 +1,2070 @@
+{
+  "schema_version": 1,
+  "name": "MinecraftModded",
+  "version": "0.1.0",
+  "minecraft": "1.21.1",
+  "loader": "neoforge",
+  "neoforge": null,
+  "inventory": "temp-modlist.txt",
+  "snapshot": "2026-10-14",
+  "notes": [
+    "Source hints are candidates, not verified release IDs. The importer must match exact filenames and compatible loader/game metadata.",
+    "NeoForge version selection and mod upgrades are deferred per user instruction.",
+    "No config, defaultconfig, resource pack, or shader files were supplied."
+  ],
+  "mods": [
+    {
+      "filename": "[neoforge]imst-2.2.1c.jar",
+      "name": "Immersive Structures",
+      "slug": "immersive-structures",
+      "side": "both",
+      "modrinth": [
+        "CVBAErky"
+      ],
+      "curseforge": [
+        "immersive-structures"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ],
+      "modrinth_version": "1fkB1mdT"
+    },
+    {
+      "filename": "accessories-neoforge-1.1.0-beta.53+1.21.1.jar",
+      "name": "Accessories",
+      "slug": "accessories",
+      "side": "both",
+      "modrinth": [
+        "accessories"
+      ],
+      "curseforge": [
+        "accessories"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "aether-1.21.1-1.5.10-neoforge.jar",
+      "name": "The Aether",
+      "slug": "aether",
+      "side": "both",
+      "modrinth": [
+        "aether"
+      ],
+      "curseforge": [
+        "aether"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "AmbientSounds_NEOFORGE_v6.3.8_mc1.21.1.jar",
+      "name": "AmbientSounds",
+      "slug": "ambientsounds",
+      "side": "client",
+      "modrinth": [
+        "ambientsounds"
+      ],
+      "curseforge": [
+        "ambientsounds"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "appleskin-neoforge-mc1.21-3.0.9.jar",
+      "name": "AppleSkin",
+      "slug": "appleskin",
+      "side": "client",
+      "modrinth": [
+        "appleskin"
+      ],
+      "curseforge": [
+        "appleskin"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "Aquaculture-1.21.1-2.7.21.jar",
+      "name": "Aquaculture 2",
+      "slug": "aquaculture",
+      "side": "both",
+      "modrinth": [
+        "aquaculture"
+      ],
+      "curseforge": [
+        "aquaculture"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "architectury-13.0.8-neoforge.jar",
+      "name": "Architectury API",
+      "slug": "architectury-api",
+      "side": "both",
+      "modrinth": [
+        "architectury-api"
+      ],
+      "curseforge": [
+        "architectury-api"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "ars_nouveau-1.21.1-5.11.5.jar",
+      "name": "Ars Nouveau",
+      "slug": "ars-nouveau",
+      "side": "both",
+      "modrinth": [
+        "ars-nouveau"
+      ],
+      "curseforge": [
+        "ars-nouveau"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "artifacts-neoforge-13.2.1.jar",
+      "name": "Artifacts",
+      "slug": "artifacts",
+      "side": "both",
+      "modrinth": [
+        "artifacts"
+      ],
+      "curseforge": [
+        "artifacts"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "atmospheric-1.21.1-7.0.1.jar",
+      "name": "Atmospheric",
+      "slug": "atmospheric",
+      "side": "both",
+      "modrinth": [
+        "atmospheric"
+      ],
+      "curseforge": [
+        "atmospheric"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "Auroras-1.21-1.6.2.jar",
+      "name": "Auroras",
+      "slug": "auroras",
+      "side": "client",
+      "modrinth": [
+        "auroras"
+      ],
+      "curseforge": [
+        "auroras"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "balm-neoforge-1.21.1-21.0.58.jar",
+      "name": "Balm",
+      "slug": "balm",
+      "side": "both",
+      "modrinth": [
+        "balm"
+      ],
+      "curseforge": [
+        "balm"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "BetterAdvancements-NeoForge-1.21.1-0.4.3.21.jar",
+      "name": "Better Advancements",
+      "slug": "better-advancements",
+      "side": "client",
+      "modrinth": [
+        "better-advancements"
+      ],
+      "curseforge": [
+        "better-advancements"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "BetterF3-11.0.3-NeoForge-1.21.1.jar",
+      "name": "BetterF3",
+      "slug": "betterf3",
+      "side": "client",
+      "modrinth": [
+        "betterf3"
+      ],
+      "curseforge": [
+        "betterf3"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "blossom-blade-1.3.jar",
+      "name": "Blossom Blade",
+      "slug": "blossom-blade",
+      "side": "both",
+      "modrinth": [
+        "blossom-blade"
+      ],
+      "curseforge": [
+        "blossom-blade"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ],
+      "curseforge_project_id": 920268,
+      "curseforge_file_id": 5806390
+    },
+    {
+      "filename": "blueprint-1.21.1-8.1.0.jar",
+      "name": "Blueprint",
+      "slug": "blueprint",
+      "side": "both",
+      "modrinth": [
+        "blueprint"
+      ],
+      "curseforge": [
+        "blueprint"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "camera-neoforge-1.21.1-1.0.21.jar",
+      "name": "Camera Mod",
+      "slug": "camera",
+      "side": "both",
+      "modrinth": [
+        "oiuNWinn"
+      ],
+      "curseforge": [
+        "camera-mod"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ],
+      "modrinth_version": "Etw6aqhL",
+      "curseforge_project_id": 289310,
+      "curseforge_file_id": 6715623,
+      "source_reference": "https://modrinth.com/mod/camera-mod/version/neoforge-1.21.1-1.0.21"
+    },
+    {
+      "filename": "carryon-neoforge-1.21.1-2.2.4.4.jar",
+      "name": "Carry On",
+      "slug": "carry-on",
+      "side": "both",
+      "modrinth": [
+        "carry-on"
+      ],
+      "curseforge": [
+        "carry-on"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "cave_dweller-1.3b.jar",
+      "name": "Cave Dweller ReEvolved",
+      "slug": "cave-dweller",
+      "side": "both",
+      "modrinth": [
+        "82njC4TT"
+      ],
+      "curseforge": [],
+      "allowed_loaders": [
+        "neoforge"
+      ],
+      "modrinth_version": "3cKL2M1m",
+      "source_reference": "https://modrinth.com/mod/cave-dweller-reevolved/version/1.3b"
+    },
+    {
+      "filename": "cc-tweaked-1.21.1-forge-1.119.0.jar",
+      "name": "CC: Tweaked",
+      "slug": "cc-tweaked",
+      "side": "both",
+      "modrinth": [
+        "cc-tweaked"
+      ],
+      "curseforge": [
+        "cc-tweaked"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "chat_heads-0.15.1-neoforge-1.21.jar",
+      "name": "Chat Heads",
+      "slug": "chat-heads",
+      "side": "client",
+      "modrinth": [
+        "chat-heads"
+      ],
+      "curseforge": [
+        "chat-heads"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "chatanimation-neoforge-1.21.1-1.1.3.jar",
+      "name": "Chat Animation",
+      "slug": "chat-animation",
+      "side": "client",
+      "modrinth": [
+        "chat-animation"
+      ],
+      "curseforge": [
+        "chat-animation"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "Chunky-NeoForge-1.4.23.jar",
+      "name": "Chunky",
+      "slug": "chunky",
+      "side": "both",
+      "modrinth": [
+        "chunky"
+      ],
+      "curseforge": [
+        "chunky"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "citadel-2.7.0-1.21.1.jar",
+      "name": "Citadel",
+      "slug": "citadel",
+      "side": "both",
+      "modrinth": [
+        "citadel"
+      ],
+      "curseforge": [
+        "citadel"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "cloth-config-15.0.140-neoforge.jar",
+      "name": "Cloth Config",
+      "slug": "cloth-config",
+      "side": "both",
+      "modrinth": [
+        "cloth-config"
+      ],
+      "curseforge": [
+        "cloth-config"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "Clumps-neoforge-1.21.1-19.0.0.1.jar",
+      "name": "Clumps",
+      "slug": "clumps",
+      "side": "both",
+      "modrinth": [
+        "clumps"
+      ],
+      "curseforge": [
+        "clumps"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "comforts-neoforge-9.0.5+1.21.1.jar",
+      "name": "Comforts",
+      "slug": "comforts",
+      "side": "both",
+      "modrinth": [
+        "comforts"
+      ],
+      "curseforge": [
+        "comforts"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "connectedglass-1.1.14-neoforge-mc1.21.jar",
+      "name": "Connected Glass",
+      "slug": "connected-glass",
+      "side": "both",
+      "modrinth": [
+        "connected-glass"
+      ],
+      "curseforge": [
+        "connected-glass"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "connector-2.0.0-beta.14+1.21.1-full.jar",
+      "name": "Sinytra Connector",
+      "slug": "connector",
+      "side": "both",
+      "modrinth": [
+        "connector"
+      ],
+      "curseforge": [
+        "sinytra-connector"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "continuity-3.0.0+1.21.neoforge.jar",
+      "name": "Continuity",
+      "slug": "continuity",
+      "side": "client",
+      "modrinth": [
+        "continuity"
+      ],
+      "curseforge": [
+        "continuity"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "Controlling-neoforge-1.21.1-19.0.5.jar",
+      "name": "Controlling",
+      "slug": "controlling",
+      "side": "client",
+      "modrinth": [
+        "controlling"
+      ],
+      "curseforge": [
+        "controlling"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "copycats-3.0.4+mc.1.21.1-neoforge.jar",
+      "name": "Create: Copycats+",
+      "slug": "copycats",
+      "side": "both",
+      "modrinth": [
+        "copycats"
+      ],
+      "curseforge": [
+        "copycats"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "coroutil-neoforge-1.21.0-1.3.8.jar",
+      "name": "CoroUtil",
+      "slug": "coroutil",
+      "side": "both",
+      "modrinth": [
+        "coroutil"
+      ],
+      "curseforge": [
+        "coroutil"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "create-1.21.1-6.0.10.jar",
+      "name": "Create",
+      "slug": "create",
+      "side": "both",
+      "modrinth": [
+        "create"
+      ],
+      "curseforge": [
+        "create"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "create-aeronautics-bundled-1.21.1-1.2.1.jar",
+      "name": "Create Aeronautics",
+      "slug": "create-aeronautics",
+      "side": "both",
+      "modrinth": [
+        "oWaK0Q19"
+      ],
+      "curseforge": [
+        "create-aeronautics"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ],
+      "modrinth_version": "YhZLrAFC"
+    },
+    {
+      "filename": "create-enchantment-industry-2.3.1.jar",
+      "name": "Create: Enchantment Industry",
+      "slug": "create-enchantment-industry",
+      "side": "both",
+      "modrinth": [
+        "create-enchantment-industry"
+      ],
+      "curseforge": [
+        "create-enchantment-industry"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "createaddition-1.5.11.jar",
+      "name": "Create Crafts & Additions",
+      "slug": "createaddition",
+      "side": "both",
+      "modrinth": [
+        "createaddition"
+      ],
+      "curseforge": [
+        "createaddition"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "createbigcannons-5.11.3+mc.1.21.1.jar",
+      "name": "Create Big Cannons",
+      "slug": "create-big-cannons",
+      "side": "both",
+      "modrinth": [
+        "create-big-cannons"
+      ],
+      "curseforge": [
+        "create-big-cannons"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "createcclogistics-1.21.1-0.3.6.jar",
+      "name": "Create: CC Logistics",
+      "slug": "create-cc-logistics",
+      "side": "both",
+      "modrinth": [
+        "create-cc-logistics"
+      ],
+      "curseforge": [
+        "create-cc-logistics"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "CreateDragonsPlus-1.10.1.jar",
+      "name": "Create: Dragons Plus",
+      "slug": "create-dragons-plus",
+      "side": "both",
+      "modrinth": [
+        "create-dragons-plus"
+      ],
+      "curseforge": [
+        "create-dragons-plus"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "createliquidfuel-2.1.1-1.21.1.jar",
+      "name": "Create: Liquid Fuel",
+      "slug": "create-liquid-fuel",
+      "side": "both",
+      "modrinth": [
+        "create-liquid-fuel"
+      ],
+      "curseforge": [
+        "create-liquid-fuel"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "createnuclear-1.3.2-beta.3-neoforge.jar",
+      "name": "Create Nuclear",
+      "slug": "create-nuclear",
+      "side": "both",
+      "modrinth": [
+        "create-nuclear"
+      ],
+      "curseforge": [
+        "create-nuclear"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "createoreexcavation-1.21-1.6.8.jar",
+      "name": "Create Ore Excavation",
+      "slug": "create-ore-excavation",
+      "side": "both",
+      "modrinth": [
+        "create-ore-excavation"
+      ],
+      "curseforge": [
+        "create-ore-excavation"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "createpropulsion-1.1.2.jar",
+      "name": "Create Propulsion: Simulated",
+      "slug": "create-propulsion",
+      "side": "both",
+      "modrinth": [
+        "ApkoHNO9"
+      ],
+      "curseforge": [
+        "create-propulsion-simulated"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ],
+      "modrinth_version_number": "1.1.2",
+      "modrinth_file_hash": {
+        "algorithm": "sha1",
+        "value": "f9d66d20ca742dcd191f38abbf9d304f3ef6587e"
+      },
+      "curseforge_project_id": 1522736,
+      "curseforge_file_id": 8039499,
+      "source_reference": "https://www.curseforge.com/minecraft/mc-mods/create-propulsion-simulated/files/8039499",
+      "note": "Modrinth returns 404 for the exact version and file hash. CurseForge file 8039499 confirms the exact filename, game and loader and supplies the Curse Maven coordinates. The fallback must download and inspect the JAR, confirm mod ID/version and the SHA-1 lookup hint, then calculate SHA-512 before recording success. Hash hint: https://baka.materus.pl/materus/banana-mc/commit/a2d6f70759b01195997ae93099ed80b5ad510ae8",
+      "curseforge_maven": {
+        "url": "https://cursemaven.com/curse/maven/create-propulsion-simulated-1522736/8039499/create-propulsion-simulated-1522736-8039499.jar",
+        "sha1": "f9d66d20ca742dcd191f38abbf9d304f3ef6587e",
+        "mod_id": "createpropulsion",
+        "version": "1.1.2",
+        "game_versions": [
+          "1.21.1"
+        ],
+        "loaders": [
+          "neoforge"
+        ],
+        "coordinates": "curse.maven:create-propulsion-simulated-1522736:8039499",
+        "documentation": "https://www.cursemaven.com/"
+      }
+    },
+    {
+      "filename": "CreativeCore_NEOFORGE_v2.13.38_mc1.21.1.jar",
+      "name": "CreativeCore",
+      "slug": "creativecore",
+      "side": "both",
+      "modrinth": [
+        "creativecore"
+      ],
+      "curseforge": [
+        "creativecore"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "curios-neoforge-9.5.1+1.21.1.jar",
+      "name": "Curios API",
+      "slug": "curios",
+      "side": "both",
+      "modrinth": [
+        "curios"
+      ],
+      "curseforge": [
+        "curios"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "DistantHorizons-3.0.3-b-1.21.1-fabric-neoforge.jar",
+      "name": "Distant Horizons",
+      "slug": "distant-horizons",
+      "side": "both",
+      "modrinth": [
+        "distant-horizons"
+      ],
+      "curseforge": [
+        "distant-horizons"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "dungeons-and-taverns-v4.4.4.jar",
+      "name": "Dungeons and Taverns",
+      "slug": "dungeons-and-taverns",
+      "side": "both",
+      "modrinth": [
+        "dungeons-and-taverns"
+      ],
+      "curseforge": [
+        "dungeons-and-taverns"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "EasyAnvils-v21.1.0-1.21.1-NeoForge.jar",
+      "name": "Easy Anvils",
+      "slug": "easy-anvils",
+      "side": "both",
+      "modrinth": [
+        "easy-anvils"
+      ],
+      "curseforge": [
+        "easy-anvils"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "elevatorid-neoforge-1.21.1-1.11.4.jar",
+      "name": "OpenBlocks Elevator",
+      "slug": "elevatorid",
+      "side": "both",
+      "modrinth": [
+        "elevatorid"
+      ],
+      "curseforge": [
+        "openblocks-elevator"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "endermanoverhaul-neoforge-1.21.1-2.0.3.jar",
+      "name": "Enderman Overhaul",
+      "slug": "enderman-overhaul",
+      "side": "both",
+      "modrinth": [
+        "enderman-overhaul"
+      ],
+      "curseforge": [
+        "enderman-overhaul"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "Essential_1-3-10-8_neoforge_1-21-1.jar",
+      "name": "Essential",
+      "slug": "essential",
+      "side": "client",
+      "modrinth": [
+        "essential"
+      ],
+      "curseforge": [
+        "essential"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "FarmersDelight-1.21.1-1.3.2.jar",
+      "name": "Farmer's Delight",
+      "slug": "farmers-delight",
+      "side": "both",
+      "modrinth": [
+        "farmers-delight"
+      ],
+      "curseforge": [
+        "farmers-delight"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "fast-ip-ping-v1.0.11-mc1.21.1-neoforge.jar",
+      "name": "Fast IP Ping",
+      "slug": "fast-ip-ping",
+      "side": "client",
+      "modrinth": [
+        "fast-ip-ping"
+      ],
+      "curseforge": [
+        "fast-ip-ping"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "ferritecore-7.0.3-neoforge.jar",
+      "name": "FerriteCore",
+      "slug": "ferrite-core",
+      "side": "both",
+      "modrinth": [
+        "ferrite-core"
+      ],
+      "curseforge": [
+        "ferritecore"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "forgified-fabric-api-0.116.7+2.2.4+1.21.1.jar",
+      "name": "Forgified Fabric API",
+      "slug": "forgified-fabric-api",
+      "side": "both",
+      "modrinth": [
+        "forgified-fabric-api"
+      ],
+      "curseforge": [
+        "forgified-fabric-api"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "friendsandfoes-neoforge-4.0.25+mc1.21.1.jar",
+      "name": "Friends & Foes",
+      "slug": "friends-and-foes",
+      "side": "both",
+      "modrinth": [
+        "friends-and-foes"
+      ],
+      "curseforge": [
+        "friends-and-foes"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "fusion-1.2.12-neoforge-mc1.21.1.jar",
+      "name": "Fusion",
+      "slug": "fusion",
+      "side": "both",
+      "modrinth": [
+        "fusion"
+      ],
+      "curseforge": [
+        "fusion"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "fzzy_config-0.7.6+1.21+neoforge.jar",
+      "name": "Fzzy Config",
+      "slug": "fzzy-config",
+      "side": "both",
+      "modrinth": [
+        "fzzy-config"
+      ],
+      "curseforge": [
+        "fzzy-config"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "geckolib-neoforge-1.21.1-4.8.4.jar",
+      "name": "GeckoLib",
+      "slug": "geckolib",
+      "side": "both",
+      "modrinth": [
+        "geckolib"
+      ],
+      "curseforge": [
+        "geckolib"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "golemoverhaul-neoforge-1.21.1-1.1.0.jar",
+      "name": "Golem Overhaul",
+      "slug": "golem-overhaul",
+      "side": "both",
+      "modrinth": [
+        "golem-overhaul"
+      ],
+      "curseforge": [
+        "golem-overhaul"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "gravestone-neoforge-1.21.1-1.0.37.jar",
+      "name": "GraveStone Mod",
+      "slug": "gravestone-mod",
+      "side": "both",
+      "modrinth": [
+        "gravestone-mod"
+      ],
+      "curseforge": [
+        "gravestone-mod"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "immersive_armors-1.7.6+1.21.1-neoforge.jar",
+      "name": "Immersive Armors",
+      "slug": "immersive-armors",
+      "side": "both",
+      "modrinth": [
+        "immersive-armors"
+      ],
+      "curseforge": [
+        "immersive-armors"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "interiors-1.21.1-neoforge-0.6.1.jar",
+      "name": "Create: Interiors",
+      "slug": "interiors",
+      "side": "both",
+      "modrinth": [
+        "interiors"
+      ],
+      "curseforge": [
+        "interiors"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "iris-neoforge-1.8.12+mc1.21.1.jar",
+      "name": "Iris",
+      "slug": "iris",
+      "side": "client",
+      "modrinth": [
+        "iris"
+      ],
+      "curseforge": [
+        "iris"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "Jade-1.21.1-NeoForge-15.10.5.jar",
+      "name": "Jade",
+      "slug": "jade",
+      "side": "both",
+      "modrinth": [
+        "jade"
+      ],
+      "curseforge": [
+        "jade"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "jamlib-neoforge-1.3.6+1.21.1.jar",
+      "name": "JamLib",
+      "slug": "jamlib",
+      "side": "both",
+      "modrinth": [
+        "jamlib"
+      ],
+      "curseforge": [
+        "jamlib"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "jei-1.21.1-neoforge-19.27.0.340.jar",
+      "name": "Just Enough Items",
+      "slug": "jei",
+      "side": "both",
+      "modrinth": [
+        "jei"
+      ],
+      "curseforge": [
+        "jei"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "jurassicreborn-1.3.44.jar",
+      "name": "Jurassic Reborn",
+      "slug": "jurassic-reborn",
+      "side": "both",
+      "modrinth": [
+        "jurassic-reborn"
+      ],
+      "curseforge": [
+        "jurassic-world-reborn-ii"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "justzoom_neoforge_2.1.0_MC_1.21.1.jar",
+      "name": "Just Zoom",
+      "slug": "just-zoom",
+      "side": "client",
+      "modrinth": [
+        "just-zoom"
+      ],
+      "curseforge": [
+        "just-zoom"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "konkrete_neoforge_1.9.9_MC_1.21.jar",
+      "name": "Konkrete",
+      "slug": "konkrete",
+      "side": "both",
+      "modrinth": [
+        "konkrete"
+      ],
+      "curseforge": [
+        "konkrete"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "kotlinforforge-5.11.0-all.jar",
+      "name": "Kotlin for Forge",
+      "slug": "kotlin-for-forge",
+      "side": "both",
+      "modrinth": [
+        "kotlin-for-forge"
+      ],
+      "curseforge": [
+        "kotlin-for-forge"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "lambdynamiclights-4.8.8+1.21.1.jar",
+      "name": "LambDynamicLights",
+      "slug": "lambdynamiclights",
+      "side": "client",
+      "modrinth": [
+        "lambdynamiclights"
+      ],
+      "curseforge": [
+        "lambdynamiclights"
+      ],
+      "allowed_loaders": [
+        "fabric"
+      ],
+      "note": "Fabric build preserved from the inventory. Requires the listed Connector and Forgified Fabric API; compatibility needs a game launch test."
+    },
+    {
+      "filename": "lithostitched-1.7.7-neoforge-21.1.jar",
+      "name": "Lithostitched",
+      "slug": "lithostitched",
+      "side": "both",
+      "modrinth": [
+        "lithostitched"
+      ],
+      "curseforge": [
+        "lithostitched"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "lootr-neoforge-1.21.1-1.11.37.120.jar",
+      "name": "Lootr",
+      "slug": "lootr",
+      "side": "both",
+      "modrinth": [
+        "lootr"
+      ],
+      "curseforge": [
+        "lootr"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "mcw-doors-1.1.5-mc1.21.1neoforge.jar",
+      "name": "Macaw's Doors",
+      "slug": "macaws-doors",
+      "side": "both",
+      "modrinth": [
+        "macaws-doors"
+      ],
+      "curseforge": [
+        "macaws-doors"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "mcw-furniture-3.4.1-mc1.21.1neoforge.jar",
+      "name": "Macaw's Furniture",
+      "slug": "macaws-furniture",
+      "side": "both",
+      "modrinth": [
+        "macaws-furniture"
+      ],
+      "curseforge": [
+        "macaws-furniture"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "mcw-holidays-1.1.2-mc1.21.1neoforge.jar",
+      "name": "Macaw's Holidays",
+      "slug": "macaws-holidays",
+      "side": "both",
+      "modrinth": [
+        "macaws-holidays"
+      ],
+      "curseforge": [
+        "macaws-holidays"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "mcw-lights-1.1.5-mc1.21.1neoforge.jar",
+      "name": "Macaw's Lights and Lamps",
+      "slug": "macaws-lights-and-lamps",
+      "side": "both",
+      "modrinth": [
+        "macaws-lights-and-lamps"
+      ],
+      "curseforge": [
+        "macaws-lights-and-lamps"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "mcw-mcwfences-1.2.1-mc1.21.1neoforge.jar",
+      "name": "Macaw's Fences and Walls",
+      "slug": "macaws-fences-and-walls",
+      "side": "both",
+      "modrinth": [
+        "macaws-fences-and-walls"
+      ],
+      "curseforge": [
+        "macaws-fences-and-walls"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "mcw-mcwpaths-1.1.1-mc1.21.1neoforge.jar",
+      "name": "Macaw's Paths and Pavings",
+      "slug": "macaws-paths-and-pavings",
+      "side": "both",
+      "modrinth": [
+        "macaws-paths-and-pavings"
+      ],
+      "curseforge": [
+        "macaws-paths-and-pavings"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "Mekanism-1.21.1-10.7.19.85.jar",
+      "name": "Mekanism",
+      "slug": "mekanism",
+      "side": "both",
+      "modrinth": [
+        "mekanism"
+      ],
+      "curseforge": [
+        "mekanism"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "moogs_structures-neoforge-1.21.1-2.0.2.jar",
+      "name": "Moog's Structure Lib",
+      "slug": "moogs-structures",
+      "side": "both",
+      "modrinth": [
+        "1oUDhxuy"
+      ],
+      "curseforge": [
+        "moogs-structure-lib"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ],
+      "modrinth_version": "9eOgZ04o",
+      "curseforge_project_id": 1337167,
+      "curseforge_file_id": 7925970,
+      "source_reference": "https://modrinth.com/mod/moogs-structure-lib/version/2.0.2"
+    },
+    {
+      "filename": "MoogsEndStructures-1.21-2.0.2.jar",
+      "name": "Moog's End Structures",
+      "slug": "moogs-end-structures",
+      "side": "both",
+      "modrinth": [
+        "moogs-end-structures"
+      ],
+      "curseforge": [
+        "moogs-end-structures"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "MoogsVoyagerStructures-1.21-5.0.10.jar",
+      "name": "Moog's Voyager Structures",
+      "slug": "moogs-voyager-structures",
+      "side": "both",
+      "modrinth": [
+        "moogs-voyager-structures"
+      ],
+      "curseforge": [
+        "moogs-voyager-structures"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "moonlight-neoforge-1.21.1-3.0.9.jar",
+      "name": "Moonlight Lib",
+      "slug": "moonlight",
+      "side": "both",
+      "modrinth": [
+        "moonlight"
+      ],
+      "curseforge": [
+        "selene"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "mowziesmobs-1.21.1-1.8.2.jar",
+      "name": "Mowzie's Mobs",
+      "slug": "mowzies-mobs",
+      "side": "both",
+      "modrinth": [
+        "mowzies-mobs"
+      ],
+      "curseforge": [
+        "mowzies-mobs"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "mru-1.0.19+LTS+1.21.1+neoforge.jar",
+      "name": "MRU",
+      "slug": "mru",
+      "side": "both",
+      "modrinth": [
+        "mru"
+      ],
+      "curseforge": [
+        "mru"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "NaturesCompass-1.21.1-3.4.0-neoforge.jar",
+      "name": "Nature's Compass",
+      "slug": "natures-compass",
+      "side": "both",
+      "modrinth": [
+        "natures-compass"
+      ],
+      "curseforge": [
+        "natures-compass"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "notenoughanimations-neoforge-1.12.3-mc1.21.1.jar",
+      "name": "Not Enough Animations",
+      "slug": "not-enough-animations",
+      "side": "client",
+      "modrinth": [
+        "not-enough-animations"
+      ],
+      "curseforge": [
+        "not-enough-animations"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "owo-lib-neoforge-0.12.15.5-beta.1+1.21.jar",
+      "name": "oωo (owo-lib)",
+      "slug": "owo-lib",
+      "side": "both",
+      "modrinth": [
+        "owo-lib"
+      ],
+      "curseforge": [
+        "owo-lib"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "Paraglider-neoforge-21.1.5.jar",
+      "name": "Paraglider",
+      "slug": "paraglider",
+      "side": "both",
+      "modrinth": [
+        "paraglider"
+      ],
+      "curseforge": [
+        "paraglider"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "particlerain-4.0.0-beta.10+1.21.1-neoforge.jar",
+      "name": "Particle Rain",
+      "slug": "particle-rain",
+      "side": "client",
+      "modrinth": [
+        "particle-rain"
+      ],
+      "curseforge": [
+        "particle-rain"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "punchy-2.5.5b-neoforge-1.21.1.jar",
+      "name": "Punchy",
+      "slug": "punchy",
+      "side": "client",
+      "modrinth": [
+        "punchy"
+      ],
+      "curseforge": [
+        "punchy"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "PuzzlesLib-v21.1.39-1.21.1-NeoForge.jar",
+      "name": "Puzzles Lib",
+      "slug": "puzzles-lib",
+      "side": "both",
+      "modrinth": [
+        "puzzles-lib"
+      ],
+      "curseforge": [
+        "puzzles-lib"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "refinedstorage-neoforge-2.0.8.jar",
+      "name": "Refined Storage",
+      "slug": "refined-storage",
+      "side": "both",
+      "modrinth": [
+        "refined-storage"
+      ],
+      "curseforge": [
+        "refined-storage"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "resourcefulconfig-neoforge-1.21-3.0.11.jar",
+      "name": "Resourceful Config",
+      "slug": "resourceful-config",
+      "side": "both",
+      "modrinth": [
+        "resourceful-config"
+      ],
+      "curseforge": [
+        "resourceful-config"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "resourcefullib-neoforge-1.21-3.0.12.jar",
+      "name": "Resourceful Lib",
+      "slug": "resourceful-lib",
+      "side": "both",
+      "modrinth": [
+        "resourceful-lib"
+      ],
+      "curseforge": [
+        "resourceful-lib"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "Ribbits-1.21.1-NeoForge-4.1.6.jar",
+      "name": "Ribbits",
+      "slug": "ribbits",
+      "side": "both",
+      "modrinth": [
+        "ribbits"
+      ],
+      "curseforge": [
+        "ribbits"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "rightclickharvest-neoforge-4.6.1+1.21.1.jar",
+      "name": "RightClickHarvest",
+      "slug": "rightclickharvest",
+      "side": "both",
+      "modrinth": [
+        "rightclickharvest"
+      ],
+      "curseforge": [
+        "rightclickharvest"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "ritchiesprojectilelib-2.1.2+mc.1.21.1-neoforge.jar",
+      "name": "Ritchie's Projectile Library",
+      "slug": "ritchies-projectile-library",
+      "side": "both",
+      "modrinth": [
+        "ritchies-projectile-library"
+      ],
+      "curseforge": [
+        "ritchies-projectile-library"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "sable-neoforge-1.21.1-1.2.2.jar",
+      "name": "Sable",
+      "slug": "sable",
+      "side": "both",
+      "modrinth": [
+        "sable"
+      ],
+      "curseforge": [
+        "sable"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "Searchables-neoforge-1.21.1-1.0.2.jar",
+      "name": "Searchables",
+      "slug": "searchables",
+      "side": "both",
+      "modrinth": [
+        "searchables"
+      ],
+      "curseforge": [
+        "searchables"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "SimpleDiscordRichPresence-neoforge-88.0.1-build.54+mc1.21.1.jar",
+      "name": "Simple Discord Rich Presence",
+      "slug": "simple-discord-rich-presence",
+      "side": "client",
+      "modrinth": [
+        "simple-discord-rich-presence"
+      ],
+      "curseforge": [
+        "simple-discord-rich-presence"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "skinlayers3d-neoforge-1.11.1-mc1.21.1.jar",
+      "name": "3D Skin Layers",
+      "slug": "3dskinlayers",
+      "side": "client",
+      "modrinth": [
+        "3dskinlayers"
+      ],
+      "curseforge": [
+        "skin-layers-3d"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "smarterfarmers-1.21-2.2.4-neoforge.jar",
+      "name": "Smarter Farmers",
+      "slug": "smarter-farmers",
+      "side": "both",
+      "modrinth": [
+        "smarter-farmers"
+      ],
+      "curseforge": [
+        "smarter-farmers"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "sodium-neoforge-0.6.13+mc1.21.1.jar",
+      "name": "Sodium",
+      "slug": "sodium",
+      "side": "client",
+      "modrinth": [
+        "AANobbMI"
+      ],
+      "curseforge": [
+        "sodium"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ],
+      "modrinth_version": "Pb3OXVqC"
+    },
+    {
+      "filename": "sophisticatedbackpacks-1.21.1-3.25.45.1742.jar",
+      "name": "Sophisticated Backpacks",
+      "slug": "sophisticated-backpacks",
+      "side": "both",
+      "modrinth": [
+        "sophisticated-backpacks"
+      ],
+      "curseforge": [
+        "sophisticated-backpacks"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "sophisticatedcore-1.21.1-1.4.39.1852.jar",
+      "name": "Sophisticated Core",
+      "slug": "sophisticated-core",
+      "side": "both",
+      "modrinth": [
+        "sophisticated-core"
+      ],
+      "curseforge": [
+        "sophisticated-core"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "sound-physics-remastered-neoforge-1.21.1-1.5.1.jar",
+      "name": "Sound Physics Remastered",
+      "slug": "sound-physics-remastered",
+      "side": "client",
+      "modrinth": [
+        "sound-physics-remastered"
+      ],
+      "curseforge": [
+        "sound-physics-remastered"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "SubtleEffects-neoforge-1.21.1-1.14.3.jar",
+      "name": "Subtle Effects",
+      "slug": "subtle-effects",
+      "side": "client",
+      "modrinth": [
+        "subtle-effects"
+      ],
+      "curseforge": [
+        "subtle-effects"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "supermartijn642corelib-1.1.21-neoforge-mc1.21.jar",
+      "name": "SuperMartijn642's Core Lib",
+      "slug": "supermartijn642s-core-lib",
+      "side": "both",
+      "modrinth": [
+        "supermartijn642s-core-lib"
+      ],
+      "curseforge": [
+        "supermartijn642s-core-lib"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "tectonic-3.0.22-neoforge-21.1.jar",
+      "name": "Tectonic",
+      "slug": "tectonic",
+      "side": "both",
+      "modrinth": [
+        "tectonic"
+      ],
+      "curseforge": [
+        "tectonic"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "Terralith_1.21.x_v2.5.8.jar",
+      "name": "Terralith",
+      "slug": "terralith",
+      "side": "both",
+      "modrinth": [
+        "terralith"
+      ],
+      "curseforge": [
+        "terralith"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "tfmg-1.2.0.jar",
+      "name": "Create: The Factory Must Grow",
+      "slug": "create-tfmg",
+      "side": "both",
+      "modrinth": [
+        "create-tfmg"
+      ],
+      "curseforge": [
+        "create-industry"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "travelersbackpack-neoforge-1.21.1-10.1.35.jar",
+      "name": "Traveler's Backpack",
+      "slug": "travelersbackpack",
+      "side": "both",
+      "modrinth": [
+        "travelersbackpack"
+      ],
+      "curseforge": [
+        "travelers-backpack"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "VisualWorkbench-v21.1.1-1.21.1-NeoForge.jar",
+      "name": "Visual Workbench",
+      "slug": "visual-workbench",
+      "side": "both",
+      "modrinth": [
+        "visual-workbench"
+      ],
+      "curseforge": [
+        "visual-workbench"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "voicechat-neoforge-1.21.1-2.6.17.jar",
+      "name": "Simple Voice Chat",
+      "slug": "simple-voice-chat",
+      "side": "both",
+      "modrinth": [
+        "simple-voice-chat"
+      ],
+      "curseforge": [
+        "simple-voice-chat"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "waystones-neoforge-1.21.1-21.1.33.jar",
+      "name": "Waystones",
+      "slug": "waystones",
+      "side": "both",
+      "modrinth": [
+        "waystones"
+      ],
+      "curseforge": [
+        "waystones"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "windy-1.1.1+1.21-neoforge.jar",
+      "name": "Windy",
+      "slug": "windy",
+      "side": "client",
+      "modrinth": [
+        "windy"
+      ],
+      "curseforge": [
+        "windy"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "xaerominimap-neoforge-1.21.1-25.3.13.jar",
+      "name": "Xaero's Minimap",
+      "slug": "xaeros-minimap",
+      "side": "client",
+      "modrinth": [
+        "xaeros-minimap"
+      ],
+      "curseforge": [
+        "xaeros-minimap"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "xaeros_waystones_compatibility-NeoForge-1.21.1-2.1.0.jar",
+      "name": "Xaero's Waystones Compatibility",
+      "slug": "xaeros-waystones-compatibility",
+      "side": "client",
+      "modrinth": [
+        "xaeros-waystones-compatibility"
+      ],
+      "curseforge": [
+        "xaeros-waystones-compatibility"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "xaeroworldmap-neoforge-1.21.1-1.40.16.jar",
+      "name": "Xaero's World Map",
+      "slug": "xaeros-world-map",
+      "side": "client",
+      "modrinth": [
+        "xaeros-world-map"
+      ],
+      "curseforge": [
+        "xaeros-world-map"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.jar",
+      "name": "YetAnotherConfigLib",
+      "slug": "yacl",
+      "side": "both",
+      "modrinth": [
+        "yacl"
+      ],
+      "curseforge": [
+        "yacl"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "YungsApi-1.21.1-NeoForge-5.1.6.jar",
+      "name": "YUNG's API",
+      "slug": "yungs-api",
+      "side": "both",
+      "modrinth": [
+        "yungs-api"
+      ],
+      "curseforge": [
+        "yungs-api"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "YungsBetterDesertTemples-1.21.1-NeoForge-4.1.5.jar",
+      "name": "YUNG's Better Desert Temples",
+      "slug": "yungs-better-desert-temples",
+      "side": "both",
+      "modrinth": [
+        "yungs-better-desert-temples"
+      ],
+      "curseforge": [
+        "yungs-better-desert-temples"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "YungsBetterDungeons-1.21.1-NeoForge-5.1.4.jar",
+      "name": "YUNG's Better Dungeons",
+      "slug": "yungs-better-dungeons",
+      "side": "both",
+      "modrinth": [
+        "yungs-better-dungeons"
+      ],
+      "curseforge": [
+        "yungs-better-dungeons"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "YungsBetterEndIsland-1.21.1-NeoForge-3.1.2.jar",
+      "name": "YUNG's Better End Island",
+      "slug": "yungs-better-end-island",
+      "side": "both",
+      "modrinth": [
+        "yungs-better-end-island"
+      ],
+      "curseforge": [
+        "yungs-better-end-island"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "YungsBetterJungleTemples-1.21.1-NeoForge-3.1.2.jar",
+      "name": "YUNG's Better Jungle Temples",
+      "slug": "yungs-better-jungle-temples",
+      "side": "both",
+      "modrinth": [
+        "yungs-better-jungle-temples"
+      ],
+      "curseforge": [
+        "yungs-better-jungle-temples"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "YungsBetterMineshafts-1.21.1-NeoForge-5.1.1.jar",
+      "name": "YUNG's Better Mineshafts",
+      "slug": "yungs-better-mineshafts",
+      "side": "both",
+      "modrinth": [
+        "yungs-better-mineshafts"
+      ],
+      "curseforge": [
+        "yungs-better-mineshafts"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "YungsBetterNetherFortresses-1.21.1-NeoForge-3.1.5.jar",
+      "name": "YUNG's Better Nether Fortresses",
+      "slug": "yungs-better-nether-fortresses",
+      "side": "both",
+      "modrinth": [
+        "yungs-better-nether-fortresses"
+      ],
+      "curseforge": [
+        "yungs-better-nether-fortresses"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "YungsBetterOceanMonuments-1.21.1-NeoForge-4.1.2.jar",
+      "name": "YUNG's Better Ocean Monuments",
+      "slug": "yungs-better-ocean-monuments",
+      "side": "both",
+      "modrinth": [
+        "yungs-better-ocean-monuments"
+      ],
+      "curseforge": [
+        "yungs-better-ocean-monuments"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "YungsBetterStrongholds-1.21.1-NeoForge-5.1.3.jar",
+      "name": "YUNG's Better Strongholds",
+      "slug": "yungs-better-strongholds",
+      "side": "both",
+      "modrinth": [
+        "yungs-better-strongholds"
+      ],
+      "curseforge": [
+        "yungs-better-strongholds"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    },
+    {
+      "filename": "YungsBetterWitchHuts-1.21.1-NeoForge-4.1.1.jar",
+      "name": "YUNG's Better Witch Huts",
+      "slug": "yungs-better-witch-huts",
+      "side": "both",
+      "modrinth": [
+        "yungs-better-witch-huts"
+      ],
+      "curseforge": [
+        "yungs-better-witch-huts"
+      ],
+      "allowed_loaders": [
+        "neoforge"
+      ]
+    }
+  ],
+  "disabled": [
+    "fabric-api-0.116.11+1.21.1.jar.disabled",
+    "L_Ender's Cataclysm 1.21.1-3.27.jar.disabled"
+  ],
+  "neoforge_minimum": "21.1.219",
+  "neoforge_minimum_source": "createpropulsion-1.1.2.jar META-INF/neoforge.mods.toml requires [21.1.219,); other JAR constraints still need review during launch testing."
+}
