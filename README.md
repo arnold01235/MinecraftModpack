@@ -76,7 +76,7 @@ Upload the contents of `dist/`. The staging command requires an empty `dist/` di
 
 With the official Minecraft Launcher (started at least once):
 
-1. Create an empty folder for the pack, for example `D:\Minecraft\MinecraftModded`, and put the published `sync-mods.cmd` in it.
+1. Download the published `sync-mods.cmd` anywhere (for example Downloads). It installs the pack to `%APPDATA%\.minecraft\modpacks\<pack name>` and puts a copy of itself there. To choose the folder instead, put the script alone in an empty folder (for example `D:\Minecraft\MinecraftModded`); a folder that already contains `packwiz.json` is also used as-is.
 2. Close Minecraft and the launcher (including the system tray), then double-click the script.
 3. The script installs the pack's NeoForge version (verified against NeoForge's published SHA-256) if missing, creates or updates a launcher profile named after this folder (each folder gets its own profile) whose game directory is this folder, and syncs the mods.
 4. Open the launcher, pick the profile with the folder's name and press Play. Run the script again whenever the pack changes; it also moves the profile to a new NeoForge version if the pack changes it.

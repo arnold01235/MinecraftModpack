@@ -4,14 +4,18 @@ setlocal EnableExtensions DisableDelayedExpansion
 rem Set this once before sharing. The pack must be publicly readable.
 set "PACKWIZ_SYNC_URL=https://YOUR-USERNAME.github.io/YOUR-REPO/pack.toml"
 
-rem Put this file in an empty folder for the modpack (for example D:\Minecraft\MyPack).
+rem Double-click from anywhere (for example Downloads): the pack is installed to
+rem %APPDATA%\.minecraft\modpacks\<pack name>, and a copy of this script is put there.
+rem To choose the folder instead, put this file alone in an empty folder and run it there.
 rem Close Minecraft and the launcher before running. With the official Minecraft
 rem Launcher, it installs the pack's NeoForge version and creates a launcher profile
-rem pointing to this folder. Set PACKWIZ_SYNC_SKIP_LAUNCHER=1 to skip that step.
+rem named after the game folder. Set PACKWIZ_SYNC_SKIP_LAUNCHER=1 to skip that step.
 rem The updater downloads its own portable Java 21; it does not configure game Java.
 rem Keep packwiz.json: the installer uses it to track the files it manages.
 
 set "PACKWIZ_SYNC_SCRIPT=%~f0"
+rem A module path inherited from PowerShell 7 breaks Windows PowerShell's built-in modules.
+set "PSModulePath="
 powershell.exe -NoLogo -NoProfile -Command "$ErrorActionPreference = 'Stop'; $lines = @(Get-Content -LiteralPath $env:PACKWIZ_SYNC_SCRIPT); $marker = [Array]::IndexOf($lines, '# POWERSHELL START'); if ($marker -lt 0) { throw 'Script is incomplete.' }; & ([scriptblock]::Create(($lines[($marker + 1)..($lines.Length - 1)] -join [Environment]::NewLine)))"
 set "PACKWIZ_SYNC_EXIT=%ERRORLEVEL%"
 if not "%PACKWIZ_SYNC_EXIT%"=="0" echo Synchronization failed. See the error above.
@@ -38,7 +42,10 @@ function Get-Download {
         }
         if ($Sha256) {
             if ($Sha256 -notmatch '^[a-fA-F0-9]{64}$') { throw 'Invalid expected SHA-256 checksum.' }
-            if ((Get-FileHash -LiteralPath $partial -Algorithm SHA256).Hash -ne $Sha256) {
+            $stream = [IO.File]::OpenRead($partial)
+            try { $actual = [BitConverter]::ToString([Security.Cryptography.SHA256]::Create().ComputeHash($stream)).Replace('-', '') }
+            finally { $stream.Dispose() }
+            if ($actual -ne $Sha256) {
                 throw "Checksum mismatch: $Url"
             }
         }
@@ -151,14 +158,46 @@ try {
         throw 'This script requires Windows x64 (Intel or AMD).'
     }
 
-    $instance = [IO.Path]::GetDirectoryName($env:PACKWIZ_SYNC_SCRIPT)
-    Set-Location -LiteralPath $instance
-    if (((Test-Path -LiteralPath (Join-Path $instance 'pack.toml')) -and
-         (Test-Path -LiteralPath (Join-Path $instance 'index.toml'))) -or
-        (Test-Path -LiteralPath (Join-Path $instance 'sources\mods.json')) -or
-        (Test-Path -LiteralPath (Join-Path $instance '..\sources\mods.json'))) {
-        throw 'This looks like the pack source repository. Copy this script to the Minecraft game instance folder.'
+    $scriptDir = [IO.Path]::GetDirectoryName($env:PACKWIZ_SYNC_SCRIPT)
+    if (((Test-Path -LiteralPath (Join-Path $scriptDir 'pack.toml')) -and
+         (Test-Path -LiteralPath (Join-Path $scriptDir 'index.toml'))) -or
+        (Test-Path -LiteralPath (Join-Path $scriptDir 'sources\mods.json')) -or
+        (Test-Path -LiteralPath (Join-Path $scriptDir '..\sources\mods.json'))) {
+        throw 'This looks like the pack source repository. Run the published copy of this script instead.'
     }
+
+    # Fail before downloading Java if the pack URL is missing or returns a web page.
+    $packResponse = Invoke-WebRequest -Uri $packUrl -UseBasicParsing -TimeoutSec 60
+    $packContent = if ($packResponse.Content -is [byte[]]) {
+        [Text.Encoding]::UTF8.GetString($packResponse.Content)
+    } else { [string]$packResponse.Content }
+    if ($packContent -notmatch '(?m)^\s*pack-format\s*=\s*"packwiz:') {
+        throw 'The pack URL did not return a packwiz pack.toml. Check the hosting URL.'
+    }
+    $neoForgeVersion = if ($packContent -match '(?m)^\s*neoforge\s*=\s*"([^"]*)"') { $Matches[1] }
+    $packName = if ($packContent -match '(?m)^\s*name\s*=\s*"([^"]*)"') { $Matches[1] }
+    if ($packName -notmatch '^[\w.()+-][\w .()+-]{0,63}$' -or $packName.EndsWith('.')) { $packName = 'Modpack' }
+
+    # An empty folder (apart from this script) or an existing instance is used as the game folder.
+    # Run from anywhere else (Downloads, Desktop, ...), the pack goes to .minecraft\modpacks\<pack>.
+    $minecraftDir = Join-Path $env:APPDATA '.minecraft'
+    $scriptName = [IO.Path]::GetFileName($env:PACKWIZ_SYNC_SCRIPT)
+    $otherFiles = @(Get-ChildItem -LiteralPath $scriptDir -Force | Where-Object { $_.Name -ne $scriptName })
+    if ((Test-Path -LiteralPath (Join-Path $scriptDir 'packwiz.json') -PathType Leaf) -or $otherFiles.Count -eq 0) {
+        $instance = $scriptDir
+    } else {
+        if (-not (Test-Path -LiteralPath (Join-Path $minecraftDir 'launcher_profiles.json') -PathType Leaf)) {
+            throw 'Official Minecraft Launcher not found. Put this script in an empty folder (or your launcher''s instance folder) and run it there.'
+        }
+        $instance = Join-Path $minecraftDir "modpacks\$packName"
+        [void][IO.Directory]::CreateDirectory($instance)
+        # Keep a copy beside the pack so updates can also be run from there.
+        $instanceScript = Join-Path $instance $scriptName
+        if ([IO.Path]::GetFullPath($instanceScript) -ne [IO.Path]::GetFullPath($env:PACKWIZ_SYNC_SCRIPT)) {
+            Copy-Item -LiteralPath $env:PACKWIZ_SYNC_SCRIPT -Destination $instanceScript -Force
+        }
+    }
+    Set-Location -LiteralPath $instance
 
     $cache = Join-Path $instance '.packwiz-sync'
     [void][IO.Directory]::CreateDirectory($cache)
@@ -174,15 +213,6 @@ try {
     Write-Host "Pack:     $packUrl"
     Write-Host ''
 
-    # Fail before downloading Java if the pack URL is missing or returns a web page.
-    $packResponse = Invoke-WebRequest -Uri $packUrl -UseBasicParsing -TimeoutSec 60
-    $packContent = if ($packResponse.Content -is [byte[]]) {
-        [Text.Encoding]::UTF8.GetString($packResponse.Content)
-    } else { [string]$packResponse.Content }
-    if ($packContent -notmatch '(?m)^\s*pack-format\s*=\s*"packwiz:') {
-        throw 'The pack URL did not return a packwiz pack.toml. Check the hosting URL.'
-    }
-    $neoForgeVersion = if ($packContent -match '(?m)^\s*neoforge\s*=\s*"([^"]*)"') { $Matches[1] }
     # The launcher profile is named after this folder; each folder gets its own profile.
     $profileName = [IO.Path]::GetFileName($instance.TrimEnd('\'))
     if ($profileName.Length -gt 64) { $profileName = $profileName.Substring(0, 64) }
@@ -192,7 +222,6 @@ try {
     $profileKey = 'packwiz-' + $pathHash.Substring(0, 16).ToLowerInvariant()
 
     # Official Minecraft Launcher setup. Other launchers (Prism, CurseForge, ...) skip this.
-    $minecraftDir = Join-Path $env:APPDATA '.minecraft'
     $profilesPath = Join-Path $minecraftDir 'launcher_profiles.json'
     $setupLauncher = $env:PACKWIZ_SYNC_SKIP_LAUNCHER -ne '1'
     if ($setupLauncher -and -not (Test-Path -LiteralPath $profilesPath -PathType Leaf)) {

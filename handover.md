@@ -180,7 +180,7 @@ The user wants a later pass to update mods and find the newest compatible loader
 - Installed for the user: NeoForge 21.1.259 in `%APPDATA%\.minecraft`, and the 134 mods in `D:\Minecraft\MinecraftModded` (packwiz bootstrap from a local server). Python's `http.server` refuses packwiz's parallel connections on Windows (listen backlog 5); serve with a `ThreadingHTTPServer` subclass using a larger `request_queue_size`.
 - `sablecompanion` (required by Create Propulsion) is provided inside the Sable and Create Propulsion JARs.
 - The launcher overwrites `launcher_profiles.json` on exit; edits must happen while it is fully closed.
-- `client/sync-mods.cmd` now installs the pack's NeoForge version and creates/updates a launcher profile named after its folder (key `packwiz-<hash of folder path>`) pointing to that folder. Its functions were tested against a sandbox `.minecraft`; the full script has not run end-to-end because it requires a public HTTPS pack URL.
+- `client/sync-mods.cmd` now installs the pack's NeoForge version and creates/updates a launcher profile named after its folder (key `packwiz-<hash of folder path>`) pointing to that folder. Run from a non-empty folder (Downloads), it installs to `%APPDATA%.minecraftmodpacks<pack>`. Tested end-to-end in a sandbox APPDATA on D: (fresh install + rerun from the copied script). Note: the user's C: drive is almost full. Its functions were tested against a sandbox `.minecraft`; the full script has not run end-to-end because it requires a public HTTPS pack URL.
 
 ## Notes for the next agent
 
