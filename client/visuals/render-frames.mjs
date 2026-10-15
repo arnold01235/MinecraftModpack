@@ -1,22 +1,24 @@
-// Pre-renders the ascii.rest "snow train" piece (MIT, see LICENSE-ascii.rest) into
+// Pre-renders the ascii.rest "aurora fjord" piece (MIT, see LICENSE-ascii.rest) into
 // console frames for client/sync-mods.cmd, so players need nothing but Windows.
 //
 //   node --experimental-strip-types client/visuals/render-frames.mjs
 //
-// Writes two gzip files of UTF-8 text: a header line "SNOWTRAIN1 <cols> <rows> <fps>"
+// Writes two gzip files of UTF-8 text: a header line "ASCIIFRAMES1 <cols> <rows> <fps> pingpong"
 // then frames separated by form feeds. Each frame positions its own lines (ESC[row;colH)
 // and uses 24-bit colour.
-//   snow-train.frames.gz         Braille: every cell of the piece is one dot, unscaled.
+//   scene.frames.gz              Braille: every cell of the piece is one dot, unscaled.
 //                                Needs a font with Braille (Windows Terminal has one).
-//   snow-train-blocks.frames.gz  Upper half blocks, two area-averaged pixels per
+//   scene-blocks.frames.gz       Upper half blocks, two area-averaged pixels per
 //                                character. Softer, but works in the classic console.
 import { gzipSync } from "node:zlib";
 import { writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
-import snowTrain, { meta } from "./snow-train.ts";
+import piece, { meta } from "./aurora-fjord.ts";
 
 const FPS = 8;
-const SECONDS = (185 + 156 + 40) / 7; // the piece's PERIOD / SPEED: one full crossing
+// The aurora never repeats, so the updater plays these frames forward then backward.
+const SECONDS = 20;
+const TOP = 4, ROWS = 22; // source rows 4-91: the whole sky, shore and reflection
 const DOTS = " ·•●";
 const COVER = [0, 0.3, 0.6, 1];
 const SRC_W = meta.cols;
@@ -27,12 +29,12 @@ const P = meta.palette.map(hex);
 const ground = hex(meta.ground);
 const step = (cells, k) => Math.max(0, DOTS.indexOf(cells[k]));
 
-// --- Braille: 200x80 cells fill 100x20 characters, keeping the square aspect --------
+// --- Braille: 200x88 cells fill 100x22 characters, keeping the square aspect --------
 const braille = {
-  file: "snow-train.frames.gz",
+  file: "scene.frames.gz",
   cols: 100,
-  rows: 20,
-  top: 10, // first source row: keeps the moon, viaduct and river
+  rows: ROWS,
+  top: TOP,
   left: 11, // centred in a 120 column window
   bit: [[0x01, 0x08], [0x02, 0x10], [0x04, 0x20], [0x40, 0x80]], // [row][column]
   // A 2x4 ordered-dither matrix, scaled to the brightness range of the night scene.
@@ -73,13 +75,13 @@ const braille = {
   },
 };
 
-// --- Half blocks: 200x68 cells averaged into 120x40 pixels ---------------------------
+// --- Half blocks: 200x73 cells averaged into 120x44 pixels ---------------------------
 const blocks = {
-  file: "snow-train-blocks.frames.gz",
+  file: "scene-blocks.frames.gz",
   cols: 120,
-  rows: 20,
-  top: 8,
-  height: 68,
+  rows: ROWS,
+  top: TOP,
+  height: 73, // 44 pixels high at 200/120 cells a pixel keeps the aspect
   // Light in a source cell: its colour scaled by its dot size, over the night ground.
   light(cells, color, k) {
     const c = COVER[step(cells, k)], p = P[color[k]];
@@ -119,7 +121,7 @@ const blocks = {
   },
 };
 
-const frame = snowTrain();
+const frame = piece();
 const outputs = [braille, blocks].map((style) => ({ style, frames: [] }));
 for (let i = 0; i < Math.round(SECONDS * FPS); i++) {
   const color = new Uint8Array(meta.cols * meta.rows);
@@ -127,7 +129,7 @@ for (let i = 0; i < Math.round(SECONDS * FPS); i++) {
   for (const o of outputs) o.frames.push(o.style.render(cells, color));
 }
 for (const { style, frames } of outputs) {
-  const text = `SNOWTRAIN1 ${style.cols} ${style.rows} ${FPS}\n` + frames.join("\f");
+  const text = `ASCIIFRAMES1 ${style.cols} ${style.rows} ${FPS} pingpong\n` + frames.join("\f");
   const data = gzipSync(Buffer.from(text, "utf8"), { level: 9 });
   const target = fileURLToPath(new URL(`./${style.file}`, import.meta.url));
   writeFileSync(target, data);

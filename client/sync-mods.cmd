@@ -38,7 +38,7 @@ $script:Status = $null
 $script:RunLog = $null
 
 # --- Screen ------------------------------------------------------------------
-# With a capable console the top shows the "snow train" scene from ascii.rest
+# With a capable console the top shows the "aurora fjord" scene from ascii.rest
 # (MIT, pre-rendered by client/visuals/render-frames.mjs) and the bottom shows a
 # boot-log style panel. Otherwise the same lines are printed as plain text.
 
@@ -92,11 +92,12 @@ function Start-Ui {
         } finally { $file.Dispose() }
         $newline = $text.IndexOf("`n")
         $header = $text.Substring(0, $newline).Split(' ')
-        if ($header[0] -ne 'SNOWTRAIN1' -or [int]$header[1] -gt 120) { return }
+        if ($header[0] -ne 'ASCIIFRAMES1' -or [int]$header[1] -gt 120 -or
+            [Console]::WindowHeight -lt [int]$header[2] + 4) { return }
         $frames = $text.Substring($newline + 1).Split([char]12)
         [Console]::OutputEncoding = New-Object Text.UTF8Encoding $false
         $script:Ui = @{
-            Frames = $frames; Rows = [int]$header[2]; Fps = [int]$header[3]
+            Frames = $frames; Rows = [int]$header[2]; Fps = [int]$header[3]; PingPong = $header -contains 'pingpong'
             Clock = [Diagnostics.Stopwatch]::StartNew(); Shown = -1; Tick = -1; Title = $Title
         }
         [Console]::Out.Write("$E[?1049h$E[?25l$E[48;2;$($script:Ground)m$E[2J")
@@ -186,7 +187,14 @@ function Update-Ui {
     $ui = $script:Ui
     if (-not $ui) { return }
     $seconds = $ui.Clock.Elapsed.TotalSeconds
-    $index = [int][Math]::Floor($seconds * $ui.Fps) % $ui.Frames.Count
+    $count = $ui.Frames.Count
+    if ($ui.PingPong -and $count -gt 2) {
+        # Forward then backward, so a scene that never repeats has no visible seam.
+        $index = [int][Math]::Floor($seconds * $ui.Fps) % (2 * $count - 2)
+        if ($index -ge $count) { $index = 2 * $count - 2 - $index }
+    } else {
+        $index = [int][Math]::Floor($seconds * $ui.Fps) % $count
+    }
     $tick = [int][Math]::Floor($seconds * 10)
     if (-not $Force -and $index -eq $ui.Shown -and $tick -eq $ui.Tick) { return }
     $out = ''
@@ -525,11 +533,12 @@ try {
 
     # The animation is optional: without it (or with a small window) the log is plain text.
     # Windows Terminal's fonts have Braille, which draws the scene sharp and unscaled; the
-    # classic console's fonts do not, so it gets the softer half-block version.
-    $style = if ($env:WT_SESSION) { 'snow-train' } else { 'snow-train-blocks' }
-    Get-ChildItem -LiteralPath $cache -Filter 'snow-train-v1*' | Remove-Item -Force
-    $frames = Join-Path $cache "$style-v2.frames.gz"
-    if ($env:PACKWIZ_SYNC_PLAIN -ne '1' -and -not (Test-Path -LiteralPath $frames -PathType Leaf)) {
+    # classic console's fonts do not, so it gets the softer half-block version. It is
+    # fetched each run so new art reaches everyone; a cached copy covers network errors.
+    $style = if ($env:WT_SESSION) { 'scene' } else { 'scene-blocks' }
+    Get-ChildItem -LiteralPath $cache -Filter 'snow-train*' | Remove-Item -Force
+    $frames = Join-Path $cache "$style.frames.gz"
+    if ($env:PACKWIZ_SYNC_PLAIN -ne '1') {
         try {
             Get-Download -Url ($packUrl -replace '/pack\.toml$', "/installer/$style.frames.gz") -Destination $frames
         } catch { }
