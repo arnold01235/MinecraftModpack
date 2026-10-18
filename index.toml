@@ -6,6 +6,16 @@ hash = "769cbabc23a4ceb4e135b7316f09f437b7536845c64480d8e0bc5a7175e8530c"
 metafile = true
 
 [[files]]
+file = "mods/distant-horizons-seedgen.pw.toml"
+hash = "babce028e938bfdb8175738b74c5c08a12d8098926aec608d7dc5ce5c6ac1a87"
+metafile = true
+
+[[files]]
+file = "mods/distant-horizons.pw.toml"
+hash = "2802ae635c7d39e56f8b38d9b4cd8f3e636315f4e0a2502ed4de71e6927d4c60"
+metafile = true
+
+[[files]]
 file = "mods/sable.pw.toml"
 hash = "bc4dc367b41e578d1f8d12498227396e44590a601a348614f714eb56e26e2f89"
 metafile = true

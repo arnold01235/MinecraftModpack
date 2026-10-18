@@ -2,7 +2,7 @@
 
 Minecraft **1.21.1 / NeoForge**, built as an **add-on for the [Craftoria](https://www.curseforge.com/minecraft/modpacks/craftoria) CurseForge modpack**. Players install Craftoria in the CurseForge app, then run `sync-mods.cmd`, which adds our extra mods and config changes to that profile. CurseForge keeps managing Craftoria itself, including the few files whose authors block third-party downloads.
 
-**Status:** the importer, validator, updater and tests are ready (37 tests pass). The pack is built against Craftoria 1.37.0 (NeoForge 21.1.249) with one extra so far: **Create Aeronautics** (plus its dependency Sable). The updater's CurseForge checks were tested against real profiles in Windows PowerShell 5.1. A full sync needs a published pack.
+**Status:** the importer, validator, updater and tests are ready (37 tests pass). The pack is built against Craftoria 1.37.0 (NeoForge 21.1.249) with four extras so far: **Create Aeronautics** (plus its dependency Sable), **Distant Horizons** and **Distant Horizons SeedGen**. The updater's CurseForge checks were tested against real profiles in Windows PowerShell 5.1. A full sync needs a published pack.
 
 The earlier standalone 134-mod pack is kept in `archive/standalone-134/` (see its README).
 

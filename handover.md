@@ -11,7 +11,7 @@ The pack is an **add-on for Craftoria** (CurseForge, NeoForge 1.21.1, about 560 
 | Repository | `github.com/arnold01235/MinecraftModpack`, local `D:\git\MinecraftModded` |
 | Standalone 134-mod pack | Archived in `archive/standalone-134/`; last live at commit `f6ce336` |
 | Base | Craftoria 1.37.0 (CurseForge project 1039252, file 8874369), NeoForge 21.1.249, imported from the local CurseForge profile without an API key |
-| Extras / local overrides | Create Aeronautics 1.3.2 (bundled jar: Aeronautics, Simulated, Offroad) and its dependency Sable 2.0.6. It needs Create 6.0.10+, which Craftoria has. No local overrides yet |
+| Extras / local overrides | Create Aeronautics 1.3.2 (bundled jar: Aeronautics, Simulated, Offroad) and its dependency Sable 2.0.6 (needs Create 6.0.10+, which Craftoria has); Distant Horizons 3.3.3 and Distant Horizons SeedGen 0.9.1 (needs DH 3.2+). All from Modrinth. No local overrides yet |
 | `client/sync-mods.cmd` | CurseForge-only. Profile detection and the version check were tested against the real profiles in Windows PowerShell 5.1. A full run needs a published pack |
 | Tests | 37 passing |
 | Published pack | The old Pages deployment (if any) is unchanged. Nothing is committed yet |

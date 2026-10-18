@@ -32,6 +32,26 @@
         "T9PomCSv"
       ],
       "modrinth_version": "fg9dTRz9"
+    },
+    {
+      "filename": "DistantHorizons-3.3.3-1.21.1-fabric-neoforge.jar",
+      "name": "Distant Horizons",
+      "slug": "distant-horizons",
+      "side": "both",
+      "modrinth": [
+        "uCdwusMi"
+      ],
+      "modrinth_version": "9w34y8ai"
+    },
+    {
+      "filename": "Distant Horizons SeedGen 0.9.1 for 1.21.1 NeoForge.jar",
+      "name": "Distant Horizons SeedGen",
+      "slug": "distant-horizons-seedgen",
+      "side": "both",
+      "modrinth": [
+        "iUGLCJTI"
+      ],
+      "modrinth_version": "2DrfEi0d"
     }
   ]
 }

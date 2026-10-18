@@ -4533,6 +4533,47 @@
       "source": "https://modrinth.com/mod/oWaK0Q19/version/44pLdPGg",
       "slug": "create-aeronautics"
     },
+    "mods/distant-horizons-seedgen.pw.toml": {
+      "filename": "Distant Horizons SeedGen 0.9.1 for 1.21.1 NeoForge.jar",
+      "name": "Distant Horizons SeedGen",
+      "side": "client",
+      "provider": "modrinth",
+      "project_id": "iUGLCJTI",
+      "version_id": "2DrfEi0d",
+      "url": "https://cdn.modrinth.com/data/iUGLCJTI/versions/2DrfEi0d/Distant%20Horizons%20SeedGen%200.9.1%20for%201.21.1%20NeoForge.jar",
+      "hash_format": "sha512",
+      "hash": "4b0bbb0426d0d600fcef2deb0580f458bbf16b90440b84b9d28fe377a3107cf22ff9f166eec85b802cb5386d5af39d5b0a12ac6bf7ca04fad427206d1405c61d",
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "dependencies": [],
+      "source": "https://modrinth.com/mod/iUGLCJTI/version/2DrfEi0d",
+      "slug": "distant-horizons-seedgen"
+    },
+    "mods/distant-horizons.pw.toml": {
+      "filename": "DistantHorizons-3.3.3-1.21.1-fabric-neoforge.jar",
+      "name": "Distant Horizons",
+      "side": "both",
+      "provider": "modrinth",
+      "project_id": "uCdwusMi",
+      "version_id": "9w34y8ai",
+      "url": "https://cdn.modrinth.com/data/uCdwusMi/versions/9w34y8ai/DistantHorizons-3.3.3-1.21.1-fabric-neoforge.jar",
+      "hash_format": "sha512",
+      "hash": "d14b32d3fd143a06514d6ad388eee11e9d657c84e1a937aaf8d033b1137fb43ef8b05cff1011a994cc42f3106823c51234f8bc18d72bb05bc317a20ea83c50ed",
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "fabric",
+        "neoforge"
+      ],
+      "dependencies": [],
+      "source": "https://modrinth.com/mod/uCdwusMi/version/9w34y8ai",
+      "slug": "distant-horizons"
+    },
     "mods/sable.pw.toml": {
       "filename": "sable-neoforge-1.21.1-2.0.6.jar",
       "name": "Sable",
@@ -4575,6 +4616,8 @@
   },
   "generated": {
     "mods/create-aeronautics.pw.toml": "769cbabc23a4ceb4e135b7316f09f437b7536845c64480d8e0bc5a7175e8530c",
+    "mods/distant-horizons-seedgen.pw.toml": "babce028e938bfdb8175738b74c5c08a12d8098926aec608d7dc5ce5c6ac1a87",
+    "mods/distant-horizons.pw.toml": "2802ae635c7d39e56f8b38d9b4cd8f3e636315f4e0a2502ed4de71e6927d4c60",
     "mods/sable.pw.toml": "bc4dc367b41e578d1f8d12498227396e44590a601a348614f714eb56e26e2f89"
   }
 }
