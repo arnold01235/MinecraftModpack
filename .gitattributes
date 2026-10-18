@@ -6,3 +6,14 @@
 *.md text eol=lf
 *.cmd text eol=crlf
 .packwizignore text eol=lf
+# Pack files are hashed byte for byte (index.toml): never convert their line endings.
+/config/** -text
+/defaultconfigs/** -text
+/kubejs/** -text
+/resourcepacks/** -text
+/shaderpacks/** -text
+/global_packs/** -text
+/options*.txt -text
+/servers.dat -text
+/sources/local-overrides/** -text
+/mods/** -text

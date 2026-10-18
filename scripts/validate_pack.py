@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate a complete packwiz pack and optionally verify every remote mod download."""
+"""Validate the add-on pack and optionally verify every remote mod download."""
 import argparse
 import hashlib
 from pathlib import Path, PurePosixPath
@@ -8,7 +8,12 @@ import sys
 import tomllib
 from urllib.request import Request, urlopen
 
-from import_pack import ROOT, HASH_LENGTHS, ResolutionError, https_url, inventory, read_json
+from import_pack import ROOT, HASH_LENGTHS, ResolutionError, https_url, read_json
+
+# Where pack files may install inside a game folder. Source and updater files never do.
+# Add a folder here only when our local overrides need it.
+INSTALL_ROOTS = {"mods", "config", "defaultconfigs", "kubejs", "resourcepacks", "shaderpacks", "global_packs"}
+INSTALL_FILES = {"options.txt", "optionsof.txt", "optionsshaders.txt", "servers.dat"}
 
 
 def inside(root, relative):
@@ -23,6 +28,16 @@ def inside(root, relative):
     return result
 
 
+def check_install_path(relative):
+    """Reject paths outside the game folders a pack is allowed to write."""
+    parts = PurePosixPath(relative).parts
+    if len(parts) > 1 and parts[0] in INSTALL_ROOTS:
+        return relative
+    if len(parts) == 1 and parts[0] in INSTALL_FILES:
+        return relative
+    raise ResolutionError(f"Source/updater files must not be installed: {relative}")
+
+
 def check_hash(data, algorithm, expected, label):
     if algorithm not in HASH_LENGTHS or not re.fullmatch(f"[a-fA-F0-9]{{{HASH_LENGTHS[algorithm]}}}", expected or ""):
         raise ResolutionError(f"Invalid checksum for {label}")
@@ -30,15 +45,20 @@ def check_hash(data, algorithm, expected, label):
         raise ResolutionError(f"Checksum mismatch: {label}")
 
 
-def validate(root=ROOT, exact=False, downloads=False):
+def validate(root=ROOT, downloads=False):
     if not (root / "pack.toml").exists():
-        raise ResolutionError("Pack is not ready: resolve all downloads and select NeoForge using scripts/import_pack.py.")
+        raise ResolutionError("Pack is not ready: build it with scripts/import_craftoria.py.")
     pack = tomllib.loads((root / "pack.toml").read_text(encoding="utf-8"))
     if pack.get("pack-format") != "packwiz:1.1.0":
         raise ResolutionError("Unsupported pack format")
     versions = pack.get("versions", {})
     if versions.get("minecraft") != "1.21.1" or not re.fullmatch(r"21\.1\.\d+", versions.get("neoforge", "")):
         raise ResolutionError("Expected Minecraft 1.21.1 and an exact stable NeoForge 21.1.x version")
+    # The updater checks the player's CurseForge profile against the base modpack named here.
+    base = read_json(root / "sources/lock.json", {}).get("base", {})
+    match = re.search(r"\(CurseForge modpack (\d+), file (\d+)\)", pack.get("description", ""))
+    if not match or (int(match[1]), int(match[2])) != (base.get("project_id"), base.get("file_id")):
+        raise ResolutionError("pack.toml's description must name the base modpack recorded in sources/lock.json")
     info = pack["index"]
     index_path = inside(root, info["file"])
     raw_index = index_path.read_bytes()
@@ -53,8 +73,9 @@ def validate(root=ROOT, exact=False, downloads=False):
         if key in indexed:
             raise ResolutionError(f"Duplicate index entry: {item['file']}")
         indexed.add(key)
-        if PurePosixPath(item["file"]).parts[0] not in {"mods", "config", "defaultconfigs", "kubejs", "resourcepacks", "shaderpacks"}:
-            raise ResolutionError(f"Source/updater files must not be installed: {item['file']}")
+        check_install_path(item["file"])
+        if not isinstance(item.get("preserve", False), bool):
+            raise ResolutionError(f"Invalid preserve flag: {item['file']}")
         content = path.read_bytes()
         check_hash(content, item.get("hash-format", default_hash), item["hash"], item["file"])
         if not item.get("metafile"):
@@ -73,10 +94,8 @@ def validate(root=ROOT, exact=False, downloads=False):
             algorithm, value = download["hash-format"], download["hash"]
             if algorithm not in HASH_LENGTHS or not re.fullmatch(f"[a-fA-F0-9]{{{HASH_LENGTHS[algorithm]}}}", value):
                 raise ResolutionError(f"Invalid mod checksum: {item['file']}")
-            if item["file"].startswith("mods/"):
+            if item["file"].startswith("mods/") and mod.get("side", "both") != "server":
                 names.append(mod["filename"])
-                if mod.get("side") == "server":
-                    raise ResolutionError(f"Enabled inventory mod would be omitted on clients: {item['file']}")
             if downloads:
                 print(f"Verifying download: {mod['filename']}")
                 h = hashlib.new(algorithm)
@@ -92,24 +111,27 @@ def validate(root=ROOT, exact=False, downloads=False):
         if target in destinations:
             raise ResolutionError(f"Duplicate installed filename: {destination.name}")
         destinations.add(target)
-    catalog = read_json(root / "sources/mods.json")
-    expected_paths = {f"mods/{m['slug']}.pw.toml" for m in catalog["mods"]}
-    missing = expected_paths - indexed
+    # The index must list exactly the files the importer generated.
+    generated = read_json(root / "sources/lock.json", {}).get("generated")
+    if generated is None:
+        raise ResolutionError("sources/lock.json is missing; build the pack with scripts/import_craftoria.py")
+    expected = {path.casefold(): path for path in generated}
+    missing = sorted(path for key, path in expected.items() if key not in indexed)
+    unexpected = sorted(item["file"] for item in files if item["file"].casefold() not in expected)
     if missing:
-        raise ResolutionError(f"Missing {len(missing)} enabled inventory entries: {', '.join(sorted(missing))}")
-    if exact and sorted(names) != sorted(inventory(root)):
-        raise ResolutionError("Installed filenames do not exactly match the original enabled inventory")
+        raise ResolutionError(f"Missing {len(missing)} generated files from the index: {', '.join(missing[:10])}")
+    if unexpected:
+        raise ResolutionError(f"Index lists files the importer did not generate: {', '.join(unexpected[:10])}")
     if any(name.endswith(".disabled") for name in names):
-        raise ResolutionError("Disabled inventory files must not be installed")
+        raise ResolutionError("Disabled mod files must not be installed")
     return {"mods": len(names), "files": len(files), "minecraft": versions["minecraft"], "neoforge": versions["neoforge"]}
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--inventory", action="store_true", help="Also require original exact mod filenames (before upgrades)")
     parser.add_argument("--downloads", action="store_true", help="Download each mod and verify its checksum without installing")
     args = parser.parse_args()
-    result = validate(exact=args.inventory, downloads=args.downloads)
+    result = validate(downloads=args.downloads)
     print(f"Valid pack: {result['mods']} mods, Minecraft {result['minecraft']}, NeoForge {result['neoforge']}.")
 
 

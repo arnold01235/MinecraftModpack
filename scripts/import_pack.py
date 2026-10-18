@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
-"""Import the filename inventory into packwiz without silently upgrading mods.
+"""Shared resolution helpers for the pack importer (scripts/import_craftoria.py).
 
-Python 3.11+, standard library only. Network resolution is resumable.
-A usable pack is written only after EVERY enabled file has verified metadata.
+Python 3.11+, standard library only. Resolves exact mod files on Modrinth or
+CurseForge (or a reviewed Curse Maven artifact) without silently upgrading them.
 """
 from __future__ import annotations
 
-import argparse
 import hashlib
 from io import BytesIO
 import json
@@ -42,9 +41,13 @@ def read_json(path: Path, default=None):
 
 
 def atomic_write(path: Path, content: str):
+    atomic_write_bytes(path, content.encode("utf-8"))
+
+
+def atomic_write_bytes(path: Path, data: bytes):
     path.parent.mkdir(parents=True, exist_ok=True)
     temp = path.with_name(path.name + ".tmp")
-    temp.write_text(content, encoding="utf-8", newline="\n")
+    temp.write_bytes(data)
     temp.replace(path)
 
 
@@ -107,14 +110,15 @@ def windows_neoforge_json(url: str):
         raise ResolutionError("Windows HTTPS retry returned invalid JSON metadata") from exc
 
 
-def fetch_metadata_json(url: str, headers):
+def fetch_metadata_json(url: str, headers, body=None):
     try:
-        with urlopen(Request(url, headers=headers), timeout=30) as response:
+        data = None if body is None else json.dumps(body).encode()
+        with urlopen(Request(url, data=data, headers=headers), timeout=30) as response:
             https_url(response.url)
             return json.load(response)
     except (URLError, ssl.SSLCertVerificationError) as exc:
         reason = getattr(exc, "reason", exc)
-        if (sys.platform != "win32" or urlparse(url).netloc != "maven.neoforged.net" or
+        if (body is not None or sys.platform != "win32" or urlparse(url).netloc != "maven.neoforged.net" or
                 not isinstance(reason, ssl.SSLCertVerificationError)):
             raise
         # No insecure flags, trust-store edits, API credentials or HTTP fallback.
@@ -127,9 +131,11 @@ class API:
     def __init__(self, cache: Path, cf_key: str = "", offline=False):
         self.cache, self.cf_key, self.offline = cache, cf_key, offline
 
-    def get(self, url: str, *, curseforge=False, fresh=False):
+    def get(self, url: str, *, curseforge=False, fresh=False, body=None):
+        """GET a JSON document, or POST `body` as JSON (batch lookups). Responses are cached."""
         https_url(url)
-        cached = self.cache / (digest(url.encode()) + ".json")
+        key = url if body is None else url + " " + json.dumps(body, sort_keys=True)
+        cached = self.cache / (digest(key.encode()) + ".json")
         if cached.exists() and not fresh:
             return read_json(cached)
         if self.offline:
@@ -137,13 +143,15 @@ class API:
         if curseforge and not self.cf_key:
             raise ResolutionError("CurseForge API lookup needs CURSEFORGE_API_KEY or a verified override")
         headers = {"User-Agent": USER_AGENT, "Accept": "application/json"}
+        if body is not None:
+            headers["Content-Type"] = "application/json"
         if curseforge:
             if urlparse(url).netloc != "api.curseforge.com":
                 raise ResolutionError("Refusing to send the CurseForge key to a different host")
             headers["x-api-key"] = self.cf_key
         for attempt in range(3):
             try:
-                data = fetch_metadata_json(url, headers)
+                data = fetch_metadata_json(url, headers, body)
                 write_json(cached, data)
                 return data
             except HTTPError as exc:
@@ -172,26 +180,18 @@ class API:
             raise ResolutionError(f"Cannot verify download from {urlparse(url).netloc}: {exc}") from exc
 
 
-def inventory(root: Path):
-    return [line.strip() for line in (root / "temp-modlist.txt").read_text(encoding="utf-8").splitlines()
-            if line.strip() and not line.lstrip().startswith("#")]
-
-
-def validate_catalog(catalog, expected):
-    mods = catalog["mods"]
+def validate_extras(mods):
+    """Check hand-written mod entries (the pack's extra mods)."""
     names = [m["filename"] for m in mods]
     if len(set(n.casefold() for n in names)) != len(names):
-        raise ResolutionError("Duplicate inventory filenames")
-    if sorted(names) != sorted(expected):
-        raise ResolutionError("sources/mods.json does not match the enabled inventory")
-    if catalog["minecraft"] != "1.21.1" or catalog["loader"] != "neoforge":
-        raise ResolutionError("This importer is for the supplied Minecraft 1.21.1 NeoForge inventory")
+        raise ResolutionError("Duplicate extra mod filenames")
     for mod in mods:
         safe_filename(mod["filename"])
         if not re.fullmatch(r"[a-z0-9-]+", mod["slug"]):
             raise ResolutionError(f"Unsafe source slug: {mod['slug']}")
         if mod["side"] not in {"client", "both"}:
-            raise ResolutionError("All enabled inventory mods must be included on the client")
+            raise ResolutionError("Extra mods must be included on the client")
+        mod.setdefault("allowed_loaders", ["neoforge"])
     if len({m["slug"] for m in mods}) != len(mods):
         raise ResolutionError("Duplicate source slugs")
 
@@ -415,35 +415,6 @@ def metadata(mod, record):
     return text
 
 
-def build(root, catalog, records, neoforge):
-    if not re.fullmatch(r"21\.1\.\d+", neoforge or ""):
-        raise ResolutionError("Supply the chosen stable 1.21.1 loader with --neoforge 21.1.NNN")
-    # This is a one-time importer. Subsequent pack updates use packwiz.
-    if (root / "pack.toml").exists():
-        raise ResolutionError("pack.toml already exists; maintain it with packwiz instead of re-importing")
-    if (root / "mods").exists() and any((root / "mods").iterdir()):
-        raise ResolutionError("mods/ is not empty; refusing to overwrite an existing pack")
-    planned = {}
-    for mod in catalog["mods"]:
-        record = records.get(mod["filename"])
-        if record is None:
-            raise ResolutionError(f"Unresolved mod: {mod['filename']}")
-        validate_record(mod, record, catalog["minecraft"])
-        planned[f"mods/{mod['slug']}.pw.toml"] = metadata(mod, record)
-    index = 'hash-format = "sha256"\n'
-    for path, text in sorted(planned.items()):
-        index += f'\n[[files]]\nfile = "{path}"\nhash = "{digest(text.encode())}"\nmetafile = true\n'
-    pack = (f"name = {json.dumps(catalog['name'])}\nversion = {json.dumps(catalog['version'])}\n"
-            'pack-format = "packwiz:1.1.0"\n\n[index]\nfile = "index.toml"\nhash-format = "sha256"\n'
-            f'hash = "{digest(index.encode())}"\n\n[versions]\nminecraft = "{catalog["minecraft"]}"\nneoforge = "{neoforge}"\n')
-    tomllib.loads(pack)
-    for path, text in planned.items():
-        atomic_write(root / path, text)
-    atomic_write(root / "index.toml", index)
-    # Written last so an incomplete resolution never becomes a consumable pack.
-    atomic_write(root / "pack.toml", pack)
-
-
 def select_neoforge(api, requested, minimum=None):
     if requested == "latest":
         if api.offline:
@@ -468,65 +439,22 @@ def select_neoforge(api, requested, minimum=None):
     return requested
 
 
-def main(argv=None):
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--offline", action="store_true", help="Use saved resolution records and cached API responses only")
-    parser.add_argument("--resolve-only", action="store_true", help="Resolve downloads but defer loader selection and pack creation")
-    parser.add_argument("--neoforge", help="Exact NeoForge 21.1.x version, or latest to select the newest stable 1.21.1 release")
-    args = parser.parse_args(argv)
-    catalog = read_json(ROOT / "sources/mods.json")
-    validate_catalog(catalog, inventory(ROOT))
-    records = read_json(ROOT / "sources/resolved.json", {})
-    overrides = read_json(ROOT / "sources/overrides.json", {})
-    api = API(ROOT / ".cache/api", os.environ.get("CURSEFORGE_API_KEY", ""), args.offline)
-    unresolved = []
-    for i, mod in enumerate(catalog["mods"], 1):
-        filename = mod["filename"]
-        try:
-            if filename in overrides:
-                record = validate_record(mod, overrides[filename], catalog["minecraft"])
-            elif filename in records:
-                record = validate_record(mod, records[filename], catalog["minecraft"])
-            else:
-                try:
-                    record = resolve_modrinth(mod, api, catalog["minecraft"])
-                except ResolutionError as mr_error:
-                    try:
-                        record = resolve_curseforge(mod, api, catalog["minecraft"])
-                    except ResolutionError as cf_error:
-                        if not mod.get("curseforge_maven"):
-                            raise ResolutionError(f"{mr_error}; {cf_error}") from cf_error
-                        try:
-                            record = resolve_maven(mod, api, catalog["minecraft"])
-                        except ResolutionError as maven_error:
-                            raise ResolutionError(f"{mr_error}; {cf_error}; {maven_error}") from maven_error
-            records[filename] = record
-            write_json(ROOT / "sources/resolved.json", records)
-            print(f"[{i}/{len(catalog['mods'])}] Resolved: {filename}")
-        except ResolutionError as exc:
-            unresolved.append({"filename": filename, "name": mod["name"], "reason": str(exc)})
-            print(f"[{i}/{len(catalog['mods'])}] Unresolved: {filename}", file=sys.stderr)
-    write_json(ROOT / "sources/unresolved.json", unresolved)
-    print(f"{len(catalog['mods']) - len(unresolved)}/{len(catalog['mods'])} enabled mods resolved.")
-    if unresolved:
-        print("No pack was created. See sources/unresolved.json.", file=sys.stderr)
-        return 1
-    if args.resolve_only:
-        print("Resolution complete. Loader selection and pack creation are still pending.")
-        return 0
-    chosen_loader = args.neoforge or catalog.get("neoforge")
-    if not chosen_loader:
-        raise ResolutionError("Re-run with --neoforge latest, or choose an exact stable 21.1.x version.")
-    chosen_loader = select_neoforge(api, chosen_loader, catalog.get("neoforge_minimum"))
-    print(f"Selected NeoForge {chosen_loader}. Full mod compatibility still requires a game launch.")
-    build(ROOT, catalog, records, chosen_loader)
-    print("Created pack.toml, index.toml and all mod metadata. Run scripts/validate_pack.py.")
-    return 0
-
-
-if __name__ == "__main__":
+def resolve_mod(mod, api, minecraft, overrides, cached):
+    """Resolve one exact file: verified override, saved record, Modrinth, CurseForge, then Curse Maven."""
+    filename = mod["filename"]
+    if filename in overrides:
+        return validate_record(mod, overrides[filename], minecraft)
+    if filename in cached:
+        return validate_record(mod, cached[filename], minecraft)
     try:
-        sys.exit(main())
-    except (ResolutionError, KeyError, ValueError) as error:
-        print(f"Import failed: {error}", file=sys.stderr)
-        sys.exit(1)
+        return resolve_modrinth(mod, api, minecraft)
+    except ResolutionError as mr_error:
+        try:
+            return resolve_curseforge(mod, api, minecraft)
+        except ResolutionError as cf_error:
+            if not mod.get("curseforge_maven"):
+                raise ResolutionError(f"{mr_error}; {cf_error}") from cf_error
+            try:
+                return resolve_maven(mod, api, minecraft)
+            except ResolutionError as maven_error:
+                raise ResolutionError(f"{mr_error}; {cf_error}; {maven_error}") from maven_error

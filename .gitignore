@@ -9,3 +9,11 @@ packwiz-installer*.jar
 *.jar
 *.zip
 *.mrpack
+# Pack files may include jars and zips (for example resource packs from the base pack's overrides).
+!/mods/**
+!/resourcepacks/**
+!/shaderpacks/**
+!/config/**
+!/defaultconfigs/**
+!/kubejs/**
+!/global_packs/**

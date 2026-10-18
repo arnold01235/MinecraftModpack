@@ -4,12 +4,12 @@ setlocal EnableExtensions DisableDelayedExpansion
 rem Set this once before sharing. The pack must be publicly readable.
 set "PACKWIZ_SYNC_URL=https://YOUR-USERNAME.github.io/YOUR-REPO/pack.toml"
 
-rem Double-click from anywhere (for example Downloads): the pack is installed to
-rem %APPDATA%\.minecraft\modpacks\<pack name>, and a copy of this script is put there.
-rem To choose the folder instead, put this file alone in an empty folder and run it there.
-rem Close Minecraft and the launcher before running. With the official Minecraft
-rem Launcher, it installs the pack's NeoForge version and creates a launcher profile
-rem named after the game folder. Set PACKWIZ_SYNC_SKIP_LAUNCHER=1 to skip that step.
+rem The pack is an add-on for a CurseForge modpack (named in pack.toml's description).
+rem Players install that modpack in the CurseForge app first, then double-click this from
+rem anywhere (for example Downloads) and pick the profile; the pack's extra mods and config
+rem changes are added to it. A copy of this script is put in the profile; run that copy to update.
+rem After CurseForge updates the modpack, run it again to restore the pack's changes.
+rem Close Minecraft before running.
 rem The updater downloads its own portable Java 21; it does not configure game Java.
 rem Keep packwiz.json: the installer uses it to track the files it manages.
 rem PACKWIZ_SYNC_PLAIN=1 turns off the animation; PACKWIZ_SYNC_NO_PAUSE=1 skips the final key press.
@@ -356,83 +356,94 @@ function Write-ToolFailure {
     throw $Message
 }
 
-function Test-LauncherRunning {
-    return [bool](Get-Process -Name 'MinecraftLauncher' -ErrorAction SilentlyContinue)
+# --- CurseForge ------------------------------------------------------------------
+# The pack is an add-on: the player installs the base modpack (Craftoria) in the CurseForge app,
+# which keeps managing it, and this script adds the pack's extra mods and config changes to that
+# profile. A CurseForge profile is a folder with minecraftinstance.json.
+
+function Read-CurseForgeProfile {
+    param([string]$Folder, [int]$ModpackId = 0)
+    $path = Join-Path $Folder 'minecraftinstance.json'
+    if (-not (Test-Path -LiteralPath $path -PathType Leaf)) { return $null }
+    $text = [IO.File]::ReadAllText($path)
+    # Skip a full parse of profiles that cannot be from the base modpack (the files are megabytes).
+    if ($ModpackId -and $text -notmatch ('"addonID"\s*:\s*' + $ModpackId + '\b')) { return $null }
+    # ConvertFrom-Json in Windows PowerShell rejects files this large; this parser takes a limit.
+    Add-Type -AssemblyName System.Web.Extensions
+    $parser = New-Object Web.Script.Serialization.JavaScriptSerializer
+    $parser.MaxJsonLength = [int]::MaxValue
+    $parser.RecursionLimit = 256
+    try { $data = $parser.DeserializeObject($text) } catch { return $null }
+    $modpack = $data['installedModpack']
+    $file = if ($modpack) { $modpack['installedFile'] }
+    $name = if ($data['name']) { [string]$data['name'] } else { [IO.Path]::GetFileName($Folder) }
+    return [pscustomobject]@{
+        Folder = $Folder
+        Name = $name
+        Minecraft = [string]$data['gameVersion']
+        Loader = if ($data['baseModLoader']) { [string]$data['baseModLoader']['name'] } else { '' }
+        ModpackId = if ($modpack) { [int64]$modpack['addonID'] } else { 0 }
+        ModpackFileId = if ($file) { [int64]$file['id'] } else { 0 }
+        ModpackFile = if ($file) { [string]$file['fileName'] } else { '' }
+        Synced = Test-Path -LiteralPath (Join-Path $Folder 'packwiz.json') -PathType Leaf
+    }
 }
 
-function Wait-LauncherClosed {
-    if (-not (Test-LauncherRunning)) { return }
-    Write-Log WARN 'The Minecraft Launcher is open and would overwrite the profile. Close it (also in the system tray).'
-    while (Test-LauncherRunning) {
-        Set-Status 'waiting for the Minecraft Launcher to close'
-        Wait-Ui 500
-    }
-    Set-Status ''
-    Write-Log OK 'Minecraft Launcher closed'
+function Get-CurseForgeProfiles {
+    param([int64]$ModpackId, [string]$Minecraft, [int]$Limit)
+    $root = Join-Path $env:USERPROFILE 'curseforge\minecraft\Instances'
+    if (-not (Test-Path -LiteralPath $root -PathType Container)) { return @() }
+    # Newest first, so recently installed profiles fit in the menu.
+    return @(Get-ChildItem -LiteralPath $root -Directory | Where-Object {
+            Test-Path -LiteralPath (Join-Path $_.FullName 'minecraftinstance.json') -PathType Leaf
+        } | Sort-Object { (Get-Item -LiteralPath (Join-Path $_.FullName 'minecraftinstance.json')).LastWriteTime } -Descending |
+        ForEach-Object { Read-CurseForgeProfile $_.FullName -ModpackId $ModpackId } |
+        Where-Object { $_ -and $_.ModpackId -eq $ModpackId -and $_.Minecraft -eq $Minecraft } |
+        Select-Object -First $Limit)
 }
 
-function Install-NeoForge {
-    param([string]$Version, [string]$MinecraftDir, [string]$Java, [string]$Cache)
-    $versionJson = Join-Path $MinecraftDir "versions\neoforge-$Version\neoforge-$Version.json"
-    if (Test-Path -LiteralPath $versionJson -PathType Leaf) {
-        Write-Log OK "NeoForge $Version is installed"
-        return
+function Select-Target {
+    param([object[]]$Targets, [string]$PackName)
+    if ($Targets.Count -eq 1 -or [Console]::IsInputRedirected) { return $Targets[0] }
+    Write-Host ''
+    Write-Host "  Which CurseForge profile should get $PackName?" -ForegroundColor White
+    for ($i = 0; $i -lt $Targets.Count; $i++) {
+        Write-Host ('   {0})  {1}' -f ($i + 1), $Targets[$i].Label)
+        Write-Host ('        {0}' -f $Targets[$i].Note) -ForegroundColor DarkGray
     }
-    $base = "https://maven.neoforged.net/releases/net/neoforged/neoforge/$Version/neoforge-$Version-installer.jar"
-    Set-Status "downloading NeoForge $Version"
-    $checksum = Get-Text ($base + '.sha256')
-    if ($checksum -notmatch '([a-fA-F0-9]{64})') { throw 'NeoForge did not publish a valid installer checksum.' }
-    $installer = Join-Path $Cache "neoforge-$Version-installer.jar"
-    Get-Download -Url $base -Destination $installer -Sha256 $Matches[1] -Label "downloading NeoForge $Version"
-    try {
-        Set-Status "installing NeoForge $Version"
-        # The installer writes installer.log and temporary files; keep them in the cache.
-        $temp = Join-Path $Cache 'tmp'
-        [void][IO.Directory]::CreateDirectory($temp)
-        $run = Invoke-Tool -FilePath $Java -WorkingDirectory $Cache -Arguments @(
-            "-Djava.io.tmpdir=$temp", '-jar', $installer, '--install-client', $MinecraftDir) -OnLine {
-            param($line)
-            if ($line -match '\S') { Set-Status "installing NeoForge $Version" -Detail $line.Trim() }
+    Write-Host ''
+    Write-Host "  Press 1-$($Targets.Count), or Esc to cancel." -ForegroundColor DarkGray
+    while ($true) {
+        $key = [Console]::ReadKey($true)
+        if ($key.Key -eq 'Escape') { return $null }
+        $number = 0
+        if ([int]::TryParse([string]$key.KeyChar, [ref]$number) -and $number -ge 1 -and $number -le $Targets.Count) {
+            Write-Host ''
+            return $Targets[$number - 1]
         }
-        if ($run.ExitCode -ne 0) { Write-ToolFailure $run "NeoForge installer exited with code $($run.ExitCode)." }
     }
-    finally {
-        Remove-Item -LiteralPath $installer -Force -ErrorAction SilentlyContinue
-        Remove-CacheDirectory -Path (Join-Path $Cache 'tmp') -CacheRoot $Cache
-    }
-    if (-not (Test-Path -LiteralPath $versionJson -PathType Leaf)) {
-        throw "NeoForge $Version did not install correctly."
-    }
-    Set-Status ''
-    Write-Log OK "installed NeoForge $Version into the Minecraft Launcher"
 }
 
-function Set-LauncherProfile {
-    param([string]$ProfilesPath, [string]$Key, [string]$Name, [string]$Version, [string]$GameDir)
-    $json = [IO.File]::ReadAllText($ProfilesPath)
-    $data = $json | ConvertFrom-Json
-    if (-not $data.profiles) { throw 'launcher_profiles.json has no profiles section.' }
-    $now = (Get-Date).ToUniversalTime().ToString('yyyy-MM-ddTHH:mm:ss.fffZ')
-    $launcherProfile = $data.profiles.$Key
-    if (-not $launcherProfile) {
-        $memory = [math]::Round((Get-CimInstance Win32_ComputerSystem).TotalPhysicalMemory / 1GB)
-        $heap = if ($memory -ge 16) { '8G' } elseif ($memory -ge 12) { '6G' } else { '4G' }
-        $launcherProfile = [pscustomobject]@{
-            created = $now
-            icon = 'Furnace'
-            type = 'custom'
-            javaArgs = "-Xmx$heap -XX:+UseG1GC -XX:+UnlockExperimentalVMOptions -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:G1HeapRegionSize=32M"
-        }
-        $data.profiles | Add-Member -NotePropertyName $Key -NotePropertyValue $launcherProfile
+function Assert-CurseForgeProfile {
+    # Returns a warning to show once the log is visible, or $null.
+    param([object]$Instance, [string]$Minecraft, [object]$Base)
+    if ($Instance.ModpackId -ne $Base.ProjectId) {
+        throw ("The CurseForge profile '$($Instance.Name)' was not installed from $($Base.Label). In the CurseForge app, " +
+            "install $($Base.Label) (Browse modpacks), then run this again.")
     }
-    # Keep any memory settings the player changed; always correct the version and folder.
-    foreach ($field in @{ name = $Name; lastVersionId = $Version; gameDir = $GameDir; lastUsed = $now }.GetEnumerator()) {
-        $launcherProfile | Add-Member -NotePropertyName $field.Key -NotePropertyValue $field.Value -Force
+    if ($Instance.Minecraft -ne $Minecraft) {
+        throw "The CurseForge profile '$($Instance.Name)' is for Minecraft $($Instance.Minecraft), not $Minecraft."
     }
-    Copy-Item -LiteralPath $ProfilesPath -Destination ($ProfilesPath + '.bak-packwiz') -Force
-    $temp = $ProfilesPath + '.packwiz.tmp'
-    [IO.File]::WriteAllText($temp, ($data | ConvertTo-Json -Depth 32), (New-Object Text.UTF8Encoding $false))
-    Move-Item -LiteralPath $temp -Destination $ProfilesPath -Force
+    # CurseForge file IDs increase with every upload, so a lower ID is an older release.
+    if ($Instance.ModpackFileId -lt $Base.FileId) {
+        throw ("The CurseForge profile '$($Instance.Name)' has $($Instance.ModpackFile), but this pack needs $($Base.Label). " +
+            "In CurseForge, update the profile (its Update button), then run this again.")
+    }
+    if ($Instance.ModpackFileId -gt $Base.FileId) {
+        return ("'$($Instance.Name)' has $($Instance.ModpackFile), newer than the $($Base.Label) this pack was made for. " +
+            'It usually still works; tell the pack maintainer if something breaks.')
+    }
+    return $null
 }
 
 function Remove-CacheDirectory {
@@ -481,8 +492,8 @@ try {
     $scriptDir = [IO.Path]::GetDirectoryName($env:PACKWIZ_SYNC_SCRIPT)
     if (((Test-Path -LiteralPath (Join-Path $scriptDir 'pack.toml')) -and
          (Test-Path -LiteralPath (Join-Path $scriptDir 'index.toml'))) -or
-        (Test-Path -LiteralPath (Join-Path $scriptDir 'sources\mods.json')) -or
-        (Test-Path -LiteralPath (Join-Path $scriptDir '..\sources\mods.json'))) {
+        (Test-Path -LiteralPath (Join-Path $scriptDir 'sources\pack.json')) -or
+        (Test-Path -LiteralPath (Join-Path $scriptDir '..\sources\pack.json'))) {
         throw 'This looks like the pack source repository. Run the published copy of this script instead.'
     }
 
@@ -498,25 +509,41 @@ try {
     $packName = if ($packContent -match '(?m)^\s*name\s*=\s*"([^"]*)"') { $Matches[1] }
     if ($packName -notmatch '^[\w.()+-][\w .()+-]{0,63}$' -or $packName.EndsWith('.')) { $packName = 'Modpack' }
 
-    # An empty folder (apart from this script) or an existing instance is used as the game folder.
-    # Run from anywhere else (Downloads, Desktop, ...), the pack goes to .minecraft\modpacks\<pack>.
-    $minecraftDir = Join-Path $env:APPDATA '.minecraft'
+    $baseMatch = [regex]::Match($packContent, '(?m)^\s*description\s*=\s*"Add-on for (.+?) \(CurseForge modpack (\d+), file (\d+)\)')
+    if (-not $baseMatch.Success) { throw 'pack.toml does not name the CurseForge modpack it builds on.' }
+    $base = [pscustomobject]@{ Label = $baseMatch.Groups[1].Value; ProjectId = [int64]$baseMatch.Groups[2].Value
+        FileId = [int64]$baseMatch.Groups[3].Value }
+    $baseName = $base.Label -replace '\s+\S+$', ''
+
+    # Run inside a CurseForge profile, the script uses that profile. Run from anywhere else
+    # (Downloads, Desktop, ...), the player picks one of their profiles of the base modpack.
     $scriptName = [IO.Path]::GetFileName($env:PACKWIZ_SYNC_SCRIPT)
-    $otherFiles = @(Get-ChildItem -LiteralPath $scriptDir -Force | Where-Object { $_.Name -ne $scriptName })
-    if ((Test-Path -LiteralPath (Join-Path $scriptDir 'packwiz.json') -PathType Leaf) -or $otherFiles.Count -eq 0) {
-        $instance = $scriptDir
-    } else {
-        if (-not (Test-Path -LiteralPath (Join-Path $minecraftDir 'launcher_profiles.json') -PathType Leaf)) {
-            throw 'Official Minecraft Launcher not found. Put this script in an empty folder (or your launcher''s instance folder) and run it there.'
+    $curseForge = Read-CurseForgeProfile $scriptDir
+    if (-not $curseForge) {
+        $targets = @(foreach ($found in (Get-CurseForgeProfiles -ModpackId $base.ProjectId -Minecraft $minecraftVersion -Limit 9)) {
+            $update = if ($found.Synced) { ' (update)' } else { '' }
+            [pscustomobject]@{ Profile = $found; Label = "CurseForge profile '$($found.Name)'$update"
+                Note = "$($found.ModpackFile)  -  $($found.Folder)" }
+        })
+        if ($targets.Count -eq 0) {
+            throw ("No CurseForge profile with $baseName was found. In the CurseForge app, install the modpack " +
+                "$($base.Label) (Browse modpacks), then run this again. If you moved the CurseForge folder, put this " +
+                'script in the profile folder (the profile''s menu, Open Folder) and run it there.')
         }
-        $instance = Join-Path $minecraftDir "modpacks\$packName"
-        [void][IO.Directory]::CreateDirectory($instance)
-        # Keep a copy beside the pack so updates can also be run from there.
-        $instanceScript = Join-Path $instance $scriptName
+        $target = Select-Target -Targets $targets -PackName $packName
+        if (-not $target) {
+            Write-Host 'Cancelled. Nothing was changed.'
+            exit 0
+        }
+        $curseForge = $target.Profile
+        # Keep a copy in the profile so updates can also be run from there.
+        $instanceScript = Join-Path $curseForge.Folder $scriptName
         if ([IO.Path]::GetFullPath($instanceScript) -ne [IO.Path]::GetFullPath($env:PACKWIZ_SYNC_SCRIPT)) {
             Copy-Item -LiteralPath $env:PACKWIZ_SYNC_SCRIPT -Destination $instanceScript -Force
         }
     }
+    $baseWarning = Assert-CurseForgeProfile $curseForge -Minecraft $minecraftVersion -Base $base
+    $instance = $curseForge.Folder
     Set-Location -LiteralPath $instance
 
     $cache = Join-Path $instance '.packwiz-sync'
@@ -549,27 +576,7 @@ try {
     Write-Log INFO "game folder $instance"
     Write-Log OK "read pack $packName $packVersion from $($packUri.Host)"
 
-    # The launcher profile is named after this folder; each folder gets its own profile.
-    $profileName = [IO.Path]::GetFileName($instance.TrimEnd('\'))
-    if ($profileName.Length -gt 64) { $profileName = $profileName.Substring(0, 64) }
-    if ([string]::IsNullOrWhiteSpace($profileName)) { $profileName = 'Modpack' }
-    $pathHash = [BitConverter]::ToString([Security.Cryptography.SHA256]::Create().ComputeHash(
-        [Text.Encoding]::UTF8.GetBytes($instance.TrimEnd('\').ToLowerInvariant()))).Replace('-', '')
-    $profileKey = 'packwiz-' + $pathHash.Substring(0, 16).ToLowerInvariant()
-
-    # Official Minecraft Launcher setup. Other launchers (Prism, CurseForge, ...) skip this.
-    $profilesPath = Join-Path $minecraftDir 'launcher_profiles.json'
-    $setupLauncher = $env:PACKWIZ_SYNC_SKIP_LAUNCHER -ne '1'
-    if ($setupLauncher -and -not (Test-Path -LiteralPath $profilesPath -PathType Leaf)) {
-        Write-Log WARN 'Official Minecraft Launcher not found; skipping NeoForge and profile setup. Start it once and run again.'
-        $setupLauncher = $false
-    }
-    if ($setupLauncher) {
-        if ($neoForgeVersion -notmatch '^\d+\.\d+\.\d+(-beta)?$') {
-            throw 'pack.toml does not name a valid NeoForge version.'
-        }
-        Wait-LauncherClosed
-    }
+    if ($baseWarning) { Write-Log WARN $baseWarning }
 
     $javaHomeForSync = Join-Path $cache 'java-21'
     $javaExeForSync = Join-Path $javaHomeForSync 'bin\java.exe'
@@ -629,15 +636,6 @@ try {
     }
     Write-Log OK 'packwiz installer ready'
 
-    if ($setupLauncher) {
-        Install-NeoForge -Version $neoForgeVersion -MinecraftDir $minecraftDir -Java $javaExeForSync -Cache $cache
-        # The launcher may have been reopened while NeoForge installed.
-        Wait-LauncherClosed
-        Set-LauncherProfile -ProfilesPath $profilesPath -Key $profileKey `
-            -Name $profileName -Version "neoforge-$neoForgeVersion" -GameDir $instance
-        Write-Log OK "launcher profile '$profileName' points to this folder"
-    }
-
     # Keep the working directory at the game instance. Never use .packwiz-sync here.
     $script:ModsDone = 0
     Set-Status 'checking mods'
@@ -661,11 +659,8 @@ try {
     } else {
         Write-Log OK 'all mods are up to date'
     }
-    if ($setupLauncher) {
-        Write-Log OK "ready. Open the Minecraft Launcher, pick '$profileName' and press Play."
-    } else {
-        Write-Log OK 'ready. You can start Minecraft.'
-    }
+    Write-Log INFO "$baseName needs at least 8 GB of memory: CurseForge settings, Minecraft, Java Settings."
+    Write-Log OK "ready. Open CurseForge, pick '$($curseForge.Name)' and press Play."
     $result = 0
 }
 catch {

@@ -1,0 +1,12 @@
+name = "MinecraftModded"
+version = "0.1.0"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "6e49bd018422f4e7873073b95387a2c877b03d2097af9c5c80a09ca68a928b67"
+
+[versions]
+minecraft = "1.21.1"
+neoforge = "21.1.259"
