@@ -19,7 +19,7 @@ The earlier standalone 134-mod pack is kept in `archive/standalone-134/` (see it
 | `scripts/import_craftoria.py` | Builds the pack from a Craftoria profile plus `sources/` |
 | `scripts/import_pack.py` | Shared helpers: exact-file Modrinth/CurseForge/Curse Maven resolution, API cache, NeoForge lookup |
 | `scripts/validate_pack.py` | Checks the hash chain, install paths, HTTPS downloads, the base modpack and that the index matches `lock.json`. `--downloads` re-downloads every file |
-| `scripts/stage_site.py` | Builds `dist/` for publishing |
+| `scripts/stage_site.py` | Builds `dist/` for publishing, including a landing page (`index.html`) with the install steps and the extras |
 | `client/sync-mods.cmd` | The Windows updater players run |
 | `.github/workflows/pages.yml` | Manual GitHub Pages publishing |
 

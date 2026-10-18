@@ -608,6 +608,9 @@ class AddonPackTests(unittest.TestCase):
             self.assertTrue((self.root / "dist" / path).exists(), path)
         self.assertEqual((self.root / "dist/installer/scene.frames.gz").read_bytes(), b"frames")
         self.assertTrue((self.root / "dist/installer/LICENSE-ascii.rest.txt").exists())
+        home = (self.root / "dist/index.html").read_text(encoding="utf-8")
+        self.assertIn('href="sync-mods.cmd"', home)
+        self.assertIn("Extra mods (1)", home)
 
     def test_publish_refuses_incomplete_pack(self):
         with self.assertRaises(importer.ResolutionError):
