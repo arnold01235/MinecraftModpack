@@ -3722,6 +3722,39 @@
       "source": "https://modrinth.com/mod/uCdwusMi/version/9w34y8ai",
       "slug": "distant-horizons"
     },
+    "mods/power-grid.pw.toml": {
+      "filename": "powergrid-mc1.21.1-0.6.2.jar",
+      "name": "Create: Power Grid",
+      "side": "both",
+      "provider": "modrinth",
+      "project_id": "eWiBLJ9R",
+      "version_id": "jCkPHjmP",
+      "url": "https://cdn.modrinth.com/data/eWiBLJ9R/versions/jCkPHjmP/powergrid-mc1.21.1-0.6.2.jar",
+      "hash_format": "sha512",
+      "hash": "60307e23a27526d22bf753d387edef5a2f2a063a04a47b69e98b7f71bbad32fdf17e05f9838008e47a5999a60e5e77a91f0695215d0ab57694f0034fde9873ca",
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "dependencies": [
+        {
+          "version_id": null,
+          "project_id": "lhGA9TYQ",
+          "file_name": null,
+          "dependency_type": "required"
+        },
+        {
+          "version_id": null,
+          "project_id": "LNytGWDc",
+          "file_name": null,
+          "dependency_type": "required"
+        }
+      ],
+      "source": "https://modrinth.com/mod/eWiBLJ9R/version/jCkPHjmP",
+      "slug": "power-grid"
+    },
     "mods/simulated-cc-compat.pw.toml": {
       "filename": "simulated_cc_compat-1.1.2.jar",
       "name": "Simulated: ComputerCraft Compat",
@@ -3832,6 +3865,7 @@
     "mods/createnuclear.pw.toml": "dff9e3808aa4624b9631d0751a452b3ab7914b8439805a0156cd08b00f7ac67f",
     "mods/distant-horizons-seedgen.pw.toml": "babce028e938bfdb8175738b74c5c08a12d8098926aec608d7dc5ce5c6ac1a87",
     "mods/distant-horizons.pw.toml": "2802ae635c7d39e56f8b38d9b4cd8f3e636315f4e0a2502ed4de71e6927d4c60",
+    "mods/power-grid.pw.toml": "b235599bb285d533732eab8b087a055530c82d5a575a77ab89a9a30c1bbed3e9",
     "mods/simulated-cc-compat.pw.toml": "ed26ddc7b9aa6b489be5fab5c1ac638f61faa8a559f0cba463a0f2f5d1f5ef96",
     "mods/turtlematic.pw.toml": "129defde72ecbbd1a442a12b2206ee13c152e97ab686c83fc1706a13eaf64c0e",
     "mods/unlimitedperipheralworks.pw.toml": "6923541b6e8f92ff763853eee86e8b1bd315809cf2d59ebae676aba5b98d3712"

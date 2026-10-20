@@ -146,6 +146,16 @@
           "neoforge"
         ]
       }
+    },
+    {
+      "filename": "powergrid-mc1.21.1-0.6.2.jar",
+      "name": "Create: Power Grid",
+      "slug": "power-grid",
+      "side": "both",
+      "modrinth": [
+        "eWiBLJ9R"
+      ],
+      "modrinth_version": "jCkPHjmP"
     }
   ]
 }

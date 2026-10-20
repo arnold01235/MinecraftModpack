@@ -46,6 +46,11 @@ hash = "2802ae635c7d39e56f8b38d9b4cd8f3e636315f4e0a2502ed4de71e6927d4c60"
 metafile = true
 
 [[files]]
+file = "mods/power-grid.pw.toml"
+hash = "b235599bb285d533732eab8b087a055530c82d5a575a77ab89a9a30c1bbed3e9"
+metafile = true
+
+[[files]]
 file = "mods/simulated-cc-compat.pw.toml"
 hash = "ed26ddc7b9aa6b489be5fab5c1ac638f61faa8a559f0cba463a0f2f5d1f5ef96"
 metafile = true
