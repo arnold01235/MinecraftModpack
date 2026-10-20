@@ -1,8 +1,38 @@
 hash-format = "sha256"
 
 [[files]]
-file = "mods/create-aeronautics.pw.toml"
-hash = "769cbabc23a4ceb4e135b7316f09f437b7536845c64480d8e0bc5a7175e8530c"
+file = "mods/advancedperipherals.pw.toml"
+hash = "7d34563f187af7972015f87f36f906dbfe38acb6dd9f99dffae562899bc78949"
+metafile = true
+
+[[files]]
+file = "mods/cc-sable.pw.toml"
+hash = "2f164641634223dedb55fb8f618d8073d4e9a4830103b9ba5f2afb92c95c466d"
+metafile = true
+
+[[files]]
+file = "mods/cc-tweaked.pw.toml"
+hash = "c73f2a48edadc72c52a8a8897e9cc1399d993dd41e445ad885c8e4f621cd551f"
+metafile = true
+
+[[files]]
+file = "mods/create-aeroportals.pw.toml"
+hash = "dffe42f4d9795ed5222e6db5b8316b118afd18ae9c903643ea1206b8f5e861b1"
+metafile = true
+
+[[files]]
+file = "mods/create-avionics.pw.toml"
+hash = "593a022e9f631982c308a4f0a58147072f992dffad71bfb8a7a3c0183124facc"
+metafile = true
+
+[[files]]
+file = "mods/create-teleporters.pw.toml"
+hash = "3557496081ba991875077593467afc25e9ab237714d421a1f00368dcde4f8ffe"
+metafile = true
+
+[[files]]
+file = "mods/createnuclear.pw.toml"
+hash = "dff9e3808aa4624b9631d0751a452b3ab7914b8439805a0156cd08b00f7ac67f"
 metafile = true
 
 [[files]]
@@ -16,6 +46,16 @@ hash = "2802ae635c7d39e56f8b38d9b4cd8f3e636315f4e0a2502ed4de71e6927d4c60"
 metafile = true
 
 [[files]]
-file = "mods/sable.pw.toml"
-hash = "bc4dc367b41e578d1f8d12498227396e44590a601a348614f714eb56e26e2f89"
+file = "mods/simulated-cc-compat.pw.toml"
+hash = "ed26ddc7b9aa6b489be5fab5c1ac638f61faa8a559f0cba463a0f2f5d1f5ef96"
+metafile = true
+
+[[files]]
+file = "mods/turtlematic.pw.toml"
+hash = "129defde72ecbbd1a442a12b2206ee13c152e97ab686c83fc1706a13eaf64c0e"
+metafile = true
+
+[[files]]
+file = "mods/unlimitedperipheralworks.pw.toml"
+hash = "6923541b6e8f92ff763853eee86e8b1bd315809cf2d59ebae676aba5b98d3712"
 metafile = true

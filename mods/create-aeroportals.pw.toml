@@ -1,0 +1,12 @@
+name = "Create: AeroPortals"
+filename = "aeroportals-1.21.1-1.3.5.jar"
+side = "both"
+
+[download]
+url = "https://cursemaven.com/curse/maven/aeroportals-1549100/9268317/aeroportals-1549100-9268317.jar"
+hash-format = "sha512"
+hash = "f1960151802d413b539ac73728d4b7cdf98bdaf1880f917e2c3f862d6bd05412f78db7d1e222b25ef221b19c7b3faf85afb158c71d8b3f2827a3e015361e2605"
+
+[update.curseforge]
+project-id = 1549100
+file-id = 9268317

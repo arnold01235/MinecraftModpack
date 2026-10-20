@@ -357,7 +357,7 @@ function Write-ToolFailure {
 }
 
 # --- CurseForge ------------------------------------------------------------------
-# The pack is an add-on: the player installs the base modpack (Craftoria) in the CurseForge app,
+# The pack is an add-on: the player installs the base modpack (named in pack.toml) in the CurseForge app,
 # which keeps managing it, and this script adds the pack's extra mods and config changes to that
 # profile. A CurseForge profile is a folder with minecraftinstance.json.
 

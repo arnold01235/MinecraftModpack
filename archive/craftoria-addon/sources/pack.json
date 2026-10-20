@@ -1,0 +1,57 @@
+{
+  "name": "MinecraftModded",
+  "minecraft": "1.21.1",
+  "build": 1,
+  "base": {
+    "curseforge_slug": "craftoria",
+    "curseforge_project_id": 1039252
+  },
+  "preserve": [
+    "options.txt",
+    "optionsof.txt",
+    "optionsshaders.txt",
+    "servers.dat"
+  ],
+  "extras": [
+    {
+      "filename": "create-aeronautics-bundled-1.21.1-1.3.2.jar",
+      "name": "Create Aeronautics",
+      "slug": "create-aeronautics",
+      "side": "both",
+      "modrinth": [
+        "oWaK0Q19"
+      ],
+      "modrinth_version": "44pLdPGg"
+    },
+    {
+      "filename": "sable-neoforge-1.21.1-2.0.6.jar",
+      "name": "Sable",
+      "slug": "sable",
+      "side": "both",
+      "modrinth": [
+        "T9PomCSv"
+      ],
+      "modrinth_version": "fg9dTRz9"
+    },
+    {
+      "filename": "DistantHorizons-3.3.3-1.21.1-fabric-neoforge.jar",
+      "name": "Distant Horizons",
+      "slug": "distant-horizons",
+      "side": "both",
+      "modrinth": [
+        "uCdwusMi"
+      ],
+      "modrinth_version": "9w34y8ai"
+    },
+    {
+      "filename": "Distant Horizons SeedGen 0.9.1 for 1.21.1 NeoForge.jar",
+      "name": "Distant Horizons SeedGen",
+      "slug": "distant-horizons-seedgen",
+      "side": "both",
+      "modrinth": [
+        "iUGLCJTI"
+      ],
+      "modrinth_version": "2DrfEi0d"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+name = "Create: Teleporters"
+filename = "createteleporters-3.0.1b-1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/9mtJ8MHP/versions/WHTovylv/createteleporters-3.0.1b-1.21.1.jar"
+hash-format = "sha512"
+hash = "aa2ceb9605011d69a5eea3432723c365e0a52e5b2b0854b7f88e1ac0e7b34f487385208efdd02a78db95dbff4254faaec3febd0fbe14a94cd89acc7ad8ea9ee8"
+
+[update.modrinth]
+mod-id = "9mtJ8MHP"
+version = "WHTovylv"

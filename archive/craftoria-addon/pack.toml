@@ -1,0 +1,13 @@
+name = "MinecraftModded"
+version = "1.37.0-1"
+description = "Add-on for Craftoria 1.37.0 (CurseForge modpack 1039252, file 8874369). Install Craftoria in the CurseForge app first."
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "0ce44999033d8d5c1ce86ba934bdd03b98cf5fa2b983f52a8a75e6caa837ee95"
+
+[versions]
+minecraft = "1.21.1"
+neoforge = "21.1.249"

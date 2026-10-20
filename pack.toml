@@ -1,13 +1,13 @@
 name = "MinecraftModded"
-version = "1.37.0-1"
-description = "Add-on for Craftoria 1.37.0 (CurseForge modpack 1039252, file 8874369). Install Craftoria in the CurseForge app first."
+version = "0.7.1-1"
+description = "Add-on for ATM10AERO 0.7.1 (CurseForge modpack 1644918, file 9022977). Install ATM10AERO in the CurseForge app first."
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "0ce44999033d8d5c1ce86ba934bdd03b98cf5fa2b983f52a8a75e6caa837ee95"
+hash = "1fe5574a588e43e5c68c368c2a3ee06706a9cec374c1011cc03a922174eea5ac"
 
 [versions]
 minecraft = "1.21.1"
-neoforge = "21.1.249"
+neoforge = "21.1.250"

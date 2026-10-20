@@ -1,0 +1,12 @@
+name = "Simulated: ComputerCraft Compat"
+filename = "simulated_cc_compat-1.1.2.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/AXk1WZrw/versions/IZ6jSqsQ/simulated_cc_compat-1.1.2.jar"
+hash-format = "sha512"
+hash = "fd0053726ab21c136a364f2baac6293c35fe3998a9fcc7b63eacaa8ff608b2e348e1ed3b2c63897551a6d54c22b1891f82a3d430d2c1222f822ac6b409d7b80c"
+
+[update.modrinth]
+mod-id = "AXk1WZrw"
+version = "IZ6jSqsQ"
