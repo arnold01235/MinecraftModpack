@@ -61,6 +61,11 @@ hash = "b235599bb285d533732eab8b087a055530c82d5a575a77ab89a9a30c1bbed3e9"
 metafile = true
 
 [[files]]
+file = "mods/simple-voice-chat.pw.toml"
+hash = "a4947a73aff2f9c64824228ccd1ec6c93cdc7e4ffe90f4b89804a887dcf2a74e"
+metafile = true
+
+[[files]]
 file = "mods/simulated-cc-compat.pw.toml"
 hash = "ed26ddc7b9aa6b489be5fab5c1ac638f61faa8a559f0cba463a0f2f5d1f5ef96"
 metafile = true

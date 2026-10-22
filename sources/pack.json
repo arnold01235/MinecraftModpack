@@ -166,6 +166,16 @@
         "UT2M39wf"
       ],
       "modrinth_version": "bPYeUWZx"
+    },
+    {
+      "filename": "voicechat-neoforge-1.21.1-2.6.24.jar",
+      "name": "Simple Voice Chat",
+      "slug": "simple-voice-chat",
+      "side": "both",
+      "modrinth": [
+        "9eGKb6K1"
+      ],
+      "modrinth_version": "qqNx1Yjm"
     }
   ]
 }

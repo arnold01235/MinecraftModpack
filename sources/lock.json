@@ -3945,6 +3945,40 @@
       "source": "https://modrinth.com/mod/eWiBLJ9R/version/jCkPHjmP",
       "slug": "power-grid"
     },
+    "mods/simple-voice-chat.pw.toml": {
+      "filename": "voicechat-neoforge-1.21.1-2.6.24.jar",
+      "name": "Simple Voice Chat",
+      "side": "both",
+      "provider": "modrinth",
+      "project_id": "9eGKb6K1",
+      "version_id": "qqNx1Yjm",
+      "url": "https://cdn.modrinth.com/data/9eGKb6K1/versions/qqNx1Yjm/voicechat-neoforge-1.21.1-2.6.24.jar",
+      "hash_format": "sha512",
+      "hash": "730d2b2acc39afbac16cd3e4312d411e6f226f71aa58e26ff9c772110f962b2e2c7810baa3cd19cd82d28aed85c58d0c0df1ed5fc97dad8a89655008f3461a31",
+      "game_versions": [
+        "1.21",
+        "1.21.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "dependencies": [
+        {
+          "version_id": null,
+          "project_id": "9s6osm5g",
+          "file_name": null,
+          "dependency_type": "optional"
+        },
+        {
+          "version_id": null,
+          "project_id": "9eGKb6K1",
+          "file_name": null,
+          "dependency_type": "optional"
+        }
+      ],
+      "source": "https://modrinth.com/mod/9eGKb6K1/version/qqNx1Yjm",
+      "slug": "simple-voice-chat"
+    },
     "mods/simulated-cc-compat.pw.toml": {
       "filename": "simulated_cc_compat-1.1.2.jar",
       "name": "Simulated: ComputerCraft Compat",
@@ -4025,6 +4059,7 @@
     "mods/distant-horizons.pw.toml": "2802ae635c7d39e56f8b38d9b4cd8f3e636315f4e0a2502ed4de71e6927d4c60",
     "mods/euphoria-patches.pw.toml": "60cda58f8f763b5b137dbfc9a0a071eeb214683fba5a2d74532eb3b755fcd833",
     "mods/power-grid.pw.toml": "b235599bb285d533732eab8b087a055530c82d5a575a77ab89a9a30c1bbed3e9",
+    "mods/simple-voice-chat.pw.toml": "a4947a73aff2f9c64824228ccd1ec6c93cdc7e4ffe90f4b89804a887dcf2a74e",
     "mods/simulated-cc-compat.pw.toml": "ed26ddc7b9aa6b489be5fab5c1ac638f61faa8a559f0cba463a0f2f5d1f5ef96",
     "mods/unlimitedperipheralworks.pw.toml": "6923541b6e8f92ff763853eee86e8b1bd315809cf2d59ebae676aba5b98d3712"
   }
