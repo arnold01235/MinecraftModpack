@@ -146,6 +146,16 @@
         "eWiBLJ9R"
       ],
       "modrinth_version": "jCkPHjmP"
+    },
+    {
+      "filename": "EuphoriaPatcher-1.10.5-r5.9.3-neoforge.jar",
+      "name": "Euphoria Patches",
+      "slug": "euphoria-patches",
+      "side": "client",
+      "modrinth": [
+        "4H6sumDB"
+      ],
+      "modrinth_version": "QMsRXtSJ"
     }
   ]
 }

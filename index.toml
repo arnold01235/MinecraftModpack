@@ -46,6 +46,11 @@ hash = "2802ae635c7d39e56f8b38d9b4cd8f3e636315f4e0a2502ed4de71e6927d4c60"
 metafile = true
 
 [[files]]
+file = "mods/euphoria-patches.pw.toml"
+hash = "60cda58f8f763b5b137dbfc9a0a071eeb214683fba5a2d74532eb3b755fcd833"
+metafile = true
+
+[[files]]
 file = "mods/power-grid.pw.toml"
 hash = "b235599bb285d533732eab8b087a055530c82d5a575a77ab89a9a30c1bbed3e9"
 metafile = true
