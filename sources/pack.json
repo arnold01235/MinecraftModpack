@@ -114,7 +114,7 @@
       "modrinth_version": "TANOhO2C"
     },
     {
-      "filename": "aeroportals-1.21.1-1.3.5.jar",
+      "filename": "aeroportals-1.21.1-1.3.6.jar",
       "name": "Create: AeroPortals",
       "slug": "create-aeroportals",
       "side": "both",
@@ -122,13 +122,13 @@
         "create-aeroportals"
       ],
       "curseforge_project_id": 1549100,
-      "curseforge_file_id": 9268317,
-      "source_reference": "https://www.curseforge.com/minecraft/mc-mods/create-aeroportals/files/9268317",
+      "curseforge_file_id": 9281419,
+      "source_reference": "https://www.curseforge.com/minecraft/mc-mods/create-aeroportals/files/9281419",
       "curseforge_maven": {
-        "url": "https://cursemaven.com/curse/maven/aeroportals-1549100/9268317/aeroportals-1549100-9268317.jar",
-        "sha1": "2001244606d857017072b9cc815c64e76915fb5c",
+        "url": "https://cursemaven.com/curse/maven/aeroportals-1549100/9281419/aeroportals-1549100-9281419.jar",
+        "sha1": "0638ae05d712b3d0bbbb5c3a1ea39553b526ffa0",
         "mod_id": "aeroportals",
-        "version": "1.3.5",
+        "version": "1.3.6",
         "game_versions": [
           "1.21.1"
         ],

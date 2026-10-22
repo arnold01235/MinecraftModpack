@@ -27,7 +27,7 @@ metafile = true
 
 [[files]]
 file = "mods/create-aeroportals.pw.toml"
-hash = "dffe42f4d9795ed5222e6db5b8316b118afd18ae9c903643ea1206b8f5e861b1"
+hash = "20edafa5563c56dc63f89c6e0342e1fd2f6d9163e9ffab3149186552da53c09e"
 metafile = true
 
 [[files]]
