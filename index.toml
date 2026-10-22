@@ -56,11 +56,6 @@ hash = "ed26ddc7b9aa6b489be5fab5c1ac638f61faa8a559f0cba463a0f2f5d1f5ef96"
 metafile = true
 
 [[files]]
-file = "mods/turtlematic.pw.toml"
-hash = "129defde72ecbbd1a442a12b2206ee13c152e97ab686c83fc1706a13eaf64c0e"
-metafile = true
-
-[[files]]
 file = "mods/unlimitedperipheralworks.pw.toml"
 hash = "6923541b6e8f92ff763853eee86e8b1bd315809cf2d59ebae676aba5b98d3712"
 metafile = true

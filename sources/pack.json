@@ -84,16 +84,6 @@
       "modrinth_version": "WHTovylv"
     },
     {
-      "filename": "turtlematic-forge-1.21.1-1.4.10.jar",
-      "name": "Turtlematic",
-      "slug": "turtlematic",
-      "side": "both",
-      "modrinth": [
-        "UogK5QqE"
-      ],
-      "modrinth_version": "BYUhSZ5W"
-    },
-    {
       "filename": "peripheralworks-forge-1.21.1-1.9.2.jar",
       "name": "UnlimitedPeripheralWorks",
       "slug": "unlimitedperipheralworks",
