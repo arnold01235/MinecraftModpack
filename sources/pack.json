@@ -210,6 +210,16 @@
         "USgVjXsk"
       ],
       "modrinth_version": "uDi14nbt"
+    },
+    {
+      "filename": "cccbridge-mc1.21.1-v1.7.3-neoforge.jar",
+      "name": "CC:C Bridge",
+      "slug": "cccbridge",
+      "side": "both",
+      "modrinth": [
+        "fXt291FO"
+      ],
+      "modrinth_version": "MKK6cYI5"
     }
   ]
 }

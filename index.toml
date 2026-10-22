@@ -16,6 +16,11 @@ hash = "c73f2a48edadc72c52a8a8897e9cc1399d993dd41e445ad885c8e4f621cd551f"
 metafile = true
 
 [[files]]
+file = "mods/cccbridge.pw.toml"
+hash = "2a12f40b8d0ddcfecef112fa7d04437d548e7371a88c2e568d049c5ac4fab666"
+metafile = true
+
+[[files]]
 file = "mods/copycats.pw.toml"
 hash = "6d0669f8165aeb43f319ea216625229f4677964baba32a62ccf0a61dd0dbd7a2"
 metafile = true

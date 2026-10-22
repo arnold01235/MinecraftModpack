@@ -3508,6 +3508,45 @@
       "source": "https://modrinth.com/mod/gu7yAYhd/version/1ewzHZYg",
       "slug": "cc-tweaked"
     },
+    "mods/cccbridge.pw.toml": {
+      "filename": "cccbridge-mc1.21.1-v1.7.3-neoforge.jar",
+      "name": "CC:C Bridge",
+      "side": "both",
+      "provider": "modrinth",
+      "project_id": "fXt291FO",
+      "version_id": "MKK6cYI5",
+      "url": "https://cdn.modrinth.com/data/fXt291FO/versions/MKK6cYI5/cccbridge-mc1.21.1-v1.7.3-neoforge.jar",
+      "hash_format": "sha512",
+      "hash": "bcface30c088371b080ad998a521968d921b814a5d293492e9c5f37ed29630610bbaeb18f3aeaa93d48b2f2c54cd2a21a62130cfab97ce52031218ad7f415a45",
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "dependencies": [
+        {
+          "version_id": null,
+          "project_id": "gu7yAYhd",
+          "file_name": null,
+          "dependency_type": "required"
+        },
+        {
+          "version_id": null,
+          "project_id": "tNmWwdI2",
+          "file_name": null,
+          "dependency_type": "optional"
+        },
+        {
+          "version_id": null,
+          "project_id": "LNytGWDc",
+          "file_name": null,
+          "dependency_type": "required"
+        }
+      ],
+      "source": "https://modrinth.com/mod/fXt291FO/version/MKK6cYI5",
+      "slug": "cccbridge"
+    },
     "mods/copycats.pw.toml": {
       "filename": "copycats-3.0.9+mc.1.21.1-neoforge.jar",
       "name": "Create: Copycats+",
@@ -4135,6 +4174,7 @@
     "mods/advancedperipherals.pw.toml": "7d34563f187af7972015f87f36f906dbfe38acb6dd9f99dffae562899bc78949",
     "mods/cc-sable.pw.toml": "2f164641634223dedb55fb8f618d8073d4e9a4830103b9ba5f2afb92c95c466d",
     "mods/cc-tweaked.pw.toml": "c73f2a48edadc72c52a8a8897e9cc1399d993dd41e445ad885c8e4f621cd551f",
+    "mods/cccbridge.pw.toml": "2a12f40b8d0ddcfecef112fa7d04437d548e7371a88c2e568d049c5ac4fab666",
     "mods/copycats.pw.toml": "6d0669f8165aeb43f319ea216625229f4677964baba32a62ccf0a61dd0dbd7a2",
     "mods/create-aeroportals.pw.toml": "dffe42f4d9795ed5222e6db5b8316b118afd18ae9c903643ea1206b8f5e861b1",
     "mods/create-avionics.pw.toml": "593a022e9f631982c308a4f0a58147072f992dffad71bfb8a7a3c0183124facc",
