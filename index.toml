@@ -16,6 +16,11 @@ hash = "c73f2a48edadc72c52a8a8897e9cc1399d993dd41e445ad885c8e4f621cd551f"
 metafile = true
 
 [[files]]
+file = "mods/copycats.pw.toml"
+hash = "6d0669f8165aeb43f319ea216625229f4677964baba32a62ccf0a61dd0dbd7a2"
+metafile = true
+
+[[files]]
 file = "mods/create-aeroportals.pw.toml"
 hash = "dffe42f4d9795ed5222e6db5b8316b118afd18ae9c903643ea1206b8f5e861b1"
 metafile = true

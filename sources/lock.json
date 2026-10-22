@@ -3508,6 +3508,39 @@
       "source": "https://modrinth.com/mod/gu7yAYhd/version/1ewzHZYg",
       "slug": "cc-tweaked"
     },
+    "mods/copycats.pw.toml": {
+      "filename": "copycats-3.0.9+mc.1.21.1-neoforge.jar",
+      "name": "Create: Copycats+",
+      "side": "both",
+      "provider": "modrinth",
+      "project_id": "UT2M39wf",
+      "version_id": "bPYeUWZx",
+      "url": "https://cdn.modrinth.com/data/UT2M39wf/versions/bPYeUWZx/copycats-3.0.9%2Bmc.1.21.1-neoforge.jar",
+      "hash_format": "sha512",
+      "hash": "432b5cde473976476b0729172710d32805576d0c3a5fd66d21f882d96cef0c4eef1b85e4e3a1a316e2adc473784b11e156b0265b0f62bcfd5b035a6ff7dfcc6e",
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "dependencies": [
+        {
+          "version_id": null,
+          "project_id": "u6dRKJwZ",
+          "file_name": null,
+          "dependency_type": "optional"
+        },
+        {
+          "version_id": null,
+          "project_id": "LNytGWDc",
+          "file_name": null,
+          "dependency_type": "required"
+        }
+      ],
+      "source": "https://modrinth.com/mod/UT2M39wf/version/bPYeUWZx",
+      "slug": "copycats"
+    },
     "mods/create-aeroportals.pw.toml": {
       "filename": "aeroportals-1.21.1-1.3.5.jar",
       "name": "Create: AeroPortals",
@@ -3983,6 +4016,7 @@
     "mods/advancedperipherals.pw.toml": "7d34563f187af7972015f87f36f906dbfe38acb6dd9f99dffae562899bc78949",
     "mods/cc-sable.pw.toml": "2f164641634223dedb55fb8f618d8073d4e9a4830103b9ba5f2afb92c95c466d",
     "mods/cc-tweaked.pw.toml": "c73f2a48edadc72c52a8a8897e9cc1399d993dd41e445ad885c8e4f621cd551f",
+    "mods/copycats.pw.toml": "6d0669f8165aeb43f319ea216625229f4677964baba32a62ccf0a61dd0dbd7a2",
     "mods/create-aeroportals.pw.toml": "dffe42f4d9795ed5222e6db5b8316b118afd18ae9c903643ea1206b8f5e861b1",
     "mods/create-avionics.pw.toml": "593a022e9f631982c308a4f0a58147072f992dffad71bfb8a7a3c0183124facc",
     "mods/create-teleporters.pw.toml": "3557496081ba991875077593467afc25e9ab237714d421a1f00368dcde4f8ffe",
