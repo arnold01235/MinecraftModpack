@@ -3,6 +3,7 @@
 import argparse
 import html
 from pathlib import Path
+import re
 import shutil
 import tomllib
 from urllib.parse import urlparse
@@ -36,7 +37,9 @@ def stage(root, output, base_url):
     # Avoid cmd.exe metacharacters, percent expansion and line injection in the assignment.
     if any(c in pack_url for c in '\r\n"%!^&|<>'):
         raise ResolutionError("Site URL contains characters unsafe for the batch updater")
-    script = script.replace("https://YOUR-USERNAME.github.io/YOUR-REPO/pack.toml", pack_url)
+    script, count = re.subn(r'(?m)^set "PACKWIZ_SYNC_URL=[^"\r\n]*"', lambda _: f'set "PACKWIZ_SYNC_URL={pack_url}"', script)
+    if count != 1:
+        raise ResolutionError("client/sync-mods.cmd must set PACKWIZ_SYNC_URL exactly once")
     (output / "sync-mods.cmd").write_bytes(script.replace("\r\n", "\n").replace("\n", "\r\n").encode("utf-8"))
     # The updater's optional animation (ascii.rest "aurora fjord", MIT) and its licence.
     (output / "installer").mkdir()

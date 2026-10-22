@@ -1,6 +1,6 @@
 # MinecraftModded handover
 
-Updated: 2026-10-20 (Europe/Oslo). Earlier handovers are in `archive/standalone-134/HANDOVER.txt` and in git history.
+Updated: 2026-10-22 (Europe/Oslo). Earlier handovers are in `archive/standalone-134/HANDOVER.txt` and in git history.
 
 ## Current status
 
@@ -13,16 +13,18 @@ The pack is an **add-on for All the Mods 10: Aeronautics** (CurseForge, NeoForge
 | Standalone 134-mod pack | Archived in `archive/standalone-134/`; last live at commit `f6ce336` |
 | Base | ATM10AERO 0.7.1 (CurseForge project 1644918, file 9022977), NeoForge 21.1.250, imported from the local CurseForge profile without an API key. It already has Create Aeronautics 1.3.2 and Sable 2.0.5 |
 | Extras (18) | Distant Horizons 3.3.3, Distant Horizons SeedGen 0.9.1, CC: Tweaked 1.120.2, Advanced Peripherals 0.8.2a, UnlimitedPeripheralWorks 1.9.2, Create: Avionics 0.6.0, CC: Sable 1.3.4, Simulated: ComputerCraft Compat 1.1.2, CC:C Bridge 1.7.3, Create: Teleporters 3.0.1b, Create Nuclear 2.0.0, Create: Power Grid 0.6.2, Create: Copycats+ 3.0.9, Create: The Factory Must Grow 1.2.0, Simple Voice Chat 2.6.24 (needs UDP port 24454 open on the server), Euphoria Patches 1.10.5-r5.9.3 (client only; patches Complementary Reimagined r5.9.3, which players put in `shaderpacks/` themselves) (all Modrinth) and Create: AeroPortals 1.3.5 and ProjectE 1.1.0 (CurseForge only, via Curse Maven with pinned SHA-1s; ProjectE marks Mekanism 10.7.8 and older incompatible, and the base pack has 10.7.19). No local overrides yet. Turtlematic 1.4.10 was dropped on 2026-10-22: on a dedicated-server client, opening the Creative inventory crashes the game (its creative tab looks up registries through the integrated server, which is null there) |
-| Tested in game | The extras were installed by hand in a local ATM10A profile. DH + SeedGen launched; the full set of 12 has not had a confirmed clean launch yet |
+| Tested in game | The extras were installed by hand in a local ATM10A profile. DH + SeedGen launched. The Kinetic dedicated server detected all 13 extras and completed startup; a client join and gameplay with the full set remain unverified |
+| Kinetic server | Base 0.7.1 installed through the panel; 13 extras uploaded and verified by downloading them again and comparing SHA-256 hashes. 408 jars total. Startup succeeded on Java 21 / NeoForge 21.1.250 with nonfatal mod/data errors. See [SERVER.md](SERVER.md) for operations, evidence, and known issues. User planned to stop it for the day; shutdown is not verified |
 | Not included | Terralith and Tectonic (being compared with the base terrain), shader packs (extras only install to `mods/`), G.L.A.S.S Remastered (needs Sable 2.0.6; the base pack ships 2.0.5 and the add-on cannot replace base files) |
 | `client/sync-mods.cmd` | CurseForge-only. Reads the base project from `pack.toml`. A full run needs a published pack |
 | Tests | 37 passing; `validate_pack.py` passes with 18 extras |
 
 ## Next steps
 
-1. Choose extras and add them to `sources/pack.json`; put config changes in `sources/local-overrides/`. Run `python scripts/import_craftoria.py --rebuild`, then `python scripts/validate_pack.py --downloads`.
-2. Test the extras in a copy of the ATM10: Aeronautics profile (CurseForge can duplicate a profile) before publishing.
-3. Commit, push, run the Pages workflow. Then test `sync-mods.cmd` from Downloads with (a) one ATM10: Aeronautics profile, (b) two (menu), (c) no ATM10: Aeronautics profile (clear error), (d) a rerun from the copy inside the profile, and (e) after an ATM10: Aeronautics update in CurseForge: check that removed or overwritten pack files come back. If packwiz says "up to date" without restoring them, the updater needs to force a full check.
+1. Remove `turtlematic-forge-1.21.1-1.4.10.jar` from the Kinetic server's `mods/` (clients that sync the pack no longer have it, so they cannot join until it is gone). Resume the existing Kinetic server from the panel and join with the matching 0.7.1 client plus the 12 extras. Follow [SERVER.md](SERVER.md); do not reinstall just to resume. Check the logged Power Grid native-backend failure, Create Nuclear recipe warnings, and other data errors against actual gameplay.
+2. Test the extras in a copy of the ATM10: Aeronautics profile (CurseForge can duplicate a profile) before publishing. Performance with 4–10 players has not been measured.
+3. If changing extras, edit `sources/pack.json`; put config changes in `sources/local-overrides/`. Run `python scripts/import_craftoria.py --rebuild`, then `python scripts/validate_pack.py --downloads`. Coordinate client/server versions and back up the server before deployment.
+4. Commit, push, run the Pages workflow. Then test `sync-mods.cmd` from Downloads with (a) one ATM10: Aeronautics profile, (b) two (menu), (c) no ATM10: Aeronautics profile (clear error), (d) a rerun from the copy inside the profile, and (e) after an ATM10: Aeronautics update in CurseForge: check that removed or overwritten pack files come back. If packwiz says "up to date" without restoring them, the updater needs to force a full check.
 
 ## Design notes
 

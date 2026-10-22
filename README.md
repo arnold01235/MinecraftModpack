@@ -4,6 +4,8 @@ Minecraft **1.21.1 / NeoForge**, built as an **add-on for the [All the Mods 10: 
 
 **Status:** the importer, validator, updater and tests are ready (37 tests pass). The pack is built against ATM10: Aeronautics 0.7.1 (NeoForge 21.1.250) with 18 extras: **Distant Horizons** and **Distant Horizons SeedGen**; **CC: Tweaked**, **Advanced Peripherals** and **UnlimitedPeripheralWorks**; the Aeronautics/ComputerCraft add-ons **Create: Avionics**, **CC: Sable**, **Simulated: ComputerCraft Compat** and **CC:C Bridge**; and **Create: AeroPortals**, **Create: Teleporters**, **Create Nuclear**, **Create: Power Grid**, **Create: Copycats+** and **Create: The Factory Must Grow**; **Simple Voice Chat** for proximity voice chat; and **ProjectE** (EMC transmutation, the modern Equivalent Exchange). Players also get the client-only **Euphoria Patches**, an add-on for Complementary Shaders. A full sync needs a published pack.
 
+**Server:** ATM10: Aeronautics 0.7.1 plus all 13 extras is installed on Kinetic Hosting; Turtlematic has since been dropped from the pack and still has to be removed from the server. Uploaded extras passed checksum verification and the dedicated server completed startup on 2026-10-22 (Europe/Oslo). A player join and group performance are still untested; the startup log contains nonfatal mod/data errors. See [server operations and known issues](SERVER.md) and the [handover](handover.md).
+
 Earlier versions are archived: the Craftoria add-on in `archive/craftoria-addon/` and the standalone 134-mod pack in `archive/standalone-134/` (see their READMEs).
 
 ## Files
@@ -22,6 +24,7 @@ Earlier versions are archived: the Craftoria add-on in `archive/craftoria-addon/
 | `scripts/stage_site.py` | Builds `dist/` for publishing, including a landing page (`index.html`) with the install steps and the extras |
 | `client/sync-mods.cmd` | The Windows updater players run |
 | `.github/workflows/pages.yml` | Manual GitHub Pages publishing |
+| `SERVER.md` | Kinetic server setup, verified state, known issues, backups, and restart/update steps |
 
 ## Build the pack
 
@@ -106,7 +109,7 @@ The script lists only profiles installed from the pack's base modpack (read from
 
 The first run downloads a portable Java 21 for the updater. Keep `packwiz.json`. Mods are installed with `-s client`. In a console of at least 120x26 characters, the updater shows the "aurora fjord" scene from [ascii.rest](https://ascii.rest/aurora-fjord/) (MIT, by bas3line), pre-rendered by `client/visuals/render-frames.mjs` (maintainer only, Node 22). Smaller windows or `PACKWIZ_SYNC_PLAIN=1` print plain text. Every run writes `last-run.log`.
 
-The source copy of the script contains `YOUR-USERNAME/YOUR-REPO`. Use the published copy, or set `PACKWIZ_SYNC_URL` first.
+The source copy of the script points at the `atm10-aeronautics-base` branch on GitHub (for testing before publishing). Publishing replaces that URL with the site's.
 
 ## Local checks
 

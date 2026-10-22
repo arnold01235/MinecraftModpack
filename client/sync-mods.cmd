@@ -1,8 +1,8 @@
 @echo off
 setlocal EnableExtensions DisableDelayedExpansion
 
-rem Set this once before sharing. The pack must be publicly readable.
-set "PACKWIZ_SYNC_URL=https://YOUR-USERNAME.github.io/YOUR-REPO/pack.toml"
+rem Points at the development branch for testing; publishing replaces it with the site's URL.
+set "PACKWIZ_SYNC_URL=https://raw.githubusercontent.com/arnold01235/MinecraftModpack/atm10-aeronautics-base/pack.toml"
 
 rem The pack is an add-on for a CurseForge modpack (named in pack.toml's description).
 rem Players install that modpack in the CurseForge app first, then double-click this from
