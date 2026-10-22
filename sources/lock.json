@@ -3669,6 +3669,44 @@
       "source": "https://modrinth.com/mod/9mtJ8MHP/version/WHTovylv",
       "slug": "create-teleporters"
     },
+    "mods/create-tfmg.pw.toml": {
+      "filename": "tfmg-1.2.0.jar",
+      "name": "Create: The Factory Must Grow",
+      "side": "both",
+      "provider": "modrinth",
+      "project_id": "USgVjXsk",
+      "version_id": "uDi14nbt",
+      "url": "https://cdn.modrinth.com/data/USgVjXsk/versions/uDi14nbt/tfmg-1.2.0.jar",
+      "hash_format": "sha512",
+      "hash": "03f2ad28c78ef565ef203c5650280acb0b846d6105dc5c84b2e31187f501be5c59733ef3adb623fbaa32c3233d113d608905259128661ffab06b26b270b1b38c",
+      "game_versions": [
+        "1.21",
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4",
+        "1.21.5",
+        "1.21.6",
+        "1.21.7",
+        "1.21.8",
+        "1.21.9",
+        "1.21.10",
+        "1.21.11"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "dependencies": [
+        {
+          "version_id": null,
+          "project_id": "LNytGWDc",
+          "file_name": null,
+          "dependency_type": "required"
+        }
+      ],
+      "source": "https://modrinth.com/mod/USgVjXsk/version/uDi14nbt",
+      "slug": "create-tfmg"
+    },
     "mods/createnuclear.pw.toml": {
       "filename": "createnuclear-2.0.0-neoforge.jar",
       "name": "Create Nuclear",
@@ -4101,6 +4139,7 @@
     "mods/create-aeroportals.pw.toml": "dffe42f4d9795ed5222e6db5b8316b118afd18ae9c903643ea1206b8f5e861b1",
     "mods/create-avionics.pw.toml": "593a022e9f631982c308a4f0a58147072f992dffad71bfb8a7a3c0183124facc",
     "mods/create-teleporters.pw.toml": "3557496081ba991875077593467afc25e9ab237714d421a1f00368dcde4f8ffe",
+    "mods/create-tfmg.pw.toml": "3f94a1182951fd0af6579264a908e0838930d6a96ca71a88ba7acb61282d6fd1",
     "mods/createnuclear.pw.toml": "dff9e3808aa4624b9631d0751a452b3ab7914b8439805a0156cd08b00f7ac67f",
     "mods/distant-horizons-seedgen.pw.toml": "babce028e938bfdb8175738b74c5c08a12d8098926aec608d7dc5ce5c6ac1a87",
     "mods/distant-horizons.pw.toml": "2802ae635c7d39e56f8b38d9b4cd8f3e636315f4e0a2502ed4de71e6927d4c60",

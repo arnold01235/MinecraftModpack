@@ -200,6 +200,16 @@
           "neoforge"
         ]
       }
+    },
+    {
+      "filename": "tfmg-1.2.0.jar",
+      "name": "Create: The Factory Must Grow",
+      "slug": "create-tfmg",
+      "side": "both",
+      "modrinth": [
+        "USgVjXsk"
+      ],
+      "modrinth_version": "uDi14nbt"
     }
   ]
 }
