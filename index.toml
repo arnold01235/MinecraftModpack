@@ -61,6 +61,11 @@ hash = "b235599bb285d533732eab8b087a055530c82d5a575a77ab89a9a30c1bbed3e9"
 metafile = true
 
 [[files]]
+file = "mods/projecte.pw.toml"
+hash = "28bae6f522ae1fd0fc96eadc9c1125a35163843a60b8a3e90ab6534daeb03d50"
+metafile = true
+
+[[files]]
 file = "mods/simple-voice-chat.pw.toml"
 hash = "a4947a73aff2f9c64824228ccd1ec6c93cdc7e4ffe90f4b89804a887dcf2a74e"
 metafile = true

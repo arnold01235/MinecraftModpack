@@ -1,0 +1,12 @@
+name = "ProjectE"
+filename = "ProjectE-1.21.1-PE1.1.0.jar"
+side = "both"
+
+[download]
+url = "https://cursemaven.com/curse/maven/projecte-226410/6611984/projecte-226410-6611984.jar"
+hash-format = "sha512"
+hash = "d8bd0e707c66df4e8dc40fbdd8454b41e78b6354302dcd52a277091e004ef8432fffa9a33f5da40c09ec80d8b4bb3f15ddc594cf891a026d6ba775677864fb58"
+
+[update.curseforge]
+project-id = 226410
+file-id = 6611984

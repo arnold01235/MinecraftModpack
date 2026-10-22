@@ -3945,6 +3945,53 @@
       "source": "https://modrinth.com/mod/eWiBLJ9R/version/jCkPHjmP",
       "slug": "power-grid"
     },
+    "mods/projecte.pw.toml": {
+      "filename": "ProjectE-1.21.1-PE1.1.0.jar",
+      "name": "ProjectE",
+      "side": "both",
+      "provider": "curseforge",
+      "project_id": 226410,
+      "version_id": 6611984,
+      "url": "https://cursemaven.com/curse/maven/projecte-226410/6611984/projecte-226410-6611984.jar",
+      "hash_format": "sha512",
+      "hash": "d8bd0e707c66df4e8dc40fbdd8454b41e78b6354302dcd52a277091e004ef8432fffa9a33f5da40c09ec80d8b4bb3f15ddc594cf891a026d6ba775677864fb58",
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "source": "https://www.curseforge.com/minecraft/mc-mods/projecte/files/6611984",
+      "verification": {
+        "method": "downloaded-jar",
+        "sha1": "24fb5997727453a15e956522761a3f586e646c2a",
+        "mod_id": "projecte",
+        "version": "1.1.0",
+        "size": 2426228
+      },
+      "jar_dependencies": [
+        {
+          "modId": "minecraft",
+          "type": "required",
+          "versionRange": "[1.21.1]",
+          "side": "BOTH"
+        },
+        {
+          "modId": "neoforge",
+          "type": "required",
+          "versionRange": "[21.1.119,)",
+          "side": "BOTH"
+        },
+        {
+          "modId": "mekanism",
+          "type": "incompatible",
+          "reason": "Requires an update to support changes to recipe mappers",
+          "versionRange": "[,10.7.8]",
+          "side": "BOTH"
+        }
+      ],
+      "slug": "projecte"
+    },
     "mods/simple-voice-chat.pw.toml": {
       "filename": "voicechat-neoforge-1.21.1-2.6.24.jar",
       "name": "Simple Voice Chat",
@@ -4059,6 +4106,7 @@
     "mods/distant-horizons.pw.toml": "2802ae635c7d39e56f8b38d9b4cd8f3e636315f4e0a2502ed4de71e6927d4c60",
     "mods/euphoria-patches.pw.toml": "60cda58f8f763b5b137dbfc9a0a071eeb214683fba5a2d74532eb3b755fcd833",
     "mods/power-grid.pw.toml": "b235599bb285d533732eab8b087a055530c82d5a575a77ab89a9a30c1bbed3e9",
+    "mods/projecte.pw.toml": "28bae6f522ae1fd0fc96eadc9c1125a35163843a60b8a3e90ab6534daeb03d50",
     "mods/simple-voice-chat.pw.toml": "a4947a73aff2f9c64824228ccd1ec6c93cdc7e4ffe90f4b89804a887dcf2a74e",
     "mods/simulated-cc-compat.pw.toml": "ed26ddc7b9aa6b489be5fab5c1ac638f61faa8a559f0cba463a0f2f5d1f5ef96",
     "mods/unlimitedperipheralworks.pw.toml": "6923541b6e8f92ff763853eee86e8b1bd315809cf2d59ebae676aba5b98d3712"
