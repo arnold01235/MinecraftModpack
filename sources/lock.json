@@ -3708,44 +3708,6 @@
       "source": "https://modrinth.com/mod/9mtJ8MHP/version/WHTovylv",
       "slug": "create-teleporters"
     },
-    "mods/create-tfmg.pw.toml": {
-      "filename": "tfmg-1.2.0.jar",
-      "name": "Create: The Factory Must Grow",
-      "side": "both",
-      "provider": "modrinth",
-      "project_id": "USgVjXsk",
-      "version_id": "uDi14nbt",
-      "url": "https://cdn.modrinth.com/data/USgVjXsk/versions/uDi14nbt/tfmg-1.2.0.jar",
-      "hash_format": "sha512",
-      "hash": "03f2ad28c78ef565ef203c5650280acb0b846d6105dc5c84b2e31187f501be5c59733ef3adb623fbaa32c3233d113d608905259128661ffab06b26b270b1b38c",
-      "game_versions": [
-        "1.21",
-        "1.21.1",
-        "1.21.2",
-        "1.21.3",
-        "1.21.4",
-        "1.21.5",
-        "1.21.6",
-        "1.21.7",
-        "1.21.8",
-        "1.21.9",
-        "1.21.10",
-        "1.21.11"
-      ],
-      "loaders": [
-        "neoforge"
-      ],
-      "dependencies": [
-        {
-          "version_id": null,
-          "project_id": "LNytGWDc",
-          "file_name": null,
-          "dependency_type": "required"
-        }
-      ],
-      "source": "https://modrinth.com/mod/USgVjXsk/version/uDi14nbt",
-      "slug": "create-tfmg"
-    },
     "mods/createnuclear.pw.toml": {
       "filename": "createnuclear-2.0.0-neoforge.jar",
       "name": "Create Nuclear",
@@ -4344,7 +4306,6 @@
     "mods/create-aeroportals.pw.toml": "20edafa5563c56dc63f89c6e0342e1fd2f6d9163e9ffab3149186552da53c09e",
     "mods/create-avionics.pw.toml": "593a022e9f631982c308a4f0a58147072f992dffad71bfb8a7a3c0183124facc",
     "mods/create-teleporters.pw.toml": "3557496081ba991875077593467afc25e9ab237714d421a1f00368dcde4f8ffe",
-    "mods/create-tfmg.pw.toml": "3f94a1182951fd0af6579264a908e0838930d6a96ca71a88ba7acb61282d6fd1",
     "mods/createnuclear.pw.toml": "dff9e3808aa4624b9631d0751a452b3ab7914b8439805a0156cd08b00f7ac67f",
     "mods/creativecore.pw.toml": "965d76fe160b748f26e88d87672a6321083df9bd93795e4d8cba40f1dbdd9780",
     "mods/distant-horizons-seedgen.pw.toml": "babce028e938bfdb8175738b74c5c08a12d8098926aec608d7dc5ce5c6ac1a87",
