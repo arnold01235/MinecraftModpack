@@ -46,11 +46,6 @@ hash = "dff9e3808aa4624b9631d0751a452b3ab7914b8439805a0156cd08b00f7ac67f"
 metafile = true
 
 [[files]]
-file = "mods/creativecore.pw.toml"
-hash = "965d76fe160b748f26e88d87672a6321083df9bd93795e4d8cba40f1dbdd9780"
-metafile = true
-
-[[files]]
 file = "mods/distant-horizons-seedgen.pw.toml"
 hash = "babce028e938bfdb8175738b74c5c08a12d8098926aec608d7dc5ce5c6ac1a87"
 metafile = true
@@ -93,19 +88,4 @@ metafile = true
 [[files]]
 file = "mods/unlimitedperipheralworks.pw.toml"
 hash = "6923541b6e8f92ff763853eee86e8b1bd315809cf2d59ebae676aba5b98d3712"
-metafile = true
-
-[[files]]
-file = "mods/waterframes.pw.toml"
-hash = "3e14a19dc67621d83cfe88c077d651d9d6ea0cea744ad14bafd767309e31a9ba"
-metafile = true
-
-[[files]]
-file = "mods/watermedia-yt-plugin.pw.toml"
-hash = "90ec87e81afcb2b8e61b32ccb6e37a85739d814a6758e813cc851d95253becd3"
-metafile = true
-
-[[files]]
-file = "mods/watermedia.pw.toml"
-hash = "12f70206803cc51b2e0b8a2f43ab6065ea019b037ea877ad70f11f1d6444442e"
 metafile = true
