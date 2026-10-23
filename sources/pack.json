@@ -220,6 +220,56 @@
         "fXt291FO"
       ],
       "modrinth_version": "MKK6cYI5"
+    },
+    {
+      "filename": "waterframes-NEOFORGE-mc1.21.1-v2.1.23.jar",
+      "name": "WATERFrAMES",
+      "slug": "waterframes",
+      "side": "both",
+      "modrinth": [
+        "eBzFuVTM"
+      ],
+      "modrinth_version": "ygogZrIE"
+    },
+    {
+      "filename": "CreativeCore_NEOFORGE_v2.13.51_mc1.21.1.jar",
+      "name": "CreativeCore",
+      "slug": "creativecore",
+      "side": "both",
+      "modrinth": [
+        "OsZiaDHq"
+      ],
+      "modrinth_version": "vRMtFt35"
+    },
+    {
+      "filename": "watermedia-2.1.37.jar",
+      "name": "WATERMeDIA",
+      "slug": "watermedia",
+      "side": "client",
+      "modrinth": [
+        "G922NeHS"
+      ],
+      "modrinth_version": "fB0LmHnR"
+    },
+    {
+      "filename": "watermedia_youtube_plugin-2.1.2.jar",
+      "name": "WATERMeDIA: YouTube Extension",
+      "slug": "watermedia-yt-plugin",
+      "side": "client",
+      "modrinth": [
+        "P0w3IrnX"
+      ],
+      "modrinth_version": "rDtJujm2"
+    },
+    {
+      "filename": "exposure-neoforge-1.21.1-1.9.19.jar",
+      "name": "Exposure",
+      "slug": "exposure",
+      "side": "both",
+      "modrinth": [
+        "hB899VmG"
+      ],
+      "modrinth_version": "iBvaR6AK"
     }
   ]
 }

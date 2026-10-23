@@ -3791,6 +3791,26 @@
       "source": "https://modrinth.com/mod/z611fdf7/version/TANOhO2C",
       "slug": "createnuclear"
     },
+    "mods/creativecore.pw.toml": {
+      "filename": "CreativeCore_NEOFORGE_v2.13.51_mc1.21.1.jar",
+      "name": "CreativeCore",
+      "side": "client",
+      "provider": "modrinth",
+      "project_id": "OsZiaDHq",
+      "version_id": "vRMtFt35",
+      "url": "https://cdn.modrinth.com/data/OsZiaDHq/versions/vRMtFt35/CreativeCore_NEOFORGE_v2.13.51_mc1.21.1.jar",
+      "hash_format": "sha512",
+      "hash": "864301fa1229511203fc291e9b683db5af3cb4aa4faed0ef1eb54112491b3c97f9b5006b42d41fb2c169f7fc93ad13459f5079c6ffc73dc4b145ee61b7687997",
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "dependencies": [],
+      "source": "https://modrinth.com/mod/OsZiaDHq/version/vRMtFt35",
+      "slug": "creativecore"
+    },
     "mods/distant-horizons-seedgen.pw.toml": {
       "filename": "Distant Horizons SeedGen 0.9.1 for 1.21.1 NeoForge.jar",
       "name": "Distant Horizons SeedGen",
@@ -3989,6 +4009,33 @@
       "source": "https://modrinth.com/mod/4H6sumDB/version/QMsRXtSJ",
       "slug": "euphoria-patches"
     },
+    "mods/exposure.pw.toml": {
+      "filename": "exposure-neoforge-1.21.1-1.9.19.jar",
+      "name": "Exposure",
+      "side": "both",
+      "provider": "modrinth",
+      "project_id": "hB899VmG",
+      "version_id": "iBvaR6AK",
+      "url": "https://cdn.modrinth.com/data/hB899VmG/versions/iBvaR6AK/exposure-neoforge-1.21.1-1.9.19.jar",
+      "hash_format": "sha512",
+      "hash": "b6b18638d61196c3b579dcb5cd977b125586c848822ffa3bb247b3d34dc019e3ca53629303cbb57c0875f7e29be30ae036e81d90dd8feb5dd87090b2b81c08b7",
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "dependencies": [
+        {
+          "version_id": null,
+          "project_id": "u6dRKJwZ",
+          "file_name": null,
+          "dependency_type": "optional"
+        }
+      ],
+      "source": "https://modrinth.com/mod/hB899VmG/version/iBvaR6AK",
+      "slug": "exposure"
+    },
     "mods/power-grid.pw.toml": {
       "filename": "powergrid-mc1.21.1-0.6.2.jar",
       "name": "Create: Power Grid",
@@ -4168,6 +4215,124 @@
       ],
       "source": "https://modrinth.com/mod/Sf7QBsRP/version/l84f9GYD",
       "slug": "unlimitedperipheralworks"
+    },
+    "mods/waterframes.pw.toml": {
+      "filename": "waterframes-NEOFORGE-mc1.21.1-v2.1.23.jar",
+      "name": "WATERFrAMES: Multimedia Displays",
+      "side": "both",
+      "provider": "modrinth",
+      "project_id": "eBzFuVTM",
+      "version_id": "ygogZrIE",
+      "url": "https://cdn.modrinth.com/data/eBzFuVTM/versions/ygogZrIE/waterframes-NEOFORGE-mc1.21.1-v2.1.23.jar",
+      "hash_format": "sha512",
+      "hash": "cd924d55d23dcd8e5ff221a4f3bcc929018e9571f672dc390d000c977e3fba33ede885795d599a80f5ea5faac51258e34904487c2323d1281a6efb2ba54b0702",
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "dependencies": [
+        {
+          "version_id": null,
+          "project_id": "OsZiaDHq",
+          "file_name": null,
+          "dependency_type": "required"
+        },
+        {
+          "version_id": null,
+          "project_id": "dGGbEGoV",
+          "file_name": null,
+          "dependency_type": "required"
+        },
+        {
+          "version_id": null,
+          "project_id": "G922NeHS",
+          "file_name": null,
+          "dependency_type": "required"
+        }
+      ],
+      "source": "https://modrinth.com/mod/eBzFuVTM/version/ygogZrIE",
+      "slug": "waterframes"
+    },
+    "mods/watermedia-yt-plugin.pw.toml": {
+      "filename": "watermedia_youtube_plugin-2.1.2.jar",
+      "name": "WATERMeDIA: Youtube Extension",
+      "side": "client",
+      "provider": "modrinth",
+      "project_id": "P0w3IrnX",
+      "version_id": "rDtJujm2",
+      "url": "https://cdn.modrinth.com/data/P0w3IrnX/versions/rDtJujm2/watermedia_youtube_plugin-2.1.2.jar",
+      "hash_format": "sha512",
+      "hash": "9dd01e3768a10358d5262cd279227a622a7caf5fef67a66ba95d71b336403421cfd8c804b09c4bd0cc8fbac707ce1a403c69c8f46c62ae42534e801a2e235b86",
+      "game_versions": [
+        "1.18.2",
+        "1.19.2",
+        "1.20.1",
+        "1.21.1",
+        "1.21.5"
+      ],
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge"
+      ],
+      "dependencies": [
+        {
+          "version_id": null,
+          "project_id": "bBkexGe1",
+          "file_name": null,
+          "dependency_type": "incompatible"
+        },
+        {
+          "version_id": null,
+          "project_id": "G922NeHS",
+          "file_name": null,
+          "dependency_type": "required"
+        }
+      ],
+      "source": "https://modrinth.com/mod/P0w3IrnX/version/rDtJujm2",
+      "slug": "watermedia-yt-plugin"
+    },
+    "mods/watermedia.pw.toml": {
+      "filename": "watermedia-2.1.37.jar",
+      "name": "WATERMeDIA: Multimedia API",
+      "side": "client",
+      "provider": "modrinth",
+      "project_id": "G922NeHS",
+      "version_id": "fB0LmHnR",
+      "url": "https://cdn.modrinth.com/data/G922NeHS/versions/fB0LmHnR/watermedia-2.1.37.jar",
+      "hash_format": "sha512",
+      "hash": "d2bdadbb352c415e04aecf130759949f1081f8f410a4019b3b885a4e05a6ce9f6144dfb7c707685dad0f9b26c04e4a26dff5c3897d057b96cf4cec1384a148bb",
+      "game_versions": [
+        "1.16.5",
+        "1.18.2",
+        "1.19.2",
+        "1.20.1",
+        "1.21.1",
+        "1.21.5"
+      ],
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge"
+      ],
+      "dependencies": [
+        {
+          "version_id": null,
+          "project_id": "bBkexGe1",
+          "file_name": null,
+          "dependency_type": "incompatible"
+        },
+        {
+          "version_id": null,
+          "project_id": "P0w3IrnX",
+          "file_name": null,
+          "dependency_type": "required"
+        }
+      ],
+      "source": "https://modrinth.com/mod/G922NeHS/version/fB0LmHnR",
+      "slug": "watermedia"
     }
   },
   "generated": {
@@ -4181,13 +4346,18 @@
     "mods/create-teleporters.pw.toml": "3557496081ba991875077593467afc25e9ab237714d421a1f00368dcde4f8ffe",
     "mods/create-tfmg.pw.toml": "3f94a1182951fd0af6579264a908e0838930d6a96ca71a88ba7acb61282d6fd1",
     "mods/createnuclear.pw.toml": "dff9e3808aa4624b9631d0751a452b3ab7914b8439805a0156cd08b00f7ac67f",
+    "mods/creativecore.pw.toml": "965d76fe160b748f26e88d87672a6321083df9bd93795e4d8cba40f1dbdd9780",
     "mods/distant-horizons-seedgen.pw.toml": "babce028e938bfdb8175738b74c5c08a12d8098926aec608d7dc5ce5c6ac1a87",
     "mods/distant-horizons.pw.toml": "2802ae635c7d39e56f8b38d9b4cd8f3e636315f4e0a2502ed4de71e6927d4c60",
     "mods/euphoria-patches.pw.toml": "60cda58f8f763b5b137dbfc9a0a071eeb214683fba5a2d74532eb3b755fcd833",
+    "mods/exposure.pw.toml": "b112e38749c8ec3c2312db862abc8cbfae41048a65057c464d8db3e02e10f243",
     "mods/power-grid.pw.toml": "b235599bb285d533732eab8b087a055530c82d5a575a77ab89a9a30c1bbed3e9",
     "mods/projecte.pw.toml": "28bae6f522ae1fd0fc96eadc9c1125a35163843a60b8a3e90ab6534daeb03d50",
     "mods/simple-voice-chat.pw.toml": "a4947a73aff2f9c64824228ccd1ec6c93cdc7e4ffe90f4b89804a887dcf2a74e",
     "mods/simulated-cc-compat.pw.toml": "ed26ddc7b9aa6b489be5fab5c1ac638f61faa8a559f0cba463a0f2f5d1f5ef96",
-    "mods/unlimitedperipheralworks.pw.toml": "6923541b6e8f92ff763853eee86e8b1bd315809cf2d59ebae676aba5b98d3712"
+    "mods/unlimitedperipheralworks.pw.toml": "6923541b6e8f92ff763853eee86e8b1bd315809cf2d59ebae676aba5b98d3712",
+    "mods/waterframes.pw.toml": "3e14a19dc67621d83cfe88c077d651d9d6ea0cea744ad14bafd767309e31a9ba",
+    "mods/watermedia-yt-plugin.pw.toml": "90ec87e81afcb2b8e61b32ccb6e37a85739d814a6758e813cc851d95253becd3",
+    "mods/watermedia.pw.toml": "12f70206803cc51b2e0b8a2f43ab6065ea019b037ea877ad70f11f1d6444442e"
   }
 }
