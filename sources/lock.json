@@ -3978,6 +3978,26 @@
       "source": "https://modrinth.com/mod/hB899VmG/version/iBvaR6AK",
       "slug": "exposure"
     },
+    "mods/fairy-lights.pw.toml": {
+      "filename": "fairylights-neoforge-1.21.1-1.2.3.jar",
+      "name": "Fairy Lights",
+      "side": "both",
+      "provider": "modrinth",
+      "project_id": "OuLVx5LM",
+      "version_id": "LQ4yv2U3",
+      "url": "https://cdn.modrinth.com/data/OuLVx5LM/versions/LQ4yv2U3/fairylights-neoforge-1.21.1-1.2.3.jar",
+      "hash_format": "sha512",
+      "hash": "53d293170595cb45c0742aa6388a790799e760c88e704b55fcc3d729153d923aff0963675a35b670b22b5a2028424cce7aedbaa2531a22bda62bcae81444871e",
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "dependencies": [],
+      "source": "https://modrinth.com/mod/OuLVx5LM/version/LQ4yv2U3",
+      "slug": "fairy-lights"
+    },
     "mods/power-grid.pw.toml": {
       "filename": "powergrid-mc1.21.1-0.6.2.jar",
       "name": "Create: Power Grid",
@@ -4173,6 +4193,7 @@
     "mods/distant-horizons.pw.toml": "2802ae635c7d39e56f8b38d9b4cd8f3e636315f4e0a2502ed4de71e6927d4c60",
     "mods/euphoria-patches.pw.toml": "60cda58f8f763b5b137dbfc9a0a071eeb214683fba5a2d74532eb3b755fcd833",
     "mods/exposure.pw.toml": "b112e38749c8ec3c2312db862abc8cbfae41048a65057c464d8db3e02e10f243",
+    "mods/fairy-lights.pw.toml": "efd4393e3d47459e6d4aadd80472167d69e1992408c60bad62c6b93ad4d692f6",
     "mods/power-grid.pw.toml": "b235599bb285d533732eab8b087a055530c82d5a575a77ab89a9a30c1bbed3e9",
     "mods/projecte.pw.toml": "28bae6f522ae1fd0fc96eadc9c1125a35163843a60b8a3e90ab6534daeb03d50",
     "mods/simple-voice-chat.pw.toml": "a4947a73aff2f9c64824228ccd1ec6c93cdc7e4ffe90f4b89804a887dcf2a74e",

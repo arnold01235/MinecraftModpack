@@ -66,6 +66,11 @@ hash = "b112e38749c8ec3c2312db862abc8cbfae41048a65057c464d8db3e02e10f243"
 metafile = true
 
 [[files]]
+file = "mods/fairy-lights.pw.toml"
+hash = "efd4393e3d47459e6d4aadd80472167d69e1992408c60bad62c6b93ad4d692f6"
+metafile = true
+
+[[files]]
 file = "mods/power-grid.pw.toml"
 hash = "b235599bb285d533732eab8b087a055530c82d5a575a77ab89a9a30c1bbed3e9"
 metafile = true
